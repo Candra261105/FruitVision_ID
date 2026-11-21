@@ -1,0 +1,31 @@
+{
+  "model": "runs\\detect\\runs\\fruitvision-smoke-metrics\\smoke-small-metrics-yolov8s-world\\weights\\best.pt",
+  "data": "data\\processed\\smoke-top3\\data.yaml",
+  "device": "cpu",
+  "elapsed_seconds": 11.077,
+  "map50": 0.012643713625003614,
+  "map50_95": 0.005226206463947469,
+  "precision": 0.028638109278284297,
+  "recall": 0.04274904878933319,
+  "per_class": {
+    "cucumber": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "map50": 0.0015521064301552106,
+      "map50_95": 0.0004586855061654134
+    },
+    "tomato": {
+      "precision": 0.0859143278348529,
+      "recall": 0.12824714636799955,
+      "map50": 0.03455135820464676,
+      "map50_95": 0.014859556834046678
+    },
+    "green beans": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "map50": 0.0018276762402088774,
+      "map50_95": 0.00036037705163031536
+    }
+  },
+  "limitation": "Metrik publik tidak membuktikan performa pada kamera laptop pengguna."
+}

@@ -1,0 +1,29 @@
+version: 1
+groups:
+  original:
+    hsv_h: 0.0
+    hsv_s: 0.0
+    hsv_v: 0.0
+    degrees: 0.0
+    translate: 0.0
+    scale: 0.0
+    fliplr: 0.0
+    mosaic: 0.0
+  light-dark-contrast-color:
+    hsv_h: 0.015
+    hsv_s: 0.20
+    hsv_v: 0.30
+    degrees: 4.0
+    translate: 0.05
+    scale: 0.25
+    fliplr: 0.5
+    mosaic: 0.5
+  blur-noise-geometry:
+    hsv_h: 0.01
+    hsv_s: 0.15
+    hsv_v: 0.25
+    degrees: 8.0
+    translate: 0.08
+    scale: 0.35
+    fliplr: 0.5
+    mosaic: 0.5

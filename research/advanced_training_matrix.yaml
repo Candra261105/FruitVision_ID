@@ -1,0 +1,33 @@
+tasks:
+  - id: disease
+    task: disease
+    model: models/base/yolo11n-cls.pt
+    epochs: 10
+    patience: 3
+    batch: 64
+    imgsz: 160
+    workers: 0
+  - id: maturity
+    task: maturity
+    model: models/base/yolo11n-cls.pt
+    epochs: 15
+    patience: 5
+    batch: 64
+    imgsz: 160
+    workers: 0
+  - id: rot
+    task: rot
+    model: models/base/yolo11n-cls.pt
+    epochs: 12
+    patience: 4
+    batch: 64
+    imgsz: 160
+    workers: 0
+  - id: grade
+    task: grade
+    model: models/base/yolo11n-cls.pt
+    epochs: 10
+    patience: 3
+    batch: 64
+    imgsz: 160
+    workers: 0

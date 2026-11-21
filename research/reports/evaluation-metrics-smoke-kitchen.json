@@ -1,0 +1,25 @@
+{
+  "model": "runs\\detect\\runs\\fruitvision-smoke-metrics\\smoke-small-metrics-yolov8s-world\\weights\\best.pt",
+  "data": "data\\processed\\kitchen-top3\\data.yaml",
+  "device": "cpu",
+  "elapsed_seconds": 33.576,
+  "map50": 0.12763950686775802,
+  "map50_95": 0.0759734695565952,
+  "precision": 0.13035709016595692,
+  "recall": 0.4485294117647059,
+  "per_class": {
+    "cucumber": {
+      "precision": 0.0893096670669726,
+      "recall": 0.14705882352941177,
+      "map50": 0.050109881859383296,
+      "map50_95": 0.03178791705392913
+    },
+    "tomato": {
+      "precision": 0.17140451326494122,
+      "recall": 0.75,
+      "map50": 0.20516913187613273,
+      "map50_95": 0.1201590220592613
+    }
+  },
+  "limitation": "Metrik publik tidak membuktikan performa pada kamera laptop pengguna."
+}

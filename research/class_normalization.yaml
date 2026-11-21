@@ -1,0 +1,25 @@
+version: 1
+exact:
+  tomato: tomato
+  tomatoes: tomato
+  tomate: tomato
+  tomat: tomato
+  potato: potato
+  potatoes: potato
+  banana: banana
+  bananas: banana
+  green banana: green banana
+  green bananas: green banana
+  orange: orange
+  oranges: orange
+  lemon: lemon
+  lemons: lemon
+  lime: lime
+  mandarin orange: mandarin orange
+protected_separate:
+  - banana
+  - green banana
+  - orange
+  - lemon
+  - lime
+  - mandarin orange

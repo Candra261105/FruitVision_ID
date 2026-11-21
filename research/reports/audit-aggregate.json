@@ -1,0 +1,429 @@
+{
+  "sources": [
+    "audit-lvis.json",
+    "audit-bangladesh.json",
+    "audit-fruit-worldwide-00000.json",
+    "audit-fruit-worldwide-00001.json",
+    "audit-kitchen.json"
+  ],
+  "aggregate": {
+    "classes": [
+      {
+        "class_name": "cucumber",
+        "valid_box_count": 12906,
+        "unique_image_count": 1484,
+        "source_count": 2
+      },
+      {
+        "class_name": "tomato",
+        "valid_box_count": 11907,
+        "unique_image_count": 2145,
+        "source_count": 3
+      },
+      {
+        "class_name": "green beans",
+        "valid_box_count": 7468,
+        "unique_image_count": 1710,
+        "source_count": 1
+      },
+      {
+        "class_name": "lemon",
+        "valid_box_count": 6295,
+        "unique_image_count": 1743,
+        "source_count": 3
+      },
+      {
+        "class_name": "eggplant",
+        "valid_box_count": 6272,
+        "unique_image_count": 1547,
+        "source_count": 1
+      },
+      {
+        "class_name": "green chilli",
+        "valid_box_count": 5329,
+        "unique_image_count": 1014,
+        "source_count": 1
+      },
+      {
+        "class_name": "turnip",
+        "valid_box_count": 4352,
+        "unique_image_count": 960,
+        "source_count": 1
+      },
+      {
+        "class_name": "coriander leaves",
+        "valid_box_count": 4113,
+        "unique_image_count": 1637,
+        "source_count": 1
+      },
+      {
+        "class_name": "pumpkin",
+        "valid_box_count": 3724,
+        "unique_image_count": 1730,
+        "source_count": 2
+      },
+      {
+        "class_name": "capsicum",
+        "valid_box_count": 3272,
+        "unique_image_count": 545,
+        "source_count": 2
+      },
+      {
+        "class_name": "bitter gourd",
+        "valid_box_count": 3164,
+        "unique_image_count": 1247,
+        "source_count": 1
+      },
+      {
+        "class_name": "cauliflower",
+        "valid_box_count": 3114,
+        "unique_image_count": 851,
+        "source_count": 2
+      },
+      {
+        "class_name": "green papaya",
+        "valid_box_count": 3072,
+        "unique_image_count": 1015,
+        "source_count": 1
+      },
+      {
+        "class_name": "carrot",
+        "valid_box_count": 3037,
+        "unique_image_count": 1188,
+        "source_count": 3
+      },
+      {
+        "class_name": "potato",
+        "valid_box_count": 3033,
+        "unique_image_count": 831,
+        "source_count": 2
+      },
+      {
+        "class_name": "bottle gourd",
+        "valid_box_count": 2688,
+        "unique_image_count": 910,
+        "source_count": 1
+      },
+      {
+        "class_name": "beetroot",
+        "valid_box_count": 1747,
+        "unique_image_count": 513,
+        "source_count": 1
+      },
+      {
+        "class_name": "cabbage",
+        "valid_box_count": 1678,
+        "unique_image_count": 703,
+        "source_count": 1
+      },
+      {
+        "class_name": "spring onion",
+        "valid_box_count": 1509,
+        "unique_image_count": 772,
+        "source_count": 1
+      },
+      {
+        "class_name": "snake gourd",
+        "valid_box_count": 1227,
+        "unique_image_count": 707,
+        "source_count": 1
+      },
+      {
+        "class_name": "mango",
+        "valid_box_count": 1145,
+        "unique_image_count": 170,
+        "source_count": 1
+      },
+      {
+        "class_name": "blueberry",
+        "valid_box_count": 1049,
+        "unique_image_count": 30,
+        "source_count": 1
+      },
+      {
+        "class_name": "radish",
+        "valid_box_count": 789,
+        "unique_image_count": 521,
+        "source_count": 1
+      },
+      {
+        "class_name": "green banana",
+        "valid_box_count": 583,
+        "unique_image_count": 131,
+        "source_count": 1
+      },
+      {
+        "class_name": "strawberry",
+        "valid_box_count": 440,
+        "unique_image_count": 81,
+        "source_count": 4
+      },
+      {
+        "class_name": "apple",
+        "valid_box_count": 438,
+        "unique_image_count": 126,
+        "source_count": 4
+      },
+      {
+        "class_name": "orange",
+        "valid_box_count": 324,
+        "unique_image_count": 100,
+        "source_count": 2
+      },
+      {
+        "class_name": "lettuce",
+        "valid_box_count": 198,
+        "unique_image_count": 29,
+        "source_count": 1
+      },
+      {
+        "class_name": "chickpea/garbanzo",
+        "valid_box_count": 195,
+        "unique_image_count": 11,
+        "source_count": 1
+      },
+      {
+        "class_name": "avocado",
+        "valid_box_count": 194,
+        "unique_image_count": 65,
+        "source_count": 3
+      },
+      {
+        "class_name": "raspberry",
+        "valid_box_count": 151,
+        "unique_image_count": 17,
+        "source_count": 1
+      },
+      {
+        "class_name": "grape",
+        "valid_box_count": 139,
+        "unique_image_count": 48,
+        "source_count": 2
+      },
+      {
+        "class_name": "rockmelon",
+        "valid_box_count": 137,
+        "unique_image_count": 56,
+        "source_count": 2
+      },
+      {
+        "class_name": "banana",
+        "valid_box_count": 118,
+        "unique_image_count": 73,
+        "source_count": 2
+      },
+      {
+        "class_name": "bell pepper/capsicum",
+        "valid_box_count": 110,
+        "unique_image_count": 12,
+        "source_count": 1
+      },
+      {
+        "class_name": "onion",
+        "valid_box_count": 79,
+        "unique_image_count": 44,
+        "source_count": 2
+      },
+      {
+        "class_name": "cucumber/cuke",
+        "valid_box_count": 73,
+        "unique_image_count": 12,
+        "source_count": 1
+      },
+      {
+        "class_name": "peach",
+        "valid_box_count": 51,
+        "unique_image_count": 42,
+        "source_count": 2
+      },
+      {
+        "class_name": "melon",
+        "valid_box_count": 44,
+        "unique_image_count": 3,
+        "source_count": 1
+      },
+      {
+        "class_name": "green bean",
+        "valid_box_count": 38,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "bell pepper red",
+        "valid_box_count": 35,
+        "unique_image_count": 35,
+        "source_count": 1
+      },
+      {
+        "class_name": "edible corn/corn/maize",
+        "valid_box_count": 33,
+        "unique_image_count": 3,
+        "source_count": 1
+      },
+      {
+        "class_name": "zucchini/courgette",
+        "valid_box_count": 32,
+        "unique_image_count": 8,
+        "source_count": 1
+      },
+      {
+        "class_name": "broccoli",
+        "valid_box_count": 30,
+        "unique_image_count": 8,
+        "source_count": 1
+      },
+      {
+        "class_name": "radish/daikon",
+        "valid_box_count": 30,
+        "unique_image_count": 5,
+        "source_count": 1
+      },
+      {
+        "class_name": "bell pepper green",
+        "valid_box_count": 29,
+        "unique_image_count": 29,
+        "source_count": 1
+      },
+      {
+        "class_name": "orange/orange fruit",
+        "valid_box_count": 27,
+        "unique_image_count": 7,
+        "source_count": 1
+      },
+      {
+        "class_name": "prune",
+        "valid_box_count": 25,
+        "unique_image_count": 3,
+        "source_count": 1
+      },
+      {
+        "class_name": "blackberry",
+        "valid_box_count": 23,
+        "unique_image_count": 5,
+        "source_count": 1
+      },
+      {
+        "class_name": "fig/fig fruit",
+        "valid_box_count": 22,
+        "unique_image_count": 4,
+        "source_count": 1
+      },
+      {
+        "class_name": "kiwi fruit",
+        "valid_box_count": 20,
+        "unique_image_count": 10,
+        "source_count": 1
+      },
+      {
+        "class_name": "eggplant/aubergine",
+        "valid_box_count": 14,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "sweet potato",
+        "valid_box_count": 11,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "date/date fruit",
+        "valid_box_count": 9,
+        "unique_image_count": 3,
+        "source_count": 1
+      },
+      {
+        "class_name": "asparagus",
+        "valid_box_count": 8,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "pear",
+        "valid_box_count": 7,
+        "unique_image_count": 3,
+        "source_count": 1
+      },
+      {
+        "class_name": "mandarin orange",
+        "valid_box_count": 7,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "garlic/ail",
+        "valid_box_count": 6,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "almond",
+        "valid_box_count": 5,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "bean curd/tofu",
+        "valid_box_count": 5,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "mushroom",
+        "valid_box_count": 4,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "pineapple",
+        "valid_box_count": 2,
+        "unique_image_count": 2,
+        "source_count": 1
+      },
+      {
+        "class_name": "clementine",
+        "valid_box_count": 1,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "ginger/gingerroot",
+        "valid_box_count": 1,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "green onion/spring onion/scallion",
+        "valid_box_count": 1,
+        "unique_image_count": 1,
+        "source_count": 1
+      },
+      {
+        "class_name": "pea/pea food",
+        "valid_box_count": 1,
+        "unique_image_count": 1,
+        "source_count": 1
+      }
+    ],
+    "top3": [
+      {
+        "class_name": "cucumber",
+        "valid_box_count": 12906,
+        "unique_image_count": 1484,
+        "source_count": 2
+      },
+      {
+        "class_name": "tomato",
+        "valid_box_count": 11907,
+        "unique_image_count": 2145,
+        "source_count": 3
+      },
+      {
+        "class_name": "green beans",
+        "valid_box_count": 7468,
+        "unique_image_count": 1710,
+        "source_count": 1
+      }
+    ]
+  }
+}

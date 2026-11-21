@@ -1,0 +1,28 @@
+{
+  "weights": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\runs\\detect\\runs\\loop-detector-yolo26n\\experiment-512-yolo26n\\weights\\best.pt",
+  "weights_sha256": "25686cda8629858fd25af63f5c5c21f537985f8bed339952addf90759c25e656",
+  "data": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\data\\processed\\combined-top3-cc0-experiment\\data.yaml",
+  "split": "test",
+  "map50": 0.5141659246926004,
+  "map50_95": 0.26498915794566064,
+  "precision": 0.5080313225544831,
+  "recall": 0.5376163402912204,
+  "per_class": {
+    "cucumber": 0.5152481403694918,
+    "tomato": 0.5820062301323368,
+    "green beans": 0.4452434035759722
+  },
+  "missing_classes": [],
+  "gate": {
+    "status": "rejected",
+    "requirements": {
+      "map50": 0.55,
+      "per_class_ap50": 0.4,
+      "classes": [
+        "cucumber",
+        "green beans",
+        "tomato"
+      ]
+    }
+  }
+}

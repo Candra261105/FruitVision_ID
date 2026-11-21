@@ -1,0 +1,9 @@
+tasks:
+  - id: grade
+    task: grade
+    model: C:/Users/dragon/Downloads/FruitVision_ID/models/base/yolo11n-cls.pt
+    epochs: 10
+    patience: 4
+    batch: 64
+    imgsz: 160
+    workers: 0

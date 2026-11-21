@@ -1,0 +1,17 @@
+{
+  "name": "cc0-test",
+  "map50": 0.5281785991587676,
+  "map50_95": 0.2724032694324943,
+  "precision": 0.5176562191489068,
+  "recall": 0.5485073180086578,
+  "per_class": {
+    "cucumber": 0.5476505358514944,
+    "tomato": 0.56805464449444,
+    "green beans": 0.4688306171303686
+  },
+  "classes_seen": [
+    "cucumber",
+    "tomato",
+    "green beans"
+  ]
+}

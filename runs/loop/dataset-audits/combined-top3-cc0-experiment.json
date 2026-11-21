@@ -1,0 +1,15 @@
+{
+  "root": "data\\processed\\combined-top3-cc0-experiment",
+  "split_counts": {
+    "external_holdout": 179,
+    "test": 320,
+    "train": 3268,
+    "val": 319
+  },
+  "image_count": 4086,
+  "duplicate_groups": {},
+  "cross_split_duplicate_groups": {},
+  "invalid_label_count": 0,
+  "invalid_labels": [],
+  "status": "clean"
+}

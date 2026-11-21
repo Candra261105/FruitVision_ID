@@ -1,0 +1,9 @@
+tasks:
+  - id: rot
+    task: rot
+    model: C:/Users/dragon/Downloads/FruitVision_ID/models/base/yolo11n-cls.pt
+    epochs: 12
+    patience: 4
+    batch: 64
+    imgsz: 160
+    workers: 0

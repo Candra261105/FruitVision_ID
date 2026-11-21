@@ -1,0 +1,9 @@
+Add-Content : The process cannot access the file 
+'C:\Users\dragon\Downloads\FruitVision_ID\runs\loop\yolo26m-postprocess.log' because it is being used by another 
+process.
+At line:1 char:814
++ ... E) } else { Add-Content 'C:\Users\dragon\Downloads\FruitVision_ID\run ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\dragon...postprocess.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+ 

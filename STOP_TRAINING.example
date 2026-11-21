@@ -1,0 +1,2 @@
+Buat file bernama STOP_TRAINING di root proyek untuk menghentikan loop
+setelah eksperimen yang sedang berjalan selesai.

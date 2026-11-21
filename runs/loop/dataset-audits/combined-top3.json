@@ -1,0 +1,2976 @@
+{
+  "root": "data\\processed\\combined-top3",
+  "split_counts": {
+    "test": 390,
+    "train": 2992,
+    "val": 413
+  },
+  "image_count": 3795,
+  "duplicate_groups": {
+    "58ffec236c620bfe6135733c134d64641ebceb26e2a635b5a4edd5b38f36df7e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00001327.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001142.jpg"
+    ],
+    "8dadee666218e3d8f14138733233f45779d606fb98fd5130845daa2fd3372cad": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002082.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001796.jpg"
+    ],
+    "9689a8e34ce8b5544d8f702b0c0228d87ffd709449a05d9a3e26b91d4fe7f368": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002214.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001911.jpg"
+    ],
+    "b60573cc34b339ea53aef9d6abd95164443d9610d5d81ffe98f80f407f90d264": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002289.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002645.jpg"
+    ],
+    "a00147cc80e37e3ecd18e35bd8878b652f93729e7cec150fe0a357a7bc5bf769": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002332.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002012.jpg"
+    ],
+    "cc16f8fe194539f1670224433f679f7ca24b5110d1ffe151603cb31322a951cc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002556.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002945.jpg"
+    ],
+    "d170233188cecae1ec7bc268d351fe5f6c1a9b2c3f06573d02cdb0ab79b0fa8a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002618.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003022.jpg"
+    ],
+    "d1907209bff535e3787b91834fd2935bd58689c8d2b41cecfb36cbc6e71d63a3": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002621.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003025.jpg"
+    ],
+    "d8dc6a0a466a70b830c49a1098dc1786592ec6c501d43ecc74aa72ee0604b35c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002707.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003121.jpg"
+    ],
+    "d9c6ae4e3ec7e5a5ceea579f53d32e95ccdaa9959d86c2facc36499910d53946": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002720.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003137.jpg"
+    ],
+    "ddb7fb44b2788f7b8444cb4dc30a3cef0a74fae97206d3eeab8b867e3b2dc07b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002773.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003196.jpg"
+    ],
+    "de90f915e435072322f67e88f1c6f01b4767280ba19b7b03c8afead1ff478149": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002783.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003208.jpg"
+    ],
+    "ded99fab05e02e3b159a17edf5ec4027969350be8a0eca9f296fdc5d903dc6e9": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002789.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003214.jpg"
+    ],
+    "c09c4582075453708661d472f9338a21cfe1482bfca4f0dfdf911fa64166fd85": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002792.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002420.jpg"
+    ],
+    "df189c71fd86a3793e6ca905bbdf46581a258595bbca71579ffba1470c45f73d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002793.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003219.jpg"
+    ],
+    "e127a7348a7bf50c07778b303ba638eacee53361a04663360337fa11110965b4": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002818.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003250.jpg"
+    ],
+    "e13242b24a4d8217ee1e86ae66cd5e26cabbe7c05eea9fdb9255f2e14c657605": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002819.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003251.jpg"
+    ],
+    "e24683a1e3cceb1d1340a0227806343513ba413a6819a73a19da07934571487c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002831.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003265.jpg"
+    ],
+    "e24ad9910fa4aae7cd71f80003d7b5ebb5a4769184115d8154dd5ad95f990072": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002833.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003267.jpg"
+    ],
+    "c4aefb3c8998f814ec47b31a0745825bbd9fb81c7f6ba31c8b55d7e4c78bbf9e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002837.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002459.jpg"
+    ],
+    "e3cd6474bb5485b5483f311fdcf80071949b7aa981d1b30e55ea25fc10d2db48": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002855.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003290.jpg"
+    ],
+    "e437627e6835d07cc9b3f523bd27058493bddc182a0deb624a5dfe5a42f7b880": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002860.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003296.jpg"
+    ],
+    "e4626309039cafd5d8d92c55e75a1c77d985328c88beb942b31fd8667d8a3397": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002862.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003298.jpg"
+    ],
+    "e5037fe7a5c15620fbeb7a22f9cec4ddde9fd8e7fce680d6f8681a049a6dddee": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002871.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003308.jpg"
+    ],
+    "e53f3f2a6b0cbd243e91ddfc72fc345be9d8d9900e7f69bf1faf1af00e1861ce": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002874.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003311.jpg"
+    ],
+    "e5552d5d10f0d5fa2c1197bb8c14ea9347fbb7aa453e810fcb58f262c9c6164d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002876.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003313.jpg"
+    ],
+    "e5854a80738978dcbf283c855b07d4199cbb29d5fc9277b777d09d484ca0921a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002880.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003317.jpg"
+    ],
+    "e65a3473627262bbaa9080d811cd2e2f27ac88caf5b10264103ae36edf0dde25": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002884.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003323.jpg"
+    ],
+    "e76e82e44b585c31769ea605a44a8a2b4dfbf7e35861a95f546841a5ef7fef16": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002894.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003334.jpg"
+    ],
+    "e8da56a13db21f763f3a22268a778cf1bfa082c9b26a41b6c07d9c55dae9669c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002906.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003348.jpg"
+    ],
+    "e97069c6e309fe967542c169aa1b94a743f429bb779a006b5a03fc27265366af": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002917.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003360.jpg"
+    ],
+    "ea972210531325674ed2e67802de6a0c016bb9d55a4a1affacc6e0dbb424b7ec": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002931.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003375.jpg"
+    ],
+    "eaca61f1af3bdce0a5add35471d10c92094e272d7165e11823ce85b31c84719d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002932.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003376.jpg"
+    ],
+    "eb93b550ac479d1745fbe2b88badb5ef53917efadbf915fb2d7379c5313217ce": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002947.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003394.jpg"
+    ],
+    "ebb7b33262beeab78f046af53656bd847423f1f62770647073754d52d5951bac": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002948.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003395.jpg"
+    ],
+    "ec39b65fe8ed3ecf6d64cebac9a0af0f5c41c851cb5c43dcc78491d20f2b8acd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002956.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003403.jpg"
+    ],
+    "ec784c31d8d937b2f52c0bc080aafe9c800a6b7acdab756d2769dd0f299a2dda": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002959.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003407.jpg"
+    ],
+    "edb28382d26d2a11f78651eb8875a21804497fcc993be0739accc246a300f908": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002975.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003425.jpg"
+    ],
+    "ef97d6c6e4d8310f6db0bf22ee144917fc9dd9837a908316a3242f45f9f35b68": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002991.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003441.jpg"
+    ],
+    "cfd945e77bd79d35b5855728b3f18f7cf95668fd39b3a4570c3350111a87caaa": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002998.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002601.jpg"
+    ],
+    "f2654eb921cb51f7455a7139d942a70895d5f7d49e21e0857ee6715bb951e520": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003012.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003467.jpg"
+    ],
+    "f2a505602f59e9a8bb462939d3bac3ed362998aeaee489a36302b6a6c7130add": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003014.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003469.jpg"
+    ],
+    "d18ee810324450b32831965fac0fad54e3a8e913798253a22296e2ffc9cb9b08": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003024.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002620.jpg"
+    ],
+    "f3c28ddd47e2cdbb78234cfbc1610089a3b2261bdcbdabb54d76e8a393a4244c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003027.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003485.jpg"
+    ],
+    "f3c759da8a2704e425ab13d00e13405747f2f8abcf6cd5614b52db902455f1b0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003028.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003486.jpg"
+    ],
+    "f46bdbc5c7230053bea672152a5f4b66e23bb5f78e283434304aa879358ea4e7": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003034.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003494.jpg"
+    ],
+    "f4a3bc5f9b0c8de4bea10972112bbe052ae50b53d8f199b8aada0d1d182efe9a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003038.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003498.jpg"
+    ],
+    "d25aa09a871ac7e93af2ab965b5357b5e5f5c266cafe0ca1e4561229af9847f6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003040.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002636.jpg"
+    ],
+    "f4f0179e303c6e59fd9d46c16ee411a1adba4d50c22f2de274950404d0650c28": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003045.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003506.jpg"
+    ],
+    "f5bd9b86246dd593b0c6e3bd99306de867e5edd4c62445a3e29201807bdb2449": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003052.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003516.jpg"
+    ],
+    "f5f801b25d7990a577076256a52494c245f4ad7d9e79c3bedd57d7a8fc041ae2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003057.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003521.jpg"
+    ],
+    "f5fc37f1f992c80c98ccc50ceee9e5e0f24847a59ed7be85b96272998bd10ae2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003058.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003522.jpg"
+    ],
+    "f60410ac271d5f27bfd42d9be23b41683edcb0120a0b8adb8ad27f9f79a5705f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003059.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003523.jpg"
+    ],
+    "d400073f34ba9769554ef76ce7a50a29b8e4189e31f32defa04fc5d66d8cb570": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003060.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002653.jpg"
+    ],
+    "d4077fc0d1ed7bc518e876250c8be6f79f64c1b849c7fca15f1da97f1d8b3f25": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003061.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002654.jpg"
+    ],
+    "f757c7db9d302926121b290d37b32257078e9762ab649214a07d8be26f2f0952": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003072.jpg",
+      "test:data\\processed\\combined-top3\\images\\test\\00003538.jpg"
+    ],
+    "f79812546e3dceec792fa384513804c9fd514e1f66e8c7c92e3a118c54a731a7": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003076.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003543.jpg"
+    ],
+    "f7a263caf3ffec91c146b01a6f91ae43ed3ce156f62a9580d4456aac09e8beba": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003080.jpg",
+      "test:data\\processed\\combined-top3\\images\\test\\00003547.jpg"
+    ],
+    "f7df0dafa31ae9a05113ff05e9599e0e9e174da9d9003c45679fcd1f1e1a4cb8": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003082.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003549.jpg"
+    ],
+    "d5c015bfcd887d6ea8c61bef5b2c270bdab22b4d987a180ff9da05abff6633cf": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003083.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002673.jpg"
+    ],
+    "f82e913ba496c23b83257120284dc6e8cde7608af55a2145b8e474715923a109": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003084.jpg",
+      "test:data\\processed\\combined-top3\\images\\test\\00003551.jpg"
+    ],
+    "f8780fa2c198521747a322303711dda9606bd10a3cb33b20cce58d5629537a10": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003089.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003556.jpg"
+    ],
+    "d68b943d4e089e0fcf3be92138579685cccbc029781830d8a15c03683d01ea69": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003091.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002679.jpg"
+    ],
+    "f8c729d0b8e3eac545bd583a50f3390ea86e2b6083ae30b4dcf167059ea19bea": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003093.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003560.jpg"
+    ],
+    "f955943f172303bbbf0c48941c2b9cf0c664cf775f1d0722a17b8c950bd6671d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003102.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003570.jpg"
+    ],
+    "d7a4cb11fc85a674bbc3f54cc44dd013e87c0949d5aff5def01622c661ab5391": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003104.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002691.jpg"
+    ],
+    "f96ceb03fd5dee8eec1234e3c9955c8fb71bf253d8855d302eee006f25022839": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003105.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003574.jpg"
+    ],
+    "fa0e8392b8a857260e584f874a7a089738af2669f974d5543e8712d9c1c57401": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003112.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003582.jpg"
+    ],
+    "fa997f2ece102b99b23548a92f8c90004fd271eee89f340bb59058de55c7ce86": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003114.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003584.jpg"
+    ],
+    "fabc9295da84b25c3a3e1e824ca9ba3c6f7c513207a4e77ca1be208fcf3758f0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003118.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003588.jpg"
+    ],
+    "fb111dfb7a0aee1e0af8c3027d65dee353ac153a62f1e59ddc992c4b67f3ab27": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003121.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003592.jpg"
+    ],
+    "fb7ed22ff7d97c5d5f070a7881248e563500356af368007375bde003731d52bf": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003127.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003600.jpg"
+    ],
+    "fc15695deccf225a1747832b38b6856cfcc3c8aa4dc2036cd7039a514418d66f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003133.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003607.jpg"
+    ],
+    "fdbea6ba866f62ad648747082719632d1834f12eb62298e6fb233bce714d5e93": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003149.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003624.jpg"
+    ],
+    "fdd5a2bbc08e4398de3a6b9a06637885d1a740ecbc40ae01e82baac88ace7910": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003151.jpg",
+      "test:data\\processed\\combined-top3\\images\\test\\00003628.jpg"
+    ],
+    "fe9eeeaa6bfde8bf3772cfef85dd634b975414e2d2c03c689036c87023473c71": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003167.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003645.jpg"
+    ],
+    "dd63aebb1da45dd039034e321b9865d84c2afda72dae33b060ba7c1e46ff5d49": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003188.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002765.jpg"
+    ],
+    "dda70679084ada8003c81f4b5f6a745596840179e46d73a6671282f58ead5de2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003194.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002771.jpg"
+    ],
+    "ded5f6c8159413a11faf7e7dead1ad86df8288474acc44189fdbd3b00d025d43": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003213.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002788.jpg"
+    ],
+    "df124cddfaf321aad20fb571dd918ba9611356c045e5a53d98b9e77704430c04": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003218.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002792.jpg"
+    ],
+    "e10a80627dec9f4a99576a2c9d1dbff65bcf3f6040c5f5bf4b91e77ad0b8790b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003248.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002817.jpg"
+    ],
+    "e24db12b2285c4226cd26466e95783a29db7f7383076548b08f54e4ea0af1852": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003268.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002834.jpg"
+    ],
+    "e4842c11aaff145b82afa86981ee67648ce6ec261a3b1004454a8d9730e31e57": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003302.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002866.jpg"
+    ],
+    "e672cda514e8fbde6b5ce023ccd3cc6a0898525ed8de65076ec879e6cc5f8362": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003324.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002885.jpg"
+    ],
+    "e720d13efb2e6546a83b8fafd4cd8a5caea2524e8de397fedb6f154725bc7d40": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003332.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002892.jpg"
+    ],
+    "e96c74307e582ba0a416f9434db9b1f4abdae08229326877f3452046a4cba256": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003358.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002915.jpg"
+    ],
+    "ea5dfc3e9e0ad55f28c89ca4d835a32040de400fb320ab61881b12f6ce6ef73f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003372.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002928.jpg"
+    ],
+    "eb3e597deeece946a19e4d86a4f3b05eb93af215f8467c53a427a35983f87a55": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003382.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002937.jpg"
+    ],
+    "eb63adba52631cb5b2ef3563732df2f9960ed8cf50fc889976e84efc2d2b0d26": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003389.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002943.jpg"
+    ],
+    "eb8a70cbe783c23fb3a0f02851b40c07bf9d070e774f844e007920426be62243": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003393.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002946.jpg"
+    ],
+    "ec0a3807125605578dca1ab7fc68cef1987e2b084a156bba4ce7e955bb5c0fc1": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003400.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002953.jpg"
+    ],
+    "ec393106d7fc549e2a58f8bb76edacf82947ac2cfc10a73b7a3ac132551c06fd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003402.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002955.jpg"
+    ],
+    "ec5cf5ae621dc52a84c5c796e0d21e10bc4427271bfd93c00e1b348a61859229": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003406.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002958.jpg"
+    ],
+    "ed009e61034ad9c0b876bde1b30ee98a93fe231b94a5399d40c91b0f67c64ae4": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003409.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002961.jpg"
+    ],
+    "ed429b03b6ec353c08a4db5202a28a046bbf5a4eeac06565e7d2f6ef7dfb37dc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003415.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002965.jpg"
+    ],
+    "ee3edf6377b5f3202231aff27e4f5865cae52edf3637159c9c13cbc6930f4601": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003428.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002978.jpg"
+    ],
+    "eed6b3a9ce171fc3cbd4bd8ddc1f8446a8ba0f9e6aa0b8b1fb87b84effa2ea5b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003434.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002984.jpg"
+    ],
+    "efd4453363b36583b81cc720b51237fd74c5fb2c526a61cae136d8cff6131786": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003447.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002994.jpg"
+    ],
+    "f481bde31c6d0bd4206b029d3c4d63736f41c4f646c4a12435afe663ef18035e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003496.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003036.jpg"
+    ],
+    "f48d284946260ee06a7892e6676ef7f28f780c07192a4c607eff7e7b1882b023": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003497.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003037.jpg"
+    ],
+    "f4e4a0462f7b04afac503deb0bfd3112c83e4782965e58b1570f147900fbeb19": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003502.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003041.jpg"
+    ],
+    "f5cccae0aa7e4d096ad6264acff35e043d41ce5dfe2e5945dfad72401ac96ee9": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003518.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003054.jpg"
+    ],
+    "f617952707afa036a9945fc49d203ea7e29d52f15e6691de00836ac01755bc00": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003524.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003060.jpg"
+    ],
+    "f617b1c8d190420fcb1e192836f45ed44461515ca643418999c18332586c551d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003525.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003061.jpg"
+    ],
+    "f678d04baaa6460751f721e34e0cfe81d8f312a472e25ac6281314d1adeb3baa": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003532.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003068.jpg"
+    ],
+    "f76a7ce6c86cacc979031ca00ea0111bf95203ecb69fe4ad1fe5cb2d174eeccc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003542.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003075.jpg"
+    ],
+    "f837dc83bffef210ba060ca87b54a18b3a472317c3fc28dbbe0e7393730889a3": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003552.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003085.jpg"
+    ],
+    "f83e8ef749413d21dc47937085816309f777e31cfd915773a1ac0d80e8aa1499": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003553.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003086.jpg"
+    ],
+    "f8ad74cf763d2fa0c2860a39aed3b2327329eccb456ca26c39fda932995af7b6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003558.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003091.jpg"
+    ],
+    "f8fe8d38d662f9fa11fbb341aa2d0e89e66106288e42dbb8410df6f3a84412b2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003562.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003094.jpg"
+    ],
+    "f9955068d4227ad3eeee5bb6ce038cd0877e5c5f0d272d8e550edbe6b2d3d3e0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003576.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003107.jpg"
+    ],
+    "fa81bcc78b0d74c4a9b2db3da7b60a1563108dc2d3a815b0399fa79c952268bd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003583.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003113.jpg"
+    ],
+    "faa04096dcdc8cea63c229c1dd9bab7410ed993dce2f69f33e8c749231e6a8db": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003585.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003115.jpg"
+    ],
+    "fb2c68d5760bacfc47bd075d1189d3e8266e6b13ab1fc4a9b95d19cbf5d68ca6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003595.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003122.jpg"
+    ],
+    "fbb566a8249e35dd9814135f707fad58a7fecfa2a5dbfe4520426087d958c829": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003602.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003128.jpg"
+    ],
+    "fc626f0feb48ba5ba430c2700887de701d41d0d7079f2773a1dceb93f9510598": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003608.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003134.jpg"
+    ],
+    "fddf12b3657c8fc8c714a05a2de7b22b1c1074fd076b973a1c5e3320cf10ca00": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003631.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003154.jpg"
+    ],
+    "fe9bca83b807f9eb94116ce88eb28faa68a9bc5f6b575a76f22b525d8e2a7081": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003644.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003166.jpg"
+    ],
+    "fea5cae0d9381ebb06753768849f60f3e0483845fb5d13b2137329f7b029c4af": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003647.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003168.jpg"
+    ],
+    "ff2b2089201f36d36786242052930b317667846032aaf2ed709d4089325b067f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003654.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003174.jpg"
+    ],
+    "3fa1e09c1f6d4d4476a05a8dc280f63c4da3902beec94a0f9c78ad28523efa31": [
+      "train:data\\processed\\combined-top3\\images\\train\\00000803.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00000934.jpg"
+    ],
+    "5729d9b0857ce297686328bd7e1db524f36755763dfce8750a71a4e5d4c2686e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00001119.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00001301.jpg"
+    ],
+    "b54513ca10beec301a7fc315c299aa30a287bd05b7e3344d603169d27bd9b4b1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002281.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002637.jpg"
+    ],
+    "b5bf3b4aa6339a1a304061cbf790885e7538fd9662be9e0fc4c18f9a40dcf152": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002284.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002640.jpg"
+    ],
+    "b7f2a5c0cb0f782a0b9ae524e228882f8c78459f638f8a65a86dc7e9d83f20e7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002314.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002672.jpg"
+    ],
+    "b82b4627bd9abe1b484bd55c6699f9933a8e165b6aae9d9636be341e0cc85411": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002315.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002673.jpg"
+    ],
+    "b8ad969a37422a766aab6a1d338fb9a3faf53f423d801d74c7418aab10fa850d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002325.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002684.jpg"
+    ],
+    "bcf8db9682cd46e1d54d4968fdf6aff6892e3e3b36af9885780453ad78aa3197": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002377.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002744.jpg"
+    ],
+    "bde31c81427f00770552b39d0b06b504c1705aa0501a3384d9985cb4af0f7b37": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002387.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002756.jpg"
+    ],
+    "be2e771057bda6f845145fe026f3bdf9a6c9b027bb82f5ed66e39b9a86049ede": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002393.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002762.jpg"
+    ],
+    "be36abf9de2bb74028611600a91b015795c6d4c17cbba123a056b55e14e63394": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002394.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002763.jpg"
+    ],
+    "be4df0a878432e29c44b3e79ae592bad99a80865b483aa16d7e869fb8e71732b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002396.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002765.jpg"
+    ],
+    "beb8bb56356e1d5a7a07597843498b72b0d4b237622890b79b5be548f0b6423c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002399.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002769.jpg"
+    ],
+    "bfd3c06b8aa4ca9a746369fec71aea27d33dea1ba617c89852ce4479cb1e0f23": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002413.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002785.jpg"
+    ],
+    "c1028d4802b75ef097a89daae3858fd6b9d730e2b71443f35b4ef754cbf90b29": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002424.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002796.jpg"
+    ],
+    "c1100d1c5bc3a03545c158616cc08284e3cdfb899a4924dbf2d8887dba9c7c69": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002425.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002797.jpg"
+    ],
+    "c289b929819b68180d03a0eb9d34c9e4de537106d19af4f6a2a038357f8a0a1f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002437.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002811.jpg"
+    ],
+    "c317d5cf32b4107920f8df01156ab518e11dd7ec139dc99be8badb90b68ec2c0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002440.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002814.jpg"
+    ],
+    "c40ab431a57d700602f90e8fe50e13924d524c6ae8399f38f73aff78871e6e52": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002446.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002823.jpg"
+    ],
+    "c4b84813ef106a32aaa45bebfd2fbb73ce2849d1dc28130f70d81036d7fe13a8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002460.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002838.jpg"
+    ],
+    "c510daf25202a2de2485e2da8cfcc62ab2f8abcca0e129964e5f589cff375e4c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002467.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002845.jpg"
+    ],
+    "c52146b6159ee01320f0da090532d7f10407517ef1ae2623232be2437232e1f6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002468.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002846.jpg"
+    ],
+    "c5b630023b94e54d907f0537f255461ae3cd763b8ace221ae75d1f6b7a4ea525": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002478.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002856.jpg"
+    ],
+    "c608b662d4785ae2e5aeca1b3478aa7307f904dad15f9c642a96e2ce89e007d7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002485.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002863.jpg"
+    ],
+    "c73540b431b6851d2d39f68414430e162e217958562d83709370bb9cc0164ee4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002505.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002886.jpg"
+    ],
+    "c893b2d3ee7e28a05153352742ab4d2b447a06d59078d93df004cc157fdc6773": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002518.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002900.jpg"
+    ],
+    "c99b0c44c21ebee5f9d00a89a51111facee9af2e48473fd0362a2480f94afb7c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002530.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002916.jpg"
+    ],
+    "c9e3717beba4bf04016b73cf6eeebe9965c04abcd359c5601466b61d7a3cfed1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002532.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002918.jpg"
+    ],
+    "cb5196615a2041d37b6d5b7756f0e6c7dd6f18c60431fdca3b4f3c1828714aa8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002544.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002932.jpg"
+    ],
+    "cbb236395873a2720b667ec74f6bbad1ad0551f47bd93720228a63dd8d6ec3df": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002548.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002937.jpg"
+    ],
+    "cbe2beb2e5d65b877f69ff03a1d84bca7068f08b197145ee0cd87ef44e64563e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002554.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002943.jpg"
+    ],
+    "cca34ab825d98b35bf1d4ec6b84c2b2831010cc45556021f0f85511b1805f32e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002563.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002954.jpg"
+    ],
+    "ccdef29bda05c524cda880a02b5a19ea0c6656ba9b385df26f96aaec9242151c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002565.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002956.jpg"
+    ],
+    "cd5eb868a5193c754c6c2c7191e5cbbabd4f3b0935c62c911bf8ff8ab30c75b8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002568.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002959.jpg"
+    ],
+    "ce75831ca225dad758783d5027dc0cfa369da29ea9d6ed1de9019fbedcd5621a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002584.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002977.jpg"
+    ],
+    "cf782e54f85268474caa639adfc06f94644ebf8e356efd6f089bab6d0fb06f56": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002596.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002991.jpg"
+    ],
+    "d087a6d7258900b7a56924531c0b599360682cdd441efcff6bcdd2653c7a1d17": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002609.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003010.jpg"
+    ],
+    "d11e1db2acb2f055a78ab376f20da15d600c4117d6a7046776764ce4427afd29": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002613.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003017.jpg"
+    ],
+    "d17efd39d9b579f6a9efe22d969e6b5866a8c3693b892c2e82809a0c143cca5d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002619.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003023.jpg"
+    ],
+    "d19a51aa63fc09cf73ae8741d0fcc4b765588e792de9ab5172218a5a568e28a9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002622.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003026.jpg"
+    ],
+    "d1de5b3709bddda418940631f4da2d7f6ce2c98244051550c134fdca505e9c04": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002630.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003034.jpg"
+    ],
+    "d2209d759caf26acef692ee9706c1338552aaf5b9c9ef778a679d4d120df93cb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002633.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003037.jpg"
+    ],
+    "d221eced9bc2475e75b22690381b6e85e109581d6e1200150576f77ae332cf4b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002634.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003038.jpg"
+    ],
+    "d318fdfac363cd1f75c43ffc900f232305739554dd7c97c9508135fe7a6b353e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002643.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003049.jpg"
+    ],
+    "d3e8cc7f4b738aefaa1831f991947adc6f1a991ffafd756df57c20e2c52e2cbc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002652.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003059.jpg"
+    ],
+    "d44cf5fd1b80e21756756702f896cb6ed239b27cbb613226adf7a116618a9b91": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002657.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003066.jpg"
+    ],
+    "d45317e57b9c841fdbb0ac656018b43dca11b08e4616fee405b6b01e62aa6d30": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002658.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003067.jpg"
+    ],
+    "d4a0c54575adb3c62eda86dbdf68144191d34315bdde63a13bd48d49e112411c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002662.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003071.jpg"
+    ],
+    "d4a1cf809ad07737a232e2424376c7f871ba15e8f799c874ddbecea6a7ea797b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002663.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003072.jpg"
+    ],
+    "d51d8ca1777e7f4972d5b6af3a23b16bfd4e9d7b3bb069ba2cab2d2e1eef9d30": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002666.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003075.jpg"
+    ],
+    "d5457ae95194ebb4738fbde9d7fd77fcc6deb3c9ee71b1a62ac32cbd31315823": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002667.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003076.jpg"
+    ],
+    "d5ab5c98c22719a9a00e30005194dba1f98e3a3614803456a613d0d03f046b75": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002671.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003081.jpg"
+    ],
+    "d5ca7ad76fcf533b1480be2627d6e47ab5eb394852423df99e8e00578974d5c6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002674.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003084.jpg"
+    ],
+    "d69261264db6167f9cda91c71ece3eb4431c068ff477ff43f204935775c97315": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002680.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003092.jpg"
+    ],
+    "d6b7d6008aa5e53d0835ba24d6ffdf8746e930a97000580ee8f3b401874513e3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002681.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003093.jpg"
+    ],
+    "d790b3a2bb40ff016691db1b612ac8399e314aac22da995eb227d4644211959d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002689.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003102.jpg"
+    ],
+    "d7d3706f36cdc7f71ea95b32bfdce6862d998445c99fa9ca37661b459aaef89f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002692.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003105.jpg"
+    ],
+    "d7fc896e593b61c4152be533b49437f619d4f189a182f651001670c055974e08": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002695.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003108.jpg"
+    ],
+    "d80a42e4f2e43cdabb6167ab6cb2f8d01d30ae6bd7fed94976257d45cdf43c5d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002697.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003110.jpg"
+    ],
+    "d828996c1e41f7dca0a558f5c79663025f15bb61d7c3717b01d522226fc3ea06": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002699.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003112.jpg"
+    ],
+    "d8c7651a85de482e6c09e862ca0a0d72c0765658c5190e8d951946880a65d946": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002704.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003118.jpg"
+    ],
+    "d8dbdcaedab52ab505577202f85c06750bd53d3694eca8a474078c97fd62f5e9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002706.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003120.jpg"
+    ],
+    "ba6633eb647c014a2114a529feba3004e7d7d295f3c045e51bd0eb4f9e15e563": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002708.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002344.jpg"
+    ],
+    "d91d230702464b7cc9a1ebd2c36ed01614473e62ecf0f2129ca93d652e2267b2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002713.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003127.jpg"
+    ],
+    "d9949a8bb2b571fa8cfe3e0593807f39f5e3c7ac11de75929d1315d45e1567bf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002718.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003133.jpg"
+    ],
+    "d99791d3b97e22ac8f381f38bddc6fef66390535f94ad8bb0d0fdc950aff7a4c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002719.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003135.jpg"
+    ],
+    "da0a73720281679f5b769d6b057f596bf3a29149aac0dc82f4470225a236eb0d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002724.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003142.jpg"
+    ],
+    "da7884890f62e081728db7f52778a1261ec0542485a1dff313dc9b64a5bc98d1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002729.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003147.jpg"
+    ],
+    "daa21d085f2ad98d4bb61e9dd8dea891256cbd2b554f91071cd31567ec1720af": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002732.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003152.jpg"
+    ],
+    "daa62c5ae8148c523e72d796f4978db2961d566a046edd2ba95ab9111fcc4722": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002733.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003153.jpg"
+    ],
+    "db58771fc767e01542fa4094bc72fd7cb62261e73206fddf2366a8ecb19266f2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002742.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003163.jpg"
+    ],
+    "dd5f70aa4ae0772e6c2a18850ae1de0717f8f85eb59b458acbc16951aa7628e3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002764.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003187.jpg"
+    ],
+    "dd6894dc2ca9d08455271cc3a5207129355a918b985182178eed63f35ef7c555": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002766.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003189.jpg"
+    ],
+    "dd7268e05dbd182ae1d70f8f3c45d8d22c33c51a89f5c08ff1677a7ba1b455b9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002768.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003191.jpg"
+    ],
+    "dda64fe20772ae02d487156597a02c11a897afb5bf47fbb6b197966dcc72c006": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002769.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003192.jpg"
+    ],
+    "dda689e0e3123ce5715165538d06d3544cd9921eb145d138a030cb1cc1d931ab": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002770.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003193.jpg"
+    ],
+    "ddb1ed6e7aa33d77d78bc884966ee61dae0f296d91fff15d99690cef1b99787b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002772.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003195.jpg"
+    ],
+    "ddb81ae872312928425921a008b65c506ddc03dd3713c041b4a8f21adcbf31f6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002774.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003197.jpg"
+    ],
+    "de1f904a7ec9eeebe3f1ef6e500c9b080ab45cf968b947bd719fe57fc779f2eb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002775.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003198.jpg"
+    ],
+    "bf08286da6372b085de258276a16dca8531b1b36fe9ed0cbe64097a2a500d7b5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002776.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002406.jpg"
+    ],
+    "de39f5c223a4f967b1463a98d55bc87b2b1c5fc03f5b41e9127fef6ff922797b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002777.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003201.jpg"
+    ],
+    "de7055c2043de0ee6647a8e09af94554932ac19c44bdb7bed4f005b5faa46603": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002778.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003203.jpg"
+    ],
+    "de741c5e467a416ce92bbd5215d0712c859f3f5940ed4828ccdd93438911877e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002779.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003204.jpg"
+    ],
+    "de7708eedbfd70aaf1b82134cb194c841296c75e04d9011065dd6c37133a8aec": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002780.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003205.jpg"
+    ],
+    "de8403b47599fc232c48e3da793b7c13dbc62b4bf5fed544661c66e44a7057cf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002781.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003206.jpg"
+    ],
+    "de87a77d8f6f01bcd2433cbe90bacbc1bac0e915015a2f2e6c0a2d494f4537f8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002782.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003207.jpg"
+    ],
+    "de9c34cab129016e1900279787b709ab928049703655a6b4b7209c7e89b119f4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002784.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003209.jpg"
+    ],
+    "deb2201e9eccb11e1def548528439f20b81ea6c33ffb3d3a9cb852d1988591fd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002785.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003210.jpg"
+    ],
+    "deb9b31e5b88ed0d8be76b6b8047d37080b3de6c45ae13bdfcd30184120589dd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002786.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003211.jpg"
+    ],
+    "ded54489fa7d5ba31bf6230ea75c99ce07109fcbcb83e28691b5fcecec7f4743": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002787.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003212.jpg"
+    ],
+    "dee056e0612576d065d999ec61d39c5bff13e134b36c6185c2de5d66da10947a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002790.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003216.jpg"
+    ],
+    "dee1b9c1c1f03af7c6dd762cb420fbafe494c90b5b54d04418976cd707e0b4a7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002791.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003217.jpg"
+    ],
+    "df3810a543fc6a072e4aa8e345b4a188e717b29ecba765d6d76cb5883c4872e1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002794.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003221.jpg"
+    ],
+    "df555507e172493d074af6a3649dee1ff7f8c817b9b1c2382699a23100d93765": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002795.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003222.jpg"
+    ],
+    "df73597f5c65c50b12516e9ec8a59b0c69f15eb0d9259259f8500fa851e4304b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002798.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003225.jpg"
+    ],
+    "df79897b83721fa3eee1ecccb19b6b1c3795ba1326bb37d0cd2ca0f6fb732c25": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002799.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003226.jpg"
+    ],
+    "df801e82a2e6112ccf9e01fd37a9cca2e58e72541e4af625932b6253381c1581": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002800.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003227.jpg"
+    ],
+    "dfa53b065f853ae01f9a275c63f68408fb988d15b82af3cd0791ec109e311e0d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002801.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003228.jpg"
+    ],
+    "dfd36d1ca9ceab3aa924162aebf88782cb2fcc22b6b2c5c1d2cb4608d9061625": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002802.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003229.jpg"
+    ],
+    "dfddeb04b696b6a70eda40342b068cee130b649fca89d6177162d57f2c214f9b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002803.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003230.jpg"
+    ],
+    "dfef4d962550c9c66f306dcc9629d07a4cfcae5c25f19de8085d894dd4e1fd31": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002804.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003231.jpg"
+    ],
+    "dff7c2d169c76dfa8059eef0d0b0ab2f92218524cdc37cc80ad33f253a3f3765": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002805.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003232.jpg"
+    ],
+    "e02aa50d5ede4f4e748536c7066fadabebc447c70c9007846f690c43a9ad069d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002806.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003233.jpg"
+    ],
+    "e0366441f649a64700f7e274a437e24544b5f08d9e5cbd746bafc7df5703df3b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002807.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003234.jpg"
+    ],
+    "e04056b975a73be9c79fc5f58786d5d822f5d3592aa4c1bcf301dc3244eaa685": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002808.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003235.jpg"
+    ],
+    "e04bd254a68eb9ab8b8ca4031ae6b55472f8f1a7c579dd09012a490589c134fe": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002809.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003236.jpg"
+    ],
+    "e04f6cf12ae73ec200f69db92946978e1b1353e07fd5ebb6719409b9347b2602": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002810.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003237.jpg"
+    ],
+    "e05a1910fb8ce475d1b576f7b2e40d7a30ad44ec55b8a3f3f5f501965b2efa4a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002811.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003239.jpg"
+    ],
+    "e07b971e4c9964e47f45fa7b804f9720bb9e661e385bf407a0a216faa1c0b597": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002813.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003241.jpg"
+    ],
+    "e0942eabd5299fb982c98cea65d6c33c1d4cbb13a99186ac3de18426ef7dbfcb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002814.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003242.jpg"
+    ],
+    "e0a6c1aedb11f99cba1b1ce35ec9e32933234b8b3229db1a039df4fd4e67d346": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002815.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003244.jpg"
+    ],
+    "e0af06200640929ab720d2d08ebfc17e7bd170037b669d0a0c926e5b0442d082": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002816.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003246.jpg"
+    ],
+    "e1483edbff5f2877f6aad4533544f6414ae364be11e0c7d5ec0cc65b4afc8f7f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002820.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003252.jpg"
+    ],
+    "e157158ea39f56c57d145dc08de60e4464c8b6631608ce0d1c28ab78721ab8bf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002821.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003253.jpg"
+    ],
+    "e15c1e6443e0423ab584e5a8e99e2b190f950e4a2b3def2d6852ab43a1cf0e36": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002822.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003254.jpg"
+    ],
+    "e16d22757e3705daac8a80654fbbb74ad492639e7af8f5797cdb561a2d6b6516": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002823.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003255.jpg"
+    ],
+    "e18b789d032bd2f8b5f2fd7c3c20974555d03eee3f166af65c6c17df3113b0b1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002824.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003256.jpg"
+    ],
+    "e19a88927444d5c3c22031ac169e6e9c2c97226b8023a9f2d92bb5701fa23bcb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002825.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003257.jpg"
+    ],
+    "e1a634c258436eb39da23e063c98bf26315d7bb69837205507b176971a8c3270": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002826.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003258.jpg"
+    ],
+    "e1c1e4ef16902ac31260f3b8d54f0407fa857b6b140b962e24a71ce38979aa82": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002827.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003259.jpg"
+    ],
+    "e1e20bc62d1611efdbb66f15da1add9302467263230384c25eec21074e4d9a5e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002828.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003262.jpg"
+    ],
+    "e1e4875c399a76be9ffbf33fb7c9b2a445d50b39e833b78fe3fd4445b67c8b13": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002829.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003263.jpg"
+    ],
+    "e232ebe4d754a4703aa352f1a40ecbc3a65a5a6f578288ab76ea071a0f52bdec": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002830.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003264.jpg"
+    ],
+    "e259a0a2558764c60637e592ae2140d933a667346b465f93664938d8b80d2c80": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002835.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003269.jpg"
+    ],
+    "e272fed5e459cb93b05b4db0cd499761ff613257771065ffb128a7d7bc0c5dcf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002836.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003270.jpg"
+    ],
+    "e29cdd0ac8a095ea5373dba1b57597a7020c5df528895486f397cb59e214b02c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002838.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003272.jpg"
+    ],
+    "e2a5ba89846bf608fbb299ec5114d2644d940cb4a362071de586e4b9e8636748": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002840.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003274.jpg"
+    ],
+    "e2af8cdbb6eb6f66735d48dbb14bcb0ff50a20e77299a456f7d18353817d937e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002841.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003275.jpg"
+    ],
+    "e2bdde4a586f58b9b9be3cde1f3ea37aeb807eff2a59e4a519b2b68560f9f877": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002842.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003276.jpg"
+    ],
+    "e2e7307f32d12f50246eb865a9e5af39a696fc091150d81f4cd953f69f6e8b3b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002843.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003277.jpg"
+    ],
+    "e2f2346ab246694cd166a8ad3e3ba3e5a2ba3faeaec76ed740b5333100f0219f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002844.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003278.jpg"
+    ],
+    "e361b4463f921c9cc9af9d1cfafa63e0009acbd48bb26c77f8fa6021951695ef": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002846.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003280.jpg"
+    ],
+    "e361dc8d61dd2e0816afe4aab72eed7edfbbeab7517d251e7df362a2be098d61": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002847.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003281.jpg"
+    ],
+    "e38419e0087a3e183eb3671b5d898b6be69becc32925a738905790a05b26cd3d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002848.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003282.jpg"
+    ],
+    "e3966db115ff65e0aeaa01eb5990695c639b678d7283d2e035d419db7893174a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002849.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003283.jpg"
+    ],
+    "e3a2d76972c0a446bcdcc1575538281762a9a606f5345077a64a767581a4d1ae": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002850.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003284.jpg"
+    ],
+    "e3a4d3425bc0acb4ca2e7cb9bd6da033795a4e68b399cd46ee8b9b8f3da3da3e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002851.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003285.jpg"
+    ],
+    "e3bccd311fd0759b134e568cb32d047a4edfb361d6d778d61b9feda9eee77391": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002852.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003286.jpg"
+    ],
+    "e3c2e8afcaeac8021f8c25c567ebc1a7c3afb28d17403556ffb123c5e6bf14fe": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002853.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003287.jpg"
+    ],
+    "e3cb256facc5f564f4ff36972459d76f068b02de86abcd8ad3969d5298c329f8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002854.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003288.jpg"
+    ],
+    "e3e2bc1b49b92d6d625b83a46865d92010659361ea8b11d7d135ded1c572f18f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002857.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003292.jpg"
+    ],
+    "e4132e37f9b2fab965401743c3886799b87f649754b8e0c0686f3f69df99729f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002858.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003294.jpg"
+    ],
+    "e41381bbd87e8b23bc910e048517857f1afd608727ef77bccefe0dfcdf13de51": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002859.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003295.jpg"
+    ],
+    "e45fb737b50566f9132cffe1c5e0a78ccf2ae6c3bba4b6d635421377434529e7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002861.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003297.jpg"
+    ],
+    "e465839c40090a674b1f47b4188af65d149f24b4904ce61ac3d88a2758a96413": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002863.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003299.jpg"
+    ],
+    "e46d1dc11b0f56dec0e0cf1332818a114fd8b489a18fc51d67f93eb8b5a9d8d5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002864.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003300.jpg"
+    ],
+    "e47c7207d993a6720a6b595617567922a7f29f0844ea2de5006f0f51131e8df3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002865.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003301.jpg"
+    ],
+    "e4ba7b1f22fa92bbebf459ba0c8a33ec2b3b94adb07583709a4ad084f4247681": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002867.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003304.jpg"
+    ],
+    "e4c2707189d342bf209e36fd99b84e289e06f33fe0d8c32d8bb8761d6febd2c2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002868.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003305.jpg"
+    ],
+    "e4e5b246d91a5a6e8e3ddfbb97c4a4f6c3f4279bf22e8a109dc819a00ca78fc6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002869.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003306.jpg"
+    ],
+    "e4f86a1fb5757572002e60b81fb50047541bb6f8981a871bc9b1629a9066c25d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002870.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003307.jpg"
+    ],
+    "e52565709da8f01c17d60db1aa3c8a671e93398f1a4fba55bfbfca2d802841c9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002873.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003310.jpg"
+    ],
+    "e547a08da902bf71ea08643b62dd30e07e9de18cba82e1c02802b46968300b4a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002875.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003312.jpg"
+    ],
+    "e5583331473ca803e529ce7c30e54ebcc89643344cdca03656d885341aadf652": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002877.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003314.jpg"
+    ],
+    "e573653fb9abf451b5ea41f250d900289fd482290b0c78b1a9b335ce4416cb31": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002878.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003315.jpg"
+    ],
+    "e58372e0a6f3515015a9f36eb4e9e0a2dc1ceeef2439b8ebbbca1941838c1c35": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002879.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003316.jpg"
+    ],
+    "e5f2a1a3ff9946f17a6b32b861abecea23076c6fa06cdb075e8348fa68f3d5d0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002881.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003319.jpg"
+    ],
+    "e5fc15afabcf0499352a466bfba25d4b2426489158a530fc3ca4ff3e74cc4888": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002882.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003320.jpg"
+    ],
+    "e6529d45410f5c970130a796d67f78767e05fe02b05bd96ec2ae3563736219e3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002883.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003322.jpg"
+    ],
+    "e681d2e1155ec598e09c8863f28a330a9963a958057753750d6b6cea8fb449a0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002886.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003325.jpg"
+    ],
+    "e686d8a3c006285dae97e375b671b51af744c64d147d2b3e9a4dd4b9aad81f91": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002887.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003326.jpg"
+    ],
+    "e6be99da273b4506a03132afe2e0c8ab329c836a23fe5320ac70938d15c7c82a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002888.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003328.jpg"
+    ],
+    "e6cdc306ad7b268196ab89075326492291b5515dd8fa4f645df986ede92db907": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002889.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003329.jpg"
+    ],
+    "e70cf981b9c6326f3402cfe921562919b9839a3e2c88b3876217a82109b57b64": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002890.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003330.jpg"
+    ],
+    "e70fc82c633f89d36f899ba90fa3a1bbf511c89519450fecfa9d12d5129e4b2a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002891.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003331.jpg"
+    ],
+    "e728623d1d95a04cdc77b3a184b739dccc9573ca78f183cd58e243b4f85f746e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002893.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003333.jpg"
+    ],
+    "e7d17ccaf8abbef2575ce4bef7ba408e24d284873b74efcf1e8ee21cc802f246": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002895.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003336.jpg"
+    ],
+    "e7f1e2ebcabf034bbfe48ab93702dee3d5e6f4d291ba8ec7e451bd09644e21fd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002896.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003337.jpg"
+    ],
+    "e7fca980e44575bcfce24b51b8ecd6d32e65cc8b9664ec4d0b3b2aa91641bfeb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002897.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003338.jpg"
+    ],
+    "e810ee746c9680954481361c498aefdc344afed69b2847a494cb08d74076f8cd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002898.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003339.jpg"
+    ],
+    "e850fca2f81ea18e541487bdc6a0569403e0b5168a3516b80dc22382c80b4e88": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002899.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003340.jpg"
+    ],
+    "e85a60b39566e2f0d9d835d3f06202afafa3a0c90d31b1baf7431a7824fe23c3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002900.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003341.jpg"
+    ],
+    "e85f9013e8ae8bba13b104da3d7de4b0079419d427e8a3eece4e025bc89780ce": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002901.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003342.jpg"
+    ],
+    "e868649e4aaf2d8e0c5ef077dc42d75412e9a04b640d78fbe38f25717d9d0cb5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002902.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003343.jpg"
+    ],
+    "e882b22f7310bb545988dd061d99894041372b57261d08988f3d3124898ea1da": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002903.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003344.jpg"
+    ],
+    "e8c715015acafd7355bfc709233020a6e52e05461748189affa0a21bd1eb8bbe": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002904.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003346.jpg"
+    ],
+    "e8c78f672eb799a9cb9d0edfe97026a40d7c8d4d860b4630f3201b2abd1e7d13": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002905.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003347.jpg"
+    ],
+    "e8f1122c1fc4acf0229dd6013af886a023605cf0cb93a307dcad7c7c85bcf690": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002907.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003349.jpg"
+    ],
+    "e90dc6ccdcf5e1b8af5ae4f972c619db229c847bb995eff35fab374a73c9b1c6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002908.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003350.jpg"
+    ],
+    "e9275994633d6a1eecd845751a64a35957e2a9d4e9dcd1d437933d215ac7bdd7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002909.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003351.jpg"
+    ],
+    "e934620745b261af19747560505760beddad47c39689c64376ed82d01f4698af": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002910.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003352.jpg"
+    ],
+    "e93475f009a2de1dcf51fd1c4b7d6951bb77867b71eb6eec87d76a6f5b21e6eb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002911.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003353.jpg"
+    ],
+    "e9422273220c37f3c18ae5e39ca6c6e9b9491f643fb2e38d213e0a01928e0e7c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002912.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003354.jpg"
+    ],
+    "e9489e98321e6286dec9bb4d6a36e12abc91449e0df2d0815e6c84b5a3928990": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002913.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003355.jpg"
+    ],
+    "e964c05d73c7cb5581e72f830d6f18f062a8a59f8579350aa5002a0486cd09ac": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002914.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003357.jpg"
+    ],
+    "e9777d03f54fea156dd5c8ed0dc609cd04c0735d4c2516d6d17fe0550719d6dc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002918.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003361.jpg"
+    ],
+    "e97b3189ebbeff1591c5e200582a87a168d5672895d38994cdde5b2f67010f9d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002919.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003362.jpg"
+    ],
+    "e985c291047082c4c7b3710176e4d371b12bcec113c5eb57a9b63c2873edf483": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002920.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003363.jpg"
+    ],
+    "e99299006eb35b247868897e507d6df5f808a9048e29158d6d01c855b9586fa2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002921.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003364.jpg"
+    ],
+    "e99311811be783e6a9a3b85b48988d93ec8d09c5bd73d6eef8774b68ac87a3b6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002922.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003365.jpg"
+    ],
+    "e9b1aad3b7069a4642a7e093ef18f191441dd08f8a5dfd8df8604905796dd31d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002923.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003366.jpg"
+    ],
+    "e9b49f361f7f80c293d898e57c11398ed72ebd7ba48a03c96584aef5ed7dbca7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002924.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003367.jpg"
+    ],
+    "ea3a9fd4b922bd24880fb50d5607d65a1f7b19c18c730f6f37688cca77e07b76": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002926.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003370.jpg"
+    ],
+    "ea5463d173212e378fdcd582832a8eb827c4e957378803538148defac222ab5a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002927.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003371.jpg"
+    ],
+    "ea688d5c4131c4c57a8f00210f5c39720b28f8d85b77d558707b7dd09070c85e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002929.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003373.jpg"
+    ],
+    "ea6ddbc81a0290276852039c8698645e4b7a8ca4d156f090c031d7c07de9cce4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002930.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003374.jpg"
+    ],
+    "ead47183bafe51bbcc7f7167e2821dadbd7b44edbe827f7b3d6ad78c851ce2d7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002933.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003377.jpg"
+    ],
+    "eb09143188e1786a386fd72dfac7ae386fb4c0a39f811fda1557ea7a3bea217b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002934.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003378.jpg"
+    ],
+    "eb27c28a4d22d354d3116f442c2f96bef4ce55941273fc2bc92866a1535342d5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002935.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003379.jpg"
+    ],
+    "eb38af33d65f67ba5bab058ef3f923d4dca2a63c376af8f9178d714d2a87480a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002936.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003381.jpg"
+    ],
+    "eb413a96561d1bfd6f9d2d975c3e495c8412ced7ecaef5d8f1b9a463de0b1969": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002938.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003383.jpg"
+    ],
+    "eb43e14928fc620128e9763cec2205c1f33f428c33404944cd4bc636cec0816d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002939.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003384.jpg"
+    ],
+    "eb47993c86a4be6a9cdc88737e5b2f09b7c75283431791c7cbe7262db0065692": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002940.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003385.jpg"
+    ],
+    "eb57c2f2cbb339adeb9f7d114aa4cc38755ba37b598017fbd8ea06fec57a94a1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002941.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003387.jpg"
+    ],
+    "eb5eb860f622d9e2f11c975a0edb7ba10f3aee613e0ab94f382b048bdf81f327": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002942.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003388.jpg"
+    ],
+    "eb7a9e2bd1d90ff1a36a2d4c5473739ab959452a6bda75787ad6617363bac824": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002944.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003391.jpg"
+    ],
+    "ebd6392140bd9f180545584e5b15acf0a2a1149becc9f662c7c00596269b80b0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002949.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003396.jpg"
+    ],
+    "ebf099fddcaa4747500b1d7bc3d6c1c4933e1b80e2e7775cfa57792716cb73fd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002950.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003397.jpg"
+    ],
+    "ebf75477f35807e62856eebb9c4c70a77f76882025320764e7000ef7cca241fc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002951.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003398.jpg"
+    ],
+    "ebf86defe6559817ee0fd7f03d30114088ff063b685b982e0916a20880bbf978": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002952.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003399.jpg"
+    ],
+    "ec3cda99efb1790f36a7ef43d6cc680e82899375d1c75edfc129b4b134610417": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002957.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003404.jpg"
+    ],
+    "ec9be623bfb10e0343cba166e96e65cc5b371453f9b7f1013b15b0b5c3b4172e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002960.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003408.jpg"
+    ],
+    "ed105116b57153db94284e6a467a11a46c314f6635196d4d06669885657a3acb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002962.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003410.jpg"
+    ],
+    "ed1aee1c0b3b5cce8771004a239483cb6f7da2e201001ea9c9251d784cdc40f7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002963.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003412.jpg"
+    ],
+    "cda31a8c33c565bdd8354274d8c9744cfa73315b7e89651df7ed723df4ac4e05": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002964.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002572.jpg"
+    ],
+    "ed54a0ed4e2fd9a6d4e0d264c236ec20b385cf200efbe8fdf633832ae3979f8e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002967.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003417.jpg"
+    ],
+    "ed67ae7659eeaf45ff3217ffa2ec7b0179cafdafee94b2a4554c586617f40aa0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002968.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003418.jpg"
+    ],
+    "ed6c93424490d7e8d13aeac2e1035412c20f69015cc1577b5d901471251d94a1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002969.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003419.jpg"
+    ],
+    "ed8773463c08ca009c71e7bb0dd0387bdfecae4f5d43438e827aa475048cb144": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002970.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003420.jpg"
+    ],
+    "ed8f8fdd3cee2cbf19a69e19e0d9b4f10140ce261fd6fcce9641a389f274aa34": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002972.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003422.jpg"
+    ],
+    "ed9e22846c0a81cea23eac6d7d22afaa1b3f87a1a1daa097502ac7eec0d36a86": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002973.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003423.jpg"
+    ],
+    "ed9f7079e53fe2609fff075eff33e4b3f8a5cd61ca0b4eb776fc7c28a6761e13": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002974.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003424.jpg"
+    ],
+    "edbae3d80800b790c41d6b562eacd2e9663948c388cd6a5170e0a253206762f4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002976.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003426.jpg"
+    ],
+    "ee5e8bd952440b1ca4cd83f626de2bcc1c62c5c4bde0be3820823fe39cbb080f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002979.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003429.jpg"
+    ],
+    "ee6bf1313d412252e0f662a6ac8841eb46776a3ba6678b3cf3aaa2f32dfde564": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002980.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003430.jpg"
+    ],
+    "ee887c71b17cd6b17eebed3c336b70fff94b168528dcc05617f4ea7a9ee84c31": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002981.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003431.jpg"
+    ],
+    "ee980c89854beab0854ae5d19f84b68172a347c22f359cc44459f550beca3739": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002982.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003432.jpg"
+    ],
+    "eeb1b2246b3d5986bc7b1922145b9af31cb7cb639a07dc54de37ecf65c1715b5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002983.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003433.jpg"
+    ],
+    "eedd05746c8961456568fd5259db3939b4715f48898008ad8a9ef382c73bde7e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002985.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003435.jpg"
+    ],
+    "ef0bcbba6f15b1d6981e618342f89b13961c98a7538c969612f04b30fbf13b93": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002986.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003436.jpg"
+    ],
+    "ef5e5edd40c1276fdc275a6103640c6083db28fa2300be31d2a640572838d466": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002987.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003437.jpg"
+    ],
+    "ef79aa3e9efa40f6e32505114c1325575e522017c0232cfc54204c4f7cf7701f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002988.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003438.jpg"
+    ],
+    "ef80e9486889a7e481cbc38b89519d97181fc632369caff445b8d37abcd59e74": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002989.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003439.jpg"
+    ],
+    "ef8ec51f68f1d4a26bcc6249c8fc46908dd6e131bf182a051f2f833551c108f0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002990.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003440.jpg"
+    ],
+    "efa13d1af5a0beb4bbad329ca9ce3d71c38e7f893e26f6ec450bcd32998b1f00": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002992.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003443.jpg"
+    ],
+    "f00a7bbf849f04b8e91e07afd1167c19d5ddbc1b7e5c8d91f9eb468027f1fe0b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002995.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003448.jpg"
+    ],
+    "f06a4177c3e9540978ff5bb46ba5b6a766a28f3008b86c27e60ef1b901db3760": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002997.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003450.jpg"
+    ],
+    "f0cd6bba254a717632c4401b0a2cfc3e91c5724df9603a9d5076520bebd2b54f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002998.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003451.jpg"
+    ],
+    "f0d737c70d30f86e2a5b1ea5efd0eb757326d7cd536133f5c35a0c0810f78567": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002999.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003452.jpg"
+    ],
+    "f0f769652e4f4a1bf86b87548b5432abdefa943ec78e8f86b4ec1f260ea025e9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003000.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003453.jpg"
+    ],
+    "f134a6cd3177d57a6ec2850f74af8a45fed6c24ff22933b9f1a9d1c9b011a1dc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003001.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003454.jpg"
+    ],
+    "f1393f29dd07068f0b6e6648fb90a96d4e004d6cf8e33a7f10cfc1793fdc4703": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003002.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003455.jpg"
+    ],
+    "f1497a3594b253e44fef9fae52b34b8bec5f6e88a3c7aeb119adb53b6bfbf971": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003003.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003456.jpg"
+    ],
+    "f160ebe6e896f80768227399cf0164e86d22892660a6893718ff487ace4e3099": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003004.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003458.jpg"
+    ],
+    "f16878ab30baf445be834d376daef9768cc3da6815745bf4c184d2a2f5eb3638": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003005.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003459.jpg"
+    ],
+    "f170f5513bee1cd2d7e35a65e2dfb011961241470616d767241ba545680662af": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003006.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003460.jpg"
+    ],
+    "f1773e324e9b1a16043e057a0a09ccb6c0b11b5026b40ca7a828a14252eb7c60": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003007.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003461.jpg"
+    ],
+    "f1d91b0e65a851058e51249a9de4d08bbadd34ea878f20c580595547f1108022": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003008.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003463.jpg"
+    ],
+    "f1dcfa46a0b9a0fbf8e696ccd4225c33cf1ea8d806f82e04a1ddf001c73473a9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003009.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003464.jpg"
+    ],
+    "f2216a476cd1a68eb54d0f57ace0313e8f899e7cccb84f02766f5f2c0f34bb3a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003010.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003465.jpg"
+    ],
+    "f29a8bfd0035a7a6f4d7a60cfdef9666d136d26b64561270cd88ec7614a78be8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003013.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003468.jpg"
+    ],
+    "f2b7bb2db2f4da10f2cb19ef6ed4033680a61a0425d2349ab4ead9f351964c7a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003015.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003470.jpg"
+    ],
+    "f2bccb698f3737f647dd34aeb1134a1fb078e48e519e18cd6a8ffeef5c9a4f0e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003016.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003471.jpg"
+    ],
+    "f2f0f71318d77af93d6263ea381e3e510d315219c40f47fa431cd57b8606ca58": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003018.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003473.jpg"
+    ],
+    "f2fb5a3a4b7271a713d102554b8a3d54fd26144006fd438e1c25fc6d26e4714a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003019.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003474.jpg"
+    ],
+    "f30c45f40d0a62e01a6cb05fbf911e2f568a923fc54497c1058b0713eaea8c3e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003020.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003476.jpg"
+    ],
+    "f3106cdc351ccd02f252f9491358515d1e6f556d8411bf7dcd29f05dfcae8beb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003021.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003477.jpg"
+    ],
+    "f31285f29dafdb0d2773951a6604a74e1916a593632fd1e536779ba6fc99e0ca": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003022.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003478.jpg"
+    ],
+    "f31a6b1dddb427496a7b8cd33a187ce2591c24d591b18e4a212bf68feb04ea26": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003023.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003479.jpg"
+    ],
+    "f35cf4a4c9d7901b0fe1b104cb73948ac7ac2aa370fd830cc789da3f5186549d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003024.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003482.jpg"
+    ],
+    "f38fb1e6a4b7dc49c2635b0195c19aefc6483f3bc8fbf99d3c7adb2eb222f6b1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003026.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003484.jpg"
+    ],
+    "f3c9a34f2405615607f494727e66a23b2adb5e7a6046a175fed8ed13b8505c89": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003029.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003487.jpg"
+    ],
+    "f3f829c60e6deda58143fe2968276834e23d968f3051545124f79ad9e6039209": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003030.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003488.jpg"
+    ],
+    "f3fb101e6a591f23f7c0f66f11dc795cc369b6989b62eceafa950ac01a9fae93": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003031.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003489.jpg"
+    ],
+    "f4330bb888c57fd396b60f37006dc6f380ab9a9405f6081ee993f0549881444f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003032.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003492.jpg"
+    ],
+    "f459f132fb932fb5bf9ee41865224a53ecfd9381d3cdc66da7f81d6854498940": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003033.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003493.jpg"
+    ],
+    "f478d4d810fa560cedf14422bf63953878ac553c60242abd4fd13308ea1a5773": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003035.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003495.jpg"
+    ],
+    "f4b10ed2de3358bcb9d5d17c9abeffa65a52ccef44c7e7b4fb85b89f7f0ee81b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003039.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003499.jpg"
+    ],
+    "f4cb324b5f268fee2bc606cbf01bba98dc980cc96e9af71bb11f52d6d5e26bb6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003040.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003500.jpg"
+    ],
+    "f4e68577abd116a4fbc56be6a3db9978e0ba93ef564bba723561f35b7d875dfd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003043.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003504.jpg"
+    ],
+    "f4e7827ce5a273a3d900346bbfd53848ca11f3a75ef82fa3bade51eb876594b6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003044.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003505.jpg"
+    ],
+    "f4f236ab45538faaa7ef2cfd4b30a1207ca492ff47071b4e8e7284ef6e313666": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003046.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003507.jpg"
+    ],
+    "f4f3145a1cda8c8de44d0c15b0157e491c51830eeeef1ff3ad9a6939187e8188": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003047.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003508.jpg"
+    ],
+    "f4f7e41126309ccdeff9cf683a04b50628437ae102a315ef67bb155446171346": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003048.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003509.jpg"
+    ],
+    "f573c93aab71a2a3ee58cc115224d7521786d8ef505702d69204e04b38fa9767": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003050.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003514.jpg"
+    ],
+    "f5ade74f2e6e632ac52e98ee7e7055793232533e69e7c59436e62b3c237b35c2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003051.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003515.jpg"
+    ],
+    "f5ca0d5afacc4d0afbb1a9576a53e49375f7c53645948917eb3ddbbe38b81280": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003053.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003517.jpg"
+    ],
+    "f5cf23a71c9ba951ddbb81439afa63851e08b5415025b458f73103c2d4ad0f29": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003055.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003519.jpg"
+    ],
+    "f5cf947d78eb9c4c624ddb579a72beb60794e74eb34c94c3a68577e3f2097d27": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003056.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003520.jpg"
+    ],
+    "f61c6927682c85c16d4f0f28a6e54bf56eabe615beade380b9d77884d94ae842": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003062.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003526.jpg"
+    ],
+    "d4425ca5ee41bc4010445303957908fdb6434659b5efd2a9e05179c8e13c07e3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003063.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002655.jpg"
+    ],
+    "f634e9488a5b74ddcb86d30fd38fdc14bc2c843c1d670cf36fb9a12d3ff8ee24": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003064.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003528.jpg"
+    ],
+    "f667d3c21de637a8c453700e0af21510a217d72e6091065b87b331d4850cc7b4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003065.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003529.jpg"
+    ],
+    "f673b0dca194152489df79d3c29674863f52e2ae7ce78885fd03167273d9d1dd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003066.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003530.jpg"
+    ],
+    "f6762b92346ead852f0b8bd1f437bc29e4763e7179e683a8160273fff515fd15": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003067.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003531.jpg"
+    ],
+    "f6c2dbfcdd2d28b924f2402fe6069a8ba4c9f70445f843b438ce44baf38c1c6f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003069.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003534.jpg"
+    ],
+    "f6d1934da4a67b75bc881dfc0395913d803bde52b0aeb1a595c0c966d81e0f8b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003070.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003535.jpg"
+    ],
+    "f75c5e2aa7f1cc3da36105bf5274c53cbf3c01e64990fc66ee7a1acaa32c0569": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003073.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003539.jpg"
+    ],
+    "f76140a5b20b70055e4bd2528635b0f58cf01e9bbeddf51f34a00cad2c840c5c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003074.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003541.jpg"
+    ],
+    "f799b4644fbf926507823b53ddea8e37a18de37dbba18ce67c8397a3ec329afc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003077.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003544.jpg"
+    ],
+    "f79b99848c8140ef04f05eeb9130ae7685e2f23c7dd99571309aaa1787574cc5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003078.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003545.jpg"
+    ],
+    "f79fdcc0283d53bda8134899a02650ab4064cf954645f94ab8d9f555fbeed9d7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003079.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003546.jpg"
+    ],
+    "f7d4eb95754dec668d2ed346e4f113192e34adfbd4f9ddb9972d84f632f49e0b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003081.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003548.jpg"
+    ],
+    "f85701cdf415674bb57ed279ef8ba135e4a17bd2cf3554bb12df38bac52c6fd0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003087.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003554.jpg"
+    ],
+    "f8590636b7273586d31a32a47ab7e5327075eca3631382235e738d9e1f4a5c6d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003088.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003555.jpg"
+    ],
+    "f891d13d0282b2ae48503fdea97fee255fb3e274e277f9fdbb29b2b902ed0d5e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003090.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003557.jpg"
+    ],
+    "f8c024cba61fc2b5341983145b2fcbd355d27365765ae4140ec7f0162a022392": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003092.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003559.jpg"
+    ],
+    "f90324cb8db2837c70e6d3f019b61e63a11fc55adea6793ea994d49c267cc056": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003095.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003563.jpg"
+    ],
+    "f905cd62085abcffd9dd3ec9dd06fd8b004bafcdb69913e1ed01fce67ec0074b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003096.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003564.jpg"
+    ],
+    "f9241cd969207ee78c050b7255674d2c6daaae43ffbdd5d8656488679f8b30ce": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003097.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003565.jpg"
+    ],
+    "f9335935aa75c5d37805a952a8f1fb5a1c4a6321713d9dd4088cec480f64dec2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003098.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003566.jpg"
+    ],
+    "f93ebe216788334eadcea243d0838c470b9590801745a70c00545bc95405b350": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003099.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003567.jpg"
+    ],
+    "f946a037dc7f92768cebeec01528d806a04eeb55c14c40cc73a4195c5f4b8b8c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003100.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003568.jpg"
+    ],
+    "f94d5b323952a76bef71402a2361eed88e482bb2b5a657f5d5f84795c817c94b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003101.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003569.jpg"
+    ],
+    "f95f1d3530aee2bbf612b66a423b7df5c727e6a8167c4145d3272e5ac2df9531": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003103.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003571.jpg"
+    ],
+    "f9612f9f706e21ebe66b27b406f270c17df5dfe733ce8d7561a00eda3b3b2d12": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003104.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003572.jpg"
+    ],
+    "f96e6ab41a18b4906af61950a34a52845c8ca6618f8471c8545052d227b53a51": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003106.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003575.jpg"
+    ],
+    "f9e27fd56f828401eb8a03f8ead97e7bd9bc0e6604f9588f4f5ce53432c6a53c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003109.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003579.jpg"
+    ],
+    "fa059e0300b5c484f97e0d2dbc9d2f0704b9e2e3aca80cbb7a79bee17407ed81": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003111.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003581.jpg"
+    ],
+    "faa19e63606335d1ceda12c46769b1a6a0172f31a89c063d14e097f71f3c40b5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003116.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003586.jpg"
+    ],
+    "fab44e8fdb2f2d88540c5a24381e7b97fb649eca7bb0e489d2ac53018107813d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003117.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003587.jpg"
+    ],
+    "facd2e317b58f5d02763729a9e8f47cfea3f391dd2d00910524d1b52a032a9d1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003119.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003589.jpg"
+    ],
+    "fad58e1182c14520ec24644b36ebf988bbde3e76d7793e73749bbe20f3d30767": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003120.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003590.jpg"
+    ],
+    "fb56aa25cc6b90516c677b3712c90506df8113e0d49dd097486bcb8d9494611c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003123.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003596.jpg"
+    ],
+    "fb5aaf9aa2e44f44edaf08bcd5a2a199bdd1531a4f79f6a8016f30afbbab3752": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003124.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003597.jpg"
+    ],
+    "fb5d69a0c394cf3061ad323e162d839118d06c5e003acf11770d0d194a3e51ad": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003125.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003598.jpg"
+    ],
+    "fb5f5a4e0efce23d0a7ba0fc09aebf3cda02fa48d06a0a014f19b50ad8e3a8f0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003126.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003599.jpg"
+    ],
+    "fbc6e53c494e116c8320ef8369e5560456f84ee15674eacbc33479dce6b7aa0a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003129.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003603.jpg"
+    ],
+    "fbd9449376be355d1ceacce9b1e55eb5cf0174d6b8aa27e058fe33cda20e3663": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003130.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003604.jpg"
+    ],
+    "fbdbcc521b13930b03e7b2731797b2cf2390eb10aab522d27e31eba53dce2788": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003131.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003605.jpg"
+    ],
+    "fc150b377c78d78be2afe6f36287a374f235f65753cac448dce64585a5f089a8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003132.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003606.jpg"
+    ],
+    "fc72f7ab4bed2fa79bdc008b136ff14c50889963c2339fbb08ac0124d601b4fd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003135.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003609.jpg"
+    ],
+    "fc7cf3be7318b67b4fe540757c5d66241e1571ac65097ca7f48e7007d6263dc1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003136.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003610.jpg"
+    ],
+    "fca0ef9c04698b7d851e6c8c2679d48349ebd2781908fa85151317cbfdf83ab0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003138.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003612.jpg"
+    ],
+    "fccdc9aabdac1335407092f9c4c7e939b68c0d2dbcbb8d6a62c0bf420bac33a2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003139.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003613.jpg"
+    ],
+    "fce2a6b56ee9e869f357a1a7c1ce41ef0b7a74f542c556d81238930c4546fcc7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003140.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003614.jpg"
+    ],
+    "fd04e016581014daf9f0487d42c201f54a998a22efb18f26f10cb762301699dd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003141.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003615.jpg"
+    ],
+    "fd14419f7bdfa3288b7aa129297aef7112bec22523dff491ac109a45f2d33735": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003143.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003617.jpg"
+    ],
+    "fd19e44df176e5f618832e6796c9a562313081ef41187c845e982109d68ff824": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003144.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003618.jpg"
+    ],
+    "fd20727044d755c52a830ad2f05596e94c9c00be3b5def480af9180ec84fabf6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003145.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003619.jpg"
+    ],
+    "fd71ca34fc29f964b0d51e55fc12d49ba971d4adc077279a3fdbd5ed02fb646b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003146.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003620.jpg"
+    ],
+    "fdb2e841cdc77a9bd7983e465d6929e49cb0069fb8fed2b61aa5641991232405": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003147.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003622.jpg"
+    ],
+    "fdba5ca25e59b37bc632285543f8c54edd2b5b6bed3c866eb0e94e9a949f03e2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003148.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003623.jpg"
+    ],
+    "fdc8f52f9bcb7e5cba96a7dec789bb47c7789fb1cccc482d5e87d0fe51472aeb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003150.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003626.jpg"
+    ],
+    "fde85bff7eac3ef118091199a23aa79a9d21f4c69553a6d236aee4c0a5b1e790": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003155.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003632.jpg"
+    ],
+    "fdec066d87a7f8e62cb0620cac3f13c7896bb1ab383d0f89fc055de3f49c18ca": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003156.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003633.jpg"
+    ],
+    "fe0072cdf9d3f50d38bbb3a6276666d9497eebfc2dba692a8e5e07693fec2868": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003157.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003634.jpg"
+    ],
+    "fe0f659241245fa8214c00819e8b1f47ea1715f3fceef60b71f1934e97f624d5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003158.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003635.jpg"
+    ],
+    "fe1440a0d7a0d657211cde31866ef5c7b86ecaeb223d8f9f0c9255743f854df0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003159.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003636.jpg"
+    ],
+    "fe536c2cbb091b5cf3b5cb04338bc00451dbad42c0479a1b823304bdbc1e10e2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003160.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003637.jpg"
+    ],
+    "fe5ed30764de5db0e55ce12bbe73c5f0c6761972ef1a6329c6e8dd8ac649c13c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003161.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003638.jpg"
+    ],
+    "fe6ea1a0da7393f718d85986e69096780b76cd39ae93dc1ebffd85a0e8d51763": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003162.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003639.jpg"
+    ],
+    "fe6f8430a1147f289a8e5af7b4afb62c4fbaf4b883183347bfb83372c446d044": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003163.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003640.jpg"
+    ],
+    "fe811182fc3514b1a5e5021ad8f733e82f2eb6ded341d377f2aadb227fae8e26": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003164.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003642.jpg"
+    ],
+    "fe8eb6e8450f1de1afcb17f5409f067d63206ee2b1a969b04afdcf637caca226": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003165.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003643.jpg"
+    ],
+    "fec70d27870967e3d72db31b48409c11c47db247e4f846254938b6ff7c14a3c9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003169.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003649.jpg"
+    ],
+    "fef06a736a953f9c4fd895ca725d266d830a12bb64efd64899348c6ea9bf3270": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003171.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003651.jpg"
+    ],
+    "ff05a1c5ad3f1a97cbd62336f08c67721382f00f8ecaacc45e110e8dfd384a81": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003172.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003652.jpg"
+    ],
+    "ff1ee451ea9f4bb0ba319e840c3a182b234f09d79885aa18646dbbb66e3f6208": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003173.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003653.jpg"
+    ],
+    "ff39d8ec22fde593b6762a8f0ffec0c70538182de64b1e48019d4e3a7855034f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003175.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003655.jpg"
+    ],
+    "ff3fd242a506974ed7b68e84faf25c9d9ff4e3d9bbf1d84682e4cc8fa8bb4937": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003176.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003656.jpg"
+    ],
+    "ff6949b014c13e4c0a934ec11b2e294e8a13b5f08a9c32cd84a1f8a5a43de998": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003177.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003657.jpg"
+    ],
+    "ff814f844c631f626522b93183fd7b035198445674b327e6ff4dbd52a4ff1738": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003178.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003658.jpg"
+    ],
+    "ff83edbe6c101b867d001b914592fc33409bab1470172e40dd562edae22db090": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003179.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003659.jpg"
+    ],
+    "ff9880d98d236d388cae6308f309772e15506001bf8f1afc64136a045d4f1e15": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003180.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003660.jpg"
+    ],
+    "ffb50693f85ff1df407d697ae094c5cbc1ca366ab13b6dc6c2519ef10491205b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003181.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003662.jpg"
+    ],
+    "ffb60070d905d1a197d5433e3458d744d9a31d0aa05deea0a4feb2f18d84d9b7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003182.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003663.jpg"
+    ],
+    "ffb6989ea8bff1adb58d2264616572f641e206efeb5cd974b9d9adfdf6dda0a4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003183.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003664.jpg"
+    ],
+    "ffcac880118309e4924d125889bd5acffacb4b5d753551dee6f20a5255179b77": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003184.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003665.jpg"
+    ],
+    "ffcf5139eb9c03ffe396ebc2af0aa224e4431d0143ac1d75928a22b1d8fb6c1e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003185.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003666.jpg"
+    ],
+    "ffd54d38eec76e599e1dc8248d17f705becd6eddb04ff92dfcc37c7a5dad730b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003186.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003667.jpg"
+    ],
+    "ffdb659484b65077206b2b2daf9e89f0778c44c03c5579f97be73d2438070910": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003188.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003669.jpg"
+    ],
+    "ffdd05345f94909adb12f23c7f37190d7381d01dc7c8d681248d8f6ac0d6044f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003189.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003670.jpg"
+    ],
+    "ffe50e147222ff8cdabfcff28da8168175b5a335ea2fcf74e9a0de8d393b9406": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003190.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003671.jpg"
+    ],
+    "de294613772d62f40ec5cdd251f396f1208275c1b7acb539cf8c91b328500c70": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003199.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002776.jpg"
+    ],
+    "df684499fa6ee09395c6d4418050b86743145708f22443a470fc067eb2d56d42": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003223.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002796.jpg"
+    ],
+    "df7138b25c5d2719838aecd381a1cd406928ac9838ecb2209b734851137dd9a4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003224.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002797.jpg"
+    ],
+    "e076b7fa24eebd6fc52f080ad4cb1199f5e3e8083fc6affacfaf4c98c1af3e35": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003240.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002812.jpg"
+    ],
+    "e24720fb5ab22f0f7eecf3de4bb648244b41753439154242ce61d79a9462a89e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003266.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002832.jpg"
+    ],
+    "e294f7844da7b4abaff8bb4a9b8a780d53272cc8e636a4c99e6c25e54f76f945": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003271.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002837.jpg"
+    ],
+    "e2a31e08161d43ac1315ee5ceff08255e79e949b9b0257ceb357ecc836735ec8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003273.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002839.jpg"
+    ],
+    "e343617d9a37f2a070dfa95aed468f88dfddfc0de441324483fdfcc0200ae174": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003279.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002845.jpg"
+    ],
+    "e3d1fe7cba26bc0d11ff6893782ba80140d42877bab7921059aae8ce9457dcc6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003291.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002856.jpg"
+    ],
+    "e50b621432f2e39f9da43681bed64d56b175964ee56bd85ce9937652ef877ed0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003309.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002872.jpg"
+    ],
+    "e96d646f2e638c5ddaaf1197737146fc5b67da25ad97c524000a3ff1b5127d96": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003359.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002916.jpg"
+    ],
+    "ea1e12291d2b0d56dbe718d23121424c72658c923bccb189e7e33080e567cfd8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003368.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002925.jpg"
+    ],
+    "eb843b35347dc12e811c7239a270eda473dd248f314a2bc823a8eb8af01c7ffd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003392.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002945.jpg"
+    ],
+    "ed2011785420211d167fadf58ca4df5ae0c6ffa8ddbf338501532168c4860029": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003413.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002964.jpg"
+    ],
+    "ed8b0839456284bf85505bcf88ab62ef00aa21a0f6b5fe6241ab56c46f40cca3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003421.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002971.jpg"
+    ],
+    "ee3167fe6e4927d31a133397fcda67d0ea8082a1564e709cf272d369212dd6a0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003427.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002977.jpg"
+    ],
+    "efaa0ebd901fd9e2b04d96434876fd4d9ca37f15f6e299ce1add824caa3aa6ba": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003444.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002993.jpg"
+    ],
+    "f23a435722d168421eb5b72f8dc42a32b4b267e747e66ab8d2ebd70620a5b65c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003466.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003011.jpg"
+    ],
+    "f2c45ce9e10b8559f8cccabbf241c074480fd33355fa0c10dd13b7ba4dedac0b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003472.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003017.jpg"
+    ],
+    "f381abdf6f9968968ca40c145666c3718b0167d12b6345d9070e856aafdc96e0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003483.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003025.jpg"
+    ],
+    "f4e501c97e6574da4abe518f79e85819122bc40595dc851eb7f3e3a625f3c235": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003503.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003042.jpg"
+    ],
+    "f517e980a233980629bf3df5091fe602354cc24063953ac3536ac2bbf4f2201b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003510.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003049.jpg"
+    ],
+    "f61e024ae7d923645967aa0c8dc64d87301fffcc54c120c5127cb07fecf4c4ea": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003527.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003063.jpg"
+    ],
+    "f805ebd53e017f68ce31d2a778c0ade47d9b32a4cecf33ff2aaaa302f602aec5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003550.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003083.jpg"
+    ],
+    "f9b42713a1aa8d31ddcb0e4a8cd084e084d7dd557b414a51b01d0fedfd0d702d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003577.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003108.jpg"
+    ],
+    "f9f23c93aab483963bfe3e4b7a86ad6c351e3cc8c12c1442c18fd6cedc3aaa02": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003580.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003110.jpg"
+    ],
+    "fc8994d0739efd6cd1bc1300f45dfaafc77783c459dc71e1d0761bced05624cd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003611.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003137.jpg"
+    ],
+    "fd0eab11a0b71b2f5b94f09a505d984eef42bd12a49ef7122cf4799f83df5bbf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003616.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003142.jpg"
+    ],
+    "fdd7b7600d986087e3419b3a0d426e8549dbe8866d38be436fdf1a931b6996be": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003629.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003152.jpg"
+    ],
+    "fddc60ed232f5a65b8bba0b160a626607bf4c1ba5de1db24963d1261e090e6a1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003630.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003153.jpg"
+    ],
+    "b83879cbdb46fc3e5b304b29caa874e7167926e605e1525c9d91e899f13898b6": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002317.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002675.jpg"
+    ],
+    "ba8969691ff64bf5f72733b9af70ae561adc36d441ff5422e1fd596dba4e3706": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002346.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002710.jpg"
+    ],
+    "c0cc1ee33ffc776cbc4d7c1a1af6300c8f8608247452e685170892a89d678cf3": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002422.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002794.jpg"
+    ],
+    "c60f32b598f2a4d4feac7dd2cd1fb7af12a36036908d35066791fb32c4dc6e2b": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002486.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002864.jpg"
+    ],
+    "cba51f512e70088759d9c7c46e4040fcb6e9db336c6cb29858d83e733bec5505": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002547.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002936.jpg"
+    ],
+    "cfad019f302b9ba9d8b6e6d9ec42b612a1154948d631d81fe952ff822dc0db55": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002599.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002995.jpg"
+    ],
+    "d718f3b4f3e49214d8f5ee2db8b6f19d44c4644ffda884d1afee00632d94795c": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002682.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003094.jpg"
+    ],
+    "ec2609f2a28c54ca3115813b4cc88dbf209e2efc7c413e36c36406d3fdeb778a": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002954.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003401.jpg"
+    ],
+    "ed4bc34355db3faa6a34714ca28f773cf1bd40603afbe9b425e4576424008d13": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002966.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003416.jpg"
+    ],
+    "f01f791dda3bc2fb4ff9613c1f0918ca63618ee3cd111fc15c6fab0aff6a6503": [
+      "val:data\\processed\\combined-top3\\images\\val\\00002996.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003449.jpg"
+    ],
+    "f73605c510c2ed0a48d1ee1c6d603d9052a3b4a4d8d07c40e2aa719731307a36": [
+      "val:data\\processed\\combined-top3\\images\\val\\00003071.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003537.jpg"
+    ],
+    "fec93ee4942b884164d729059cbe8e7c5239a52808f180694893bf91a2473fe5": [
+      "val:data\\processed\\combined-top3\\images\\val\\00003170.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003650.jpg"
+    ],
+    "ffd62f18e4411c63a272fac27182e064ba00d424a08224c01d6e861d3a7eeae6": [
+      "val:data\\processed\\combined-top3\\images\\val\\00003187.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003668.jpg"
+    ]
+  },
+  "cross_split_duplicate_groups": {
+    "58ffec236c620bfe6135733c134d64641ebceb26e2a635b5a4edd5b38f36df7e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00001327.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001142.jpg"
+    ],
+    "8dadee666218e3d8f14138733233f45779d606fb98fd5130845daa2fd3372cad": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002082.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001796.jpg"
+    ],
+    "9689a8e34ce8b5544d8f702b0c0228d87ffd709449a05d9a3e26b91d4fe7f368": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002214.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00001911.jpg"
+    ],
+    "b60573cc34b339ea53aef9d6abd95164443d9610d5d81ffe98f80f407f90d264": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002289.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002645.jpg"
+    ],
+    "a00147cc80e37e3ecd18e35bd8878b652f93729e7cec150fe0a357a7bc5bf769": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002332.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002012.jpg"
+    ],
+    "cc16f8fe194539f1670224433f679f7ca24b5110d1ffe151603cb31322a951cc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002556.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002945.jpg"
+    ],
+    "d170233188cecae1ec7bc268d351fe5f6c1a9b2c3f06573d02cdb0ab79b0fa8a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002618.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003022.jpg"
+    ],
+    "d1907209bff535e3787b91834fd2935bd58689c8d2b41cecfb36cbc6e71d63a3": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002621.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003025.jpg"
+    ],
+    "d8dc6a0a466a70b830c49a1098dc1786592ec6c501d43ecc74aa72ee0604b35c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002707.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003121.jpg"
+    ],
+    "d9c6ae4e3ec7e5a5ceea579f53d32e95ccdaa9959d86c2facc36499910d53946": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002720.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003137.jpg"
+    ],
+    "ddb7fb44b2788f7b8444cb4dc30a3cef0a74fae97206d3eeab8b867e3b2dc07b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002773.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003196.jpg"
+    ],
+    "de90f915e435072322f67e88f1c6f01b4767280ba19b7b03c8afead1ff478149": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002783.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003208.jpg"
+    ],
+    "ded99fab05e02e3b159a17edf5ec4027969350be8a0eca9f296fdc5d903dc6e9": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002789.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003214.jpg"
+    ],
+    "c09c4582075453708661d472f9338a21cfe1482bfca4f0dfdf911fa64166fd85": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002792.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002420.jpg"
+    ],
+    "df189c71fd86a3793e6ca905bbdf46581a258595bbca71579ffba1470c45f73d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002793.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003219.jpg"
+    ],
+    "e127a7348a7bf50c07778b303ba638eacee53361a04663360337fa11110965b4": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002818.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003250.jpg"
+    ],
+    "e13242b24a4d8217ee1e86ae66cd5e26cabbe7c05eea9fdb9255f2e14c657605": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002819.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003251.jpg"
+    ],
+    "e24683a1e3cceb1d1340a0227806343513ba413a6819a73a19da07934571487c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002831.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003265.jpg"
+    ],
+    "e24ad9910fa4aae7cd71f80003d7b5ebb5a4769184115d8154dd5ad95f990072": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002833.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003267.jpg"
+    ],
+    "c4aefb3c8998f814ec47b31a0745825bbd9fb81c7f6ba31c8b55d7e4c78bbf9e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002837.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002459.jpg"
+    ],
+    "e3cd6474bb5485b5483f311fdcf80071949b7aa981d1b30e55ea25fc10d2db48": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002855.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003290.jpg"
+    ],
+    "e437627e6835d07cc9b3f523bd27058493bddc182a0deb624a5dfe5a42f7b880": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002860.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003296.jpg"
+    ],
+    "e4626309039cafd5d8d92c55e75a1c77d985328c88beb942b31fd8667d8a3397": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002862.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003298.jpg"
+    ],
+    "e5037fe7a5c15620fbeb7a22f9cec4ddde9fd8e7fce680d6f8681a049a6dddee": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002871.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003308.jpg"
+    ],
+    "e53f3f2a6b0cbd243e91ddfc72fc345be9d8d9900e7f69bf1faf1af00e1861ce": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002874.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003311.jpg"
+    ],
+    "e5552d5d10f0d5fa2c1197bb8c14ea9347fbb7aa453e810fcb58f262c9c6164d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002876.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003313.jpg"
+    ],
+    "e5854a80738978dcbf283c855b07d4199cbb29d5fc9277b777d09d484ca0921a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002880.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003317.jpg"
+    ],
+    "e65a3473627262bbaa9080d811cd2e2f27ac88caf5b10264103ae36edf0dde25": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002884.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003323.jpg"
+    ],
+    "e76e82e44b585c31769ea605a44a8a2b4dfbf7e35861a95f546841a5ef7fef16": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002894.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003334.jpg"
+    ],
+    "e8da56a13db21f763f3a22268a778cf1bfa082c9b26a41b6c07d9c55dae9669c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002906.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003348.jpg"
+    ],
+    "e97069c6e309fe967542c169aa1b94a743f429bb779a006b5a03fc27265366af": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002917.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003360.jpg"
+    ],
+    "ea972210531325674ed2e67802de6a0c016bb9d55a4a1affacc6e0dbb424b7ec": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002931.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003375.jpg"
+    ],
+    "eaca61f1af3bdce0a5add35471d10c92094e272d7165e11823ce85b31c84719d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002932.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003376.jpg"
+    ],
+    "eb93b550ac479d1745fbe2b88badb5ef53917efadbf915fb2d7379c5313217ce": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002947.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003394.jpg"
+    ],
+    "ebb7b33262beeab78f046af53656bd847423f1f62770647073754d52d5951bac": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002948.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003395.jpg"
+    ],
+    "ec39b65fe8ed3ecf6d64cebac9a0af0f5c41c851cb5c43dcc78491d20f2b8acd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002956.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003403.jpg"
+    ],
+    "ec784c31d8d937b2f52c0bc080aafe9c800a6b7acdab756d2769dd0f299a2dda": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002959.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003407.jpg"
+    ],
+    "edb28382d26d2a11f78651eb8875a21804497fcc993be0739accc246a300f908": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002975.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003425.jpg"
+    ],
+    "ef97d6c6e4d8310f6db0bf22ee144917fc9dd9837a908316a3242f45f9f35b68": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002991.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003441.jpg"
+    ],
+    "cfd945e77bd79d35b5855728b3f18f7cf95668fd39b3a4570c3350111a87caaa": [
+      "test:data\\processed\\combined-top3\\images\\test\\00002998.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002601.jpg"
+    ],
+    "f2654eb921cb51f7455a7139d942a70895d5f7d49e21e0857ee6715bb951e520": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003012.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003467.jpg"
+    ],
+    "f2a505602f59e9a8bb462939d3bac3ed362998aeaee489a36302b6a6c7130add": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003014.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003469.jpg"
+    ],
+    "d18ee810324450b32831965fac0fad54e3a8e913798253a22296e2ffc9cb9b08": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003024.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002620.jpg"
+    ],
+    "f3c28ddd47e2cdbb78234cfbc1610089a3b2261bdcbdabb54d76e8a393a4244c": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003027.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003485.jpg"
+    ],
+    "f3c759da8a2704e425ab13d00e13405747f2f8abcf6cd5614b52db902455f1b0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003028.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003486.jpg"
+    ],
+    "f46bdbc5c7230053bea672152a5f4b66e23bb5f78e283434304aa879358ea4e7": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003034.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003494.jpg"
+    ],
+    "f4a3bc5f9b0c8de4bea10972112bbe052ae50b53d8f199b8aada0d1d182efe9a": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003038.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003498.jpg"
+    ],
+    "d25aa09a871ac7e93af2ab965b5357b5e5f5c266cafe0ca1e4561229af9847f6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003040.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002636.jpg"
+    ],
+    "f4f0179e303c6e59fd9d46c16ee411a1adba4d50c22f2de274950404d0650c28": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003045.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003506.jpg"
+    ],
+    "f5bd9b86246dd593b0c6e3bd99306de867e5edd4c62445a3e29201807bdb2449": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003052.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003516.jpg"
+    ],
+    "f5f801b25d7990a577076256a52494c245f4ad7d9e79c3bedd57d7a8fc041ae2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003057.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003521.jpg"
+    ],
+    "f5fc37f1f992c80c98ccc50ceee9e5e0f24847a59ed7be85b96272998bd10ae2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003058.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003522.jpg"
+    ],
+    "f60410ac271d5f27bfd42d9be23b41683edcb0120a0b8adb8ad27f9f79a5705f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003059.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003523.jpg"
+    ],
+    "d400073f34ba9769554ef76ce7a50a29b8e4189e31f32defa04fc5d66d8cb570": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003060.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002653.jpg"
+    ],
+    "d4077fc0d1ed7bc518e876250c8be6f79f64c1b849c7fca15f1da97f1d8b3f25": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003061.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002654.jpg"
+    ],
+    "f79812546e3dceec792fa384513804c9fd514e1f66e8c7c92e3a118c54a731a7": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003076.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003543.jpg"
+    ],
+    "f7df0dafa31ae9a05113ff05e9599e0e9e174da9d9003c45679fcd1f1e1a4cb8": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003082.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003549.jpg"
+    ],
+    "d5c015bfcd887d6ea8c61bef5b2c270bdab22b4d987a180ff9da05abff6633cf": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003083.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002673.jpg"
+    ],
+    "f8780fa2c198521747a322303711dda9606bd10a3cb33b20cce58d5629537a10": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003089.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003556.jpg"
+    ],
+    "d68b943d4e089e0fcf3be92138579685cccbc029781830d8a15c03683d01ea69": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003091.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002679.jpg"
+    ],
+    "f8c729d0b8e3eac545bd583a50f3390ea86e2b6083ae30b4dcf167059ea19bea": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003093.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003560.jpg"
+    ],
+    "f955943f172303bbbf0c48941c2b9cf0c664cf775f1d0722a17b8c950bd6671d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003102.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003570.jpg"
+    ],
+    "d7a4cb11fc85a674bbc3f54cc44dd013e87c0949d5aff5def01622c661ab5391": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003104.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002691.jpg"
+    ],
+    "f96ceb03fd5dee8eec1234e3c9955c8fb71bf253d8855d302eee006f25022839": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003105.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003574.jpg"
+    ],
+    "fa0e8392b8a857260e584f874a7a089738af2669f974d5543e8712d9c1c57401": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003112.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003582.jpg"
+    ],
+    "fa997f2ece102b99b23548a92f8c90004fd271eee89f340bb59058de55c7ce86": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003114.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003584.jpg"
+    ],
+    "fabc9295da84b25c3a3e1e824ca9ba3c6f7c513207a4e77ca1be208fcf3758f0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003118.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003588.jpg"
+    ],
+    "fb111dfb7a0aee1e0af8c3027d65dee353ac153a62f1e59ddc992c4b67f3ab27": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003121.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003592.jpg"
+    ],
+    "fb7ed22ff7d97c5d5f070a7881248e563500356af368007375bde003731d52bf": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003127.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003600.jpg"
+    ],
+    "fc15695deccf225a1747832b38b6856cfcc3c8aa4dc2036cd7039a514418d66f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003133.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003607.jpg"
+    ],
+    "fdbea6ba866f62ad648747082719632d1834f12eb62298e6fb233bce714d5e93": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003149.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003624.jpg"
+    ],
+    "fe9eeeaa6bfde8bf3772cfef85dd634b975414e2d2c03c689036c87023473c71": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003167.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003645.jpg"
+    ],
+    "dd63aebb1da45dd039034e321b9865d84c2afda72dae33b060ba7c1e46ff5d49": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003188.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002765.jpg"
+    ],
+    "dda70679084ada8003c81f4b5f6a745596840179e46d73a6671282f58ead5de2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003194.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002771.jpg"
+    ],
+    "ded5f6c8159413a11faf7e7dead1ad86df8288474acc44189fdbd3b00d025d43": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003213.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002788.jpg"
+    ],
+    "df124cddfaf321aad20fb571dd918ba9611356c045e5a53d98b9e77704430c04": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003218.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002792.jpg"
+    ],
+    "e10a80627dec9f4a99576a2c9d1dbff65bcf3f6040c5f5bf4b91e77ad0b8790b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003248.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002817.jpg"
+    ],
+    "e24db12b2285c4226cd26466e95783a29db7f7383076548b08f54e4ea0af1852": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003268.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002834.jpg"
+    ],
+    "e4842c11aaff145b82afa86981ee67648ce6ec261a3b1004454a8d9730e31e57": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003302.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002866.jpg"
+    ],
+    "e672cda514e8fbde6b5ce023ccd3cc6a0898525ed8de65076ec879e6cc5f8362": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003324.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002885.jpg"
+    ],
+    "e720d13efb2e6546a83b8fafd4cd8a5caea2524e8de397fedb6f154725bc7d40": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003332.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002892.jpg"
+    ],
+    "e96c74307e582ba0a416f9434db9b1f4abdae08229326877f3452046a4cba256": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003358.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002915.jpg"
+    ],
+    "ea5dfc3e9e0ad55f28c89ca4d835a32040de400fb320ab61881b12f6ce6ef73f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003372.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002928.jpg"
+    ],
+    "eb3e597deeece946a19e4d86a4f3b05eb93af215f8467c53a427a35983f87a55": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003382.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002937.jpg"
+    ],
+    "eb63adba52631cb5b2ef3563732df2f9960ed8cf50fc889976e84efc2d2b0d26": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003389.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002943.jpg"
+    ],
+    "eb8a70cbe783c23fb3a0f02851b40c07bf9d070e774f844e007920426be62243": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003393.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002946.jpg"
+    ],
+    "ec0a3807125605578dca1ab7fc68cef1987e2b084a156bba4ce7e955bb5c0fc1": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003400.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002953.jpg"
+    ],
+    "ec393106d7fc549e2a58f8bb76edacf82947ac2cfc10a73b7a3ac132551c06fd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003402.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002955.jpg"
+    ],
+    "ec5cf5ae621dc52a84c5c796e0d21e10bc4427271bfd93c00e1b348a61859229": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003406.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002958.jpg"
+    ],
+    "ed009e61034ad9c0b876bde1b30ee98a93fe231b94a5399d40c91b0f67c64ae4": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003409.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002961.jpg"
+    ],
+    "ed429b03b6ec353c08a4db5202a28a046bbf5a4eeac06565e7d2f6ef7dfb37dc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003415.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002965.jpg"
+    ],
+    "ee3edf6377b5f3202231aff27e4f5865cae52edf3637159c9c13cbc6930f4601": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003428.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002978.jpg"
+    ],
+    "eed6b3a9ce171fc3cbd4bd8ddc1f8446a8ba0f9e6aa0b8b1fb87b84effa2ea5b": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003434.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002984.jpg"
+    ],
+    "efd4453363b36583b81cc720b51237fd74c5fb2c526a61cae136d8cff6131786": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003447.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00002994.jpg"
+    ],
+    "f481bde31c6d0bd4206b029d3c4d63736f41c4f646c4a12435afe663ef18035e": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003496.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003036.jpg"
+    ],
+    "f48d284946260ee06a7892e6676ef7f28f780c07192a4c607eff7e7b1882b023": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003497.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003037.jpg"
+    ],
+    "f4e4a0462f7b04afac503deb0bfd3112c83e4782965e58b1570f147900fbeb19": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003502.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003041.jpg"
+    ],
+    "f5cccae0aa7e4d096ad6264acff35e043d41ce5dfe2e5945dfad72401ac96ee9": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003518.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003054.jpg"
+    ],
+    "f617952707afa036a9945fc49d203ea7e29d52f15e6691de00836ac01755bc00": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003524.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003060.jpg"
+    ],
+    "f617b1c8d190420fcb1e192836f45ed44461515ca643418999c18332586c551d": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003525.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003061.jpg"
+    ],
+    "f678d04baaa6460751f721e34e0cfe81d8f312a472e25ac6281314d1adeb3baa": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003532.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003068.jpg"
+    ],
+    "f76a7ce6c86cacc979031ca00ea0111bf95203ecb69fe4ad1fe5cb2d174eeccc": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003542.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003075.jpg"
+    ],
+    "f837dc83bffef210ba060ca87b54a18b3a472317c3fc28dbbe0e7393730889a3": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003552.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003085.jpg"
+    ],
+    "f83e8ef749413d21dc47937085816309f777e31cfd915773a1ac0d80e8aa1499": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003553.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003086.jpg"
+    ],
+    "f8ad74cf763d2fa0c2860a39aed3b2327329eccb456ca26c39fda932995af7b6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003558.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003091.jpg"
+    ],
+    "f8fe8d38d662f9fa11fbb341aa2d0e89e66106288e42dbb8410df6f3a84412b2": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003562.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003094.jpg"
+    ],
+    "f9955068d4227ad3eeee5bb6ce038cd0877e5c5f0d272d8e550edbe6b2d3d3e0": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003576.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003107.jpg"
+    ],
+    "fa81bcc78b0d74c4a9b2db3da7b60a1563108dc2d3a815b0399fa79c952268bd": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003583.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003113.jpg"
+    ],
+    "faa04096dcdc8cea63c229c1dd9bab7410ed993dce2f69f33e8c749231e6a8db": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003585.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003115.jpg"
+    ],
+    "fb2c68d5760bacfc47bd075d1189d3e8266e6b13ab1fc4a9b95d19cbf5d68ca6": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003595.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003122.jpg"
+    ],
+    "fbb566a8249e35dd9814135f707fad58a7fecfa2a5dbfe4520426087d958c829": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003602.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003128.jpg"
+    ],
+    "fc626f0feb48ba5ba430c2700887de701d41d0d7079f2773a1dceb93f9510598": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003608.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003134.jpg"
+    ],
+    "fddf12b3657c8fc8c714a05a2de7b22b1c1074fd076b973a1c5e3320cf10ca00": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003631.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003154.jpg"
+    ],
+    "fe9bca83b807f9eb94116ce88eb28faa68a9bc5f6b575a76f22b525d8e2a7081": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003644.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003166.jpg"
+    ],
+    "fea5cae0d9381ebb06753768849f60f3e0483845fb5d13b2137329f7b029c4af": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003647.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003168.jpg"
+    ],
+    "ff2b2089201f36d36786242052930b317667846032aaf2ed709d4089325b067f": [
+      "test:data\\processed\\combined-top3\\images\\test\\00003654.jpg",
+      "train:data\\processed\\combined-top3\\images\\train\\00003174.jpg"
+    ],
+    "3fa1e09c1f6d4d4476a05a8dc280f63c4da3902beec94a0f9c78ad28523efa31": [
+      "train:data\\processed\\combined-top3\\images\\train\\00000803.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00000934.jpg"
+    ],
+    "5729d9b0857ce297686328bd7e1db524f36755763dfce8750a71a4e5d4c2686e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00001119.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00001301.jpg"
+    ],
+    "b54513ca10beec301a7fc315c299aa30a287bd05b7e3344d603169d27bd9b4b1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002281.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002637.jpg"
+    ],
+    "b7f2a5c0cb0f782a0b9ae524e228882f8c78459f638f8a65a86dc7e9d83f20e7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002314.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002672.jpg"
+    ],
+    "b82b4627bd9abe1b484bd55c6699f9933a8e165b6aae9d9636be341e0cc85411": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002315.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002673.jpg"
+    ],
+    "bde31c81427f00770552b39d0b06b504c1705aa0501a3384d9985cb4af0f7b37": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002387.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002756.jpg"
+    ],
+    "be2e771057bda6f845145fe026f3bdf9a6c9b027bb82f5ed66e39b9a86049ede": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002393.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002762.jpg"
+    ],
+    "be36abf9de2bb74028611600a91b015795c6d4c17cbba123a056b55e14e63394": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002394.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002763.jpg"
+    ],
+    "beb8bb56356e1d5a7a07597843498b72b0d4b237622890b79b5be548f0b6423c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002399.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002769.jpg"
+    ],
+    "bfd3c06b8aa4ca9a746369fec71aea27d33dea1ba617c89852ce4479cb1e0f23": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002413.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002785.jpg"
+    ],
+    "c289b929819b68180d03a0eb9d34c9e4de537106d19af4f6a2a038357f8a0a1f": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002437.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002811.jpg"
+    ],
+    "c317d5cf32b4107920f8df01156ab518e11dd7ec139dc99be8badb90b68ec2c0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002440.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002814.jpg"
+    ],
+    "c40ab431a57d700602f90e8fe50e13924d524c6ae8399f38f73aff78871e6e52": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002446.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002823.jpg"
+    ],
+    "c4b84813ef106a32aaa45bebfd2fbb73ce2849d1dc28130f70d81036d7fe13a8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002460.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002838.jpg"
+    ],
+    "c52146b6159ee01320f0da090532d7f10407517ef1ae2623232be2437232e1f6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002468.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002846.jpg"
+    ],
+    "c608b662d4785ae2e5aeca1b3478aa7307f904dad15f9c642a96e2ce89e007d7": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002485.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002863.jpg"
+    ],
+    "c73540b431b6851d2d39f68414430e162e217958562d83709370bb9cc0164ee4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002505.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002886.jpg"
+    ],
+    "c893b2d3ee7e28a05153352742ab4d2b447a06d59078d93df004cc157fdc6773": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002518.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002900.jpg"
+    ],
+    "c9e3717beba4bf04016b73cf6eeebe9965c04abcd359c5601466b61d7a3cfed1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002532.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002918.jpg"
+    ],
+    "cbe2beb2e5d65b877f69ff03a1d84bca7068f08b197145ee0cd87ef44e64563e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002554.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002943.jpg"
+    ],
+    "d087a6d7258900b7a56924531c0b599360682cdd441efcff6bcdd2653c7a1d17": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002609.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003010.jpg"
+    ],
+    "d17efd39d9b579f6a9efe22d969e6b5866a8c3693b892c2e82809a0c143cca5d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002619.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003023.jpg"
+    ],
+    "d19a51aa63fc09cf73ae8741d0fcc4b765588e792de9ab5172218a5a568e28a9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002622.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003026.jpg"
+    ],
+    "d2209d759caf26acef692ee9706c1338552aaf5b9c9ef778a679d4d120df93cb": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002633.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003037.jpg"
+    ],
+    "d44cf5fd1b80e21756756702f896cb6ed239b27cbb613226adf7a116618a9b91": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002657.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003066.jpg"
+    ],
+    "d45317e57b9c841fdbb0ac656018b43dca11b08e4616fee405b6b01e62aa6d30": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002658.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003067.jpg"
+    ],
+    "d4a1cf809ad07737a232e2424376c7f871ba15e8f799c874ddbecea6a7ea797b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002663.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003072.jpg"
+    ],
+    "d51d8ca1777e7f4972d5b6af3a23b16bfd4e9d7b3bb069ba2cab2d2e1eef9d30": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002666.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003075.jpg"
+    ],
+    "d5ab5c98c22719a9a00e30005194dba1f98e3a3614803456a613d0d03f046b75": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002671.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003081.jpg"
+    ],
+    "d69261264db6167f9cda91c71ece3eb4431c068ff477ff43f204935775c97315": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002680.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003092.jpg"
+    ],
+    "d8dbdcaedab52ab505577202f85c06750bd53d3694eca8a474078c97fd62f5e9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002706.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003120.jpg"
+    ],
+    "ba6633eb647c014a2114a529feba3004e7d7d295f3c045e51bd0eb4f9e15e563": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002708.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002344.jpg"
+    ],
+    "d9949a8bb2b571fa8cfe3e0593807f39f5e3c7ac11de75929d1315d45e1567bf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002718.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003133.jpg"
+    ],
+    "d99791d3b97e22ac8f381f38bddc6fef66390535f94ad8bb0d0fdc950aff7a4c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002719.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003135.jpg"
+    ],
+    "da7884890f62e081728db7f52778a1261ec0542485a1dff313dc9b64a5bc98d1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002729.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003147.jpg"
+    ],
+    "db58771fc767e01542fa4094bc72fd7cb62261e73206fddf2366a8ecb19266f2": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002742.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003163.jpg"
+    ],
+    "dd6894dc2ca9d08455271cc3a5207129355a918b985182178eed63f35ef7c555": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002766.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003189.jpg"
+    ],
+    "dd7268e05dbd182ae1d70f8f3c45d8d22c33c51a89f5c08ff1677a7ba1b455b9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002768.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003191.jpg"
+    ],
+    "dda689e0e3123ce5715165538d06d3544cd9921eb145d138a030cb1cc1d931ab": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002770.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003193.jpg"
+    ],
+    "bf08286da6372b085de258276a16dca8531b1b36fe9ed0cbe64097a2a500d7b5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002776.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002406.jpg"
+    ],
+    "de39f5c223a4f967b1463a98d55bc87b2b1c5fc03f5b41e9127fef6ff922797b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002777.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003201.jpg"
+    ],
+    "df801e82a2e6112ccf9e01fd37a9cca2e58e72541e4af625932b6253381c1581": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002800.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003227.jpg"
+    ],
+    "dfa53b065f853ae01f9a275c63f68408fb988d15b82af3cd0791ec109e311e0d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002801.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003228.jpg"
+    ],
+    "dfd36d1ca9ceab3aa924162aebf88782cb2fcc22b6b2c5c1d2cb4608d9061625": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002802.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003229.jpg"
+    ],
+    "e0a6c1aedb11f99cba1b1ce35ec9e32933234b8b3229db1a039df4fd4e67d346": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002815.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003244.jpg"
+    ],
+    "e2e7307f32d12f50246eb865a9e5af39a696fc091150d81f4cd953f69f6e8b3b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002843.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003277.jpg"
+    ],
+    "e41381bbd87e8b23bc910e048517857f1afd608727ef77bccefe0dfcdf13de51": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002859.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003295.jpg"
+    ],
+    "e47c7207d993a6720a6b595617567922a7f29f0844ea2de5006f0f51131e8df3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002865.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003301.jpg"
+    ],
+    "e547a08da902bf71ea08643b62dd30e07e9de18cba82e1c02802b46968300b4a": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002875.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003312.jpg"
+    ],
+    "e5583331473ca803e529ce7c30e54ebcc89643344cdca03656d885341aadf652": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002877.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003314.jpg"
+    ],
+    "e9777d03f54fea156dd5c8ed0dc609cd04c0735d4c2516d6d17fe0550719d6dc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002918.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003361.jpg"
+    ],
+    "eb57c2f2cbb339adeb9f7d114aa4cc38755ba37b598017fbd8ea06fec57a94a1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002941.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003387.jpg"
+    ],
+    "ebf75477f35807e62856eebb9c4c70a77f76882025320764e7000ef7cca241fc": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002951.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003398.jpg"
+    ],
+    "ec3cda99efb1790f36a7ef43d6cc680e82899375d1c75edfc129b4b134610417": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002957.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003404.jpg"
+    ],
+    "cda31a8c33c565bdd8354274d8c9744cfa73315b7e89651df7ed723df4ac4e05": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002964.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002572.jpg"
+    ],
+    "ed67ae7659eeaf45ff3217ffa2ec7b0179cafdafee94b2a4554c586617f40aa0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002968.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003418.jpg"
+    ],
+    "eeb1b2246b3d5986bc7b1922145b9af31cb7cb639a07dc54de37ecf65c1715b5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002983.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003433.jpg"
+    ],
+    "f0d737c70d30f86e2a5b1ea5efd0eb757326d7cd536133f5c35a0c0810f78567": [
+      "train:data\\processed\\combined-top3\\images\\train\\00002999.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003452.jpg"
+    ],
+    "f0f769652e4f4a1bf86b87548b5432abdefa943ec78e8f86b4ec1f260ea025e9": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003000.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003453.jpg"
+    ],
+    "f30c45f40d0a62e01a6cb05fbf911e2f568a923fc54497c1058b0713eaea8c3e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003020.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003476.jpg"
+    ],
+    "f3fb101e6a591f23f7c0f66f11dc795cc369b6989b62eceafa950ac01a9fae93": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003031.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003489.jpg"
+    ],
+    "f61c6927682c85c16d4f0f28a6e54bf56eabe615beade380b9d77884d94ae842": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003062.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003526.jpg"
+    ],
+    "d4425ca5ee41bc4010445303957908fdb6434659b5efd2a9e05179c8e13c07e3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003063.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002655.jpg"
+    ],
+    "fa059e0300b5c484f97e0d2dbc9d2f0704b9e2e3aca80cbb7a79bee17407ed81": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003111.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003581.jpg"
+    ],
+    "fd19e44df176e5f618832e6796c9a562313081ef41187c845e982109d68ff824": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003144.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003618.jpg"
+    ],
+    "fde85bff7eac3ef118091199a23aa79a9d21f4c69553a6d236aee4c0a5b1e790": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003155.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003632.jpg"
+    ],
+    "fdec066d87a7f8e62cb0620cac3f13c7896bb1ab383d0f89fc055de3f49c18ca": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003156.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003633.jpg"
+    ],
+    "de294613772d62f40ec5cdd251f396f1208275c1b7acb539cf8c91b328500c70": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003199.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002776.jpg"
+    ],
+    "df684499fa6ee09395c6d4418050b86743145708f22443a470fc067eb2d56d42": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003223.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002796.jpg"
+    ],
+    "df7138b25c5d2719838aecd381a1cd406928ac9838ecb2209b734851137dd9a4": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003224.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002797.jpg"
+    ],
+    "e076b7fa24eebd6fc52f080ad4cb1199f5e3e8083fc6affacfaf4c98c1af3e35": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003240.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002812.jpg"
+    ],
+    "e24720fb5ab22f0f7eecf3de4bb648244b41753439154242ce61d79a9462a89e": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003266.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002832.jpg"
+    ],
+    "e294f7844da7b4abaff8bb4a9b8a780d53272cc8e636a4c99e6c25e54f76f945": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003271.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002837.jpg"
+    ],
+    "e2a31e08161d43ac1315ee5ceff08255e79e949b9b0257ceb357ecc836735ec8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003273.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002839.jpg"
+    ],
+    "e343617d9a37f2a070dfa95aed468f88dfddfc0de441324483fdfcc0200ae174": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003279.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002845.jpg"
+    ],
+    "e3d1fe7cba26bc0d11ff6893782ba80140d42877bab7921059aae8ce9457dcc6": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003291.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002856.jpg"
+    ],
+    "e50b621432f2e39f9da43681bed64d56b175964ee56bd85ce9937652ef877ed0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003309.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002872.jpg"
+    ],
+    "e96d646f2e638c5ddaaf1197737146fc5b67da25ad97c524000a3ff1b5127d96": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003359.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002916.jpg"
+    ],
+    "ea1e12291d2b0d56dbe718d23121424c72658c923bccb189e7e33080e567cfd8": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003368.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002925.jpg"
+    ],
+    "eb843b35347dc12e811c7239a270eda473dd248f314a2bc823a8eb8af01c7ffd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003392.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002945.jpg"
+    ],
+    "ed2011785420211d167fadf58ca4df5ae0c6ffa8ddbf338501532168c4860029": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003413.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002964.jpg"
+    ],
+    "ed8b0839456284bf85505bcf88ab62ef00aa21a0f6b5fe6241ab56c46f40cca3": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003421.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002971.jpg"
+    ],
+    "ee3167fe6e4927d31a133397fcda67d0ea8082a1564e709cf272d369212dd6a0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003427.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002977.jpg"
+    ],
+    "efaa0ebd901fd9e2b04d96434876fd4d9ca37f15f6e299ce1add824caa3aa6ba": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003444.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00002993.jpg"
+    ],
+    "f23a435722d168421eb5b72f8dc42a32b4b267e747e66ab8d2ebd70620a5b65c": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003466.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003011.jpg"
+    ],
+    "f2c45ce9e10b8559f8cccabbf241c074480fd33355fa0c10dd13b7ba4dedac0b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003472.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003017.jpg"
+    ],
+    "f381abdf6f9968968ca40c145666c3718b0167d12b6345d9070e856aafdc96e0": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003483.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003025.jpg"
+    ],
+    "f4e501c97e6574da4abe518f79e85819122bc40595dc851eb7f3e3a625f3c235": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003503.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003042.jpg"
+    ],
+    "f517e980a233980629bf3df5091fe602354cc24063953ac3536ac2bbf4f2201b": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003510.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003049.jpg"
+    ],
+    "f61e024ae7d923645967aa0c8dc64d87301fffcc54c120c5127cb07fecf4c4ea": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003527.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003063.jpg"
+    ],
+    "f805ebd53e017f68ce31d2a778c0ade47d9b32a4cecf33ff2aaaa302f602aec5": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003550.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003083.jpg"
+    ],
+    "f9b42713a1aa8d31ddcb0e4a8cd084e084d7dd557b414a51b01d0fedfd0d702d": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003577.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003108.jpg"
+    ],
+    "f9f23c93aab483963bfe3e4b7a86ad6c351e3cc8c12c1442c18fd6cedc3aaa02": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003580.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003110.jpg"
+    ],
+    "fc8994d0739efd6cd1bc1300f45dfaafc77783c459dc71e1d0761bced05624cd": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003611.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003137.jpg"
+    ],
+    "fd0eab11a0b71b2f5b94f09a505d984eef42bd12a49ef7122cf4799f83df5bbf": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003616.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003142.jpg"
+    ],
+    "fdd7b7600d986087e3419b3a0d426e8549dbe8866d38be436fdf1a931b6996be": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003629.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003152.jpg"
+    ],
+    "fddc60ed232f5a65b8bba0b160a626607bf4c1ba5de1db24963d1261e090e6a1": [
+      "train:data\\processed\\combined-top3\\images\\train\\00003630.jpg",
+      "val:data\\processed\\combined-top3\\images\\val\\00003153.jpg"
+    ]
+  },
+  "invalid_label_count": 0,
+  "invalid_labels": [],
+  "status": "review_required"
+}

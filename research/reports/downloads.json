@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://github.com/henningheyen/Fruits-And-Vegetables-Detection-Dataset/archive/refs/heads/main.zip",
+    "path": "data\\raw\\lvis-fruits-vegetables-github\\lvis.zip",
+    "size": 217136303,
+    "sha256": "a83b7a5108fe93a22741885fae7f8344612947694845df16acd156e5e469f98f",
+    "status": "downloaded",
+    "id": "lvis-fruits-vegetables-github",
+    "license": "MIT",
+    "annotation": "yolo-bounding-box"
+  },
+  {
+    "url": "https://huggingface.co/datasets/LFTTim/multiple_smartphone_bangladesh_vegetable_detection/resolve/main/data/train-00000-of-00001.parquet",
+    "path": "data\\raw\\bangladesh-smartphone-parquet\\bangladesh.parquet",
+    "size": 223273212,
+    "sha256": "8a1513076c339076c187da50b658698a36591c6c1377eb48ebc26a2be95be437",
+    "status": "downloaded",
+    "id": "bangladesh-smartphone-parquet",
+    "license": "CC-BY-4.0",
+    "annotation": "object-detection-parquet"
+  },
+  {
+    "url": "https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide/resolve/main/data/train-00000-of-00002.parquet",
+    "path": "data\\raw\\fruit-worldwide-00000\\fruit-worldwide-00000.parquet",
+    "size": 375523986,
+    "sha256": "28d5c132e4cc2f216014073cb4b59bfebb2f1b25b604dfe2ad7d8fa734b83663",
+    "status": "downloaded",
+    "id": "fruit-worldwide-00000",
+    "license": "CC-BY-4.0",
+    "annotation": "object-detection-parquet"
+  },
+  {
+    "url": "https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide/resolve/main/data/train-00001-of-00002.parquet",
+    "path": "data\\raw\\fruit-worldwide-00001\\fruit-worldwide-00001.parquet",
+    "size": 174457350,
+    "sha256": "aa33d0e00bec37795669831b0409300bbe573cd0b98f8514adce792822aa4b9b",
+    "status": "downloaded",
+    "id": "fruit-worldwide-00001",
+    "license": "CC-BY-4.0",
+    "annotation": "object-detection-parquet"
+  },
+  {
+    "url": "https://huggingface.co/datasets/omorros/kitchen-fruit-vegetable-detection/resolve/main/coco/annotations.json",
+    "path": "data\\raw\\kitchen-annotations\\annotations.json",
+    "size": 89012,
+    "sha256": "d2ba8cfd2d09e4c9522abbaf43e39cec06968a61510e68f4b65c981ebbb5f126",
+    "status": "downloaded",
+    "id": "kitchen-annotations",
+    "license": "CC-BY-4.0",
+    "annotation": "coco-bounding-box"
+  }
+]

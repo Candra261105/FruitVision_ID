@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "candidates": [
+    {
+      "run": "smoke-small-metrics-yolov8s-world",
+      "status": "rejected",
+      "map50": 0.012643713625003614,
+      "map50_95": 0.005226206463947469,
+      "reasons": [
+        "recall cucumber di bawah gate (0.0000 < 0.3000)",
+        "recall tomato di bawah gate (0.1282 < 0.3000)",
+        "recall green beans di bawah gate (0.0000 < 0.3000)"
+      ]
+    }
+  ],
+  "best_eligible": null
+}

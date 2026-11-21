@@ -1,0 +1,7 @@
+version: 1
+fruits: [cucumber, tomato, green_beans]
+tasks:
+  disease: [healthy, unknown, belly_rot, pythium_fruit_rot]
+  maturity: [unripe, half_ripe, ripe]
+  rot: [not_rotten, rotten]
+  grade: [A, B, C, reject]

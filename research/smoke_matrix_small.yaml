@@ -1,0 +1,9 @@
+experiments:
+  - id: smoke-small-yolov8s-world
+    model: models/yolov8s-world.pt
+    imgsz: 160
+    epochs: 1
+    patience: 1
+    seed: 20261118
+    augmentation: original
+    augmentation_policy: research/augmentation_policy.yaml

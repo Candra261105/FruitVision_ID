@@ -1,0 +1,259 @@
+[
+  {
+    "file": "01_deteksi_cucumber.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "1 objek terdeteksi. 1 objek dinilai kondisi tomat.",
+    "detections": [
+      {
+        "class_name": "tomato",
+        "confidence": 0.2075,
+        "review_status": "review",
+        "warnings": [
+          "objek kecil",
+          "objek menyentuh tepi"
+        ]
+      }
+    ],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "01_deteksi_green_beans.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "3 objek terdeteksi. 3 objek dinilai kondisi tomat.",
+    "detections": [
+      {
+        "class_name": "tomato",
+        "confidence": 0.3708,
+        "review_status": "review",
+        "warnings": [
+          "objek kecil",
+          "objek menyentuh tepi"
+        ]
+      },
+      {
+        "class_name": "tomato",
+        "confidence": 0.281,
+        "review_status": "review",
+        "warnings": [
+          "objek kecil"
+        ]
+      },
+      {
+        "class_name": "tomato",
+        "confidence": 0.2272,
+        "review_status": "review",
+        "warnings": []
+      }
+    ],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "01_deteksi_tomato.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "02_penyakit_mentimun_belly_rot.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "02_penyakit_mentimun_healthy.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "2 objek terdeteksi. 2 objek dinilai kondisi mentimun.",
+    "detections": [
+      {
+        "class_name": "cucumber",
+        "confidence": 0.5455,
+        "review_status": "review",
+        "warnings": []
+      },
+      {
+        "class_name": "cucumber",
+        "confidence": 0.4944,
+        "review_status": "review",
+        "warnings": []
+      }
+    ],
+    "enhancement_steps": [
+      "koreksi_cahaya",
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "02_penyakit_mentimun_pythium_fruit_rot.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "03_kematangan_tomat_half_ripe.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "koreksi_cahaya",
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "03_kematangan_tomat_ripe.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "1 objek terdeteksi. 1 objek dinilai kondisi tomat.",
+    "detections": [
+      {
+        "class_name": "tomato",
+        "confidence": 0.4195,
+        "review_status": "review",
+        "warnings": []
+      }
+    ],
+    "enhancement_steps": [
+      "koreksi_cahaya",
+      "denoise"
+    ],
+    "quality_warnings": [
+      "gelap",
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "03_kematangan_tomat_unripe.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "04_busuk_tomat_not_rotten.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "koreksi_cahaya",
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "04_busuk_tomat_rotten.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "1 objek terdeteksi. 1 objek dinilai kondisi tomat.",
+    "detections": [
+      {
+        "class_name": "tomato",
+        "confidence": 0.4441,
+        "review_status": "review",
+        "warnings": []
+      }
+    ],
+    "enhancement_steps": [
+      "koreksi_cahaya",
+      "denoise"
+    ],
+    "quality_warnings": [
+      "gelap",
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "05_grade_tomat_A.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "1 objek terdeteksi. 1 objek dinilai kondisi tomat.",
+    "detections": [
+      {
+        "class_name": "tomato",
+        "confidence": 0.3059,
+        "review_status": "review",
+        "warnings": []
+      }
+    ],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "05_grade_tomat_B.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  },
+  {
+    "file": "05_grade_tomat_C.jpg",
+    "http_status": 200,
+    "mode": "demo",
+    "message": "Tidak ada objek dari tiga kelas yang dikenali.",
+    "detections": [],
+    "enhancement_steps": [
+      "denoise"
+    ],
+    "quality_warnings": [
+      "noise_tinggi"
+    ]
+  }
+]

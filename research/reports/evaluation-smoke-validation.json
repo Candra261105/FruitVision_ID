@@ -1,0 +1,9 @@
+{
+  "model": "runs\\detect\\runs\\fruitvision-smoke-small\\smoke-small-yolov8s-world\\weights\\best.pt",
+  "data": "data\\processed\\smoke-top3\\data.yaml",
+  "device": "cpu",
+  "elapsed_seconds": 12.226,
+  "map50": 0.014628821640694836,
+  "map50_95": 0.004828125840131091,
+  "limitation": "Metrik publik tidak membuktikan performa pada kamera laptop pengguna."
+}

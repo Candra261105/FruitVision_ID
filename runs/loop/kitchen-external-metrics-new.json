@@ -1,0 +1,15 @@
+{
+  "name": "kitchen-external",
+  "map50": 0.22969253748767648,
+  "map50_95": 0.18188074259195353,
+  "precision": 0.6949414015159839,
+  "recall": 0.28125,
+  "per_class": {
+    "cucumber": 0.0018407305727141004,
+    "tomato": 0.45754434440263886
+  },
+  "classes_seen": [
+    "cucumber",
+    "tomato"
+  ]
+}

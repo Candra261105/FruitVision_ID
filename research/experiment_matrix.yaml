@@ -1,0 +1,25 @@
+experiments:
+  - id: yolo11n-light-original
+    model: yolo11n.pt
+    imgsz: 512
+    epochs: 80
+    patience: 15
+    seed: 20261118
+    augmentation: original
+    augmentation_policy: research/augmentation_policy.yaml
+  - id: yolo11n-light-photometric
+    model: yolo11n.pt
+    imgsz: 512
+    epochs: 80
+    patience: 15
+    seed: 20261119
+    augmentation: light-dark-contrast-color
+    augmentation_policy: research/augmentation_policy.yaml
+  - id: yolo11n-standard-original
+    model: yolo11n.pt
+    imgsz: 640
+    epochs: 100
+    patience: 20
+    seed: 20261120
+    augmentation: original
+    augmentation_policy: research/augmentation_policy.yaml

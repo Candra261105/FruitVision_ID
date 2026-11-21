@@ -1,0 +1,12 @@
+{
+  "root": "data\\processed\\lvis-top3",
+  "split_counts": {
+    "unknown": 17
+  },
+  "image_count": 17,
+  "duplicate_groups": {},
+  "cross_split_duplicate_groups": {},
+  "invalid_label_count": 0,
+  "invalid_labels": [],
+  "status": "clean"
+}

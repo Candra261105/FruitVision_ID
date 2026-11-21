@@ -1,0 +1,36 @@
+entries:
+  - id: lvis-fruits-vegetables-github
+    title: LVIS Fruits And Vegetables Dataset
+    url: https://github.com/henningheyen/Fruits-And-Vegetables-Detection-Dataset/archive/refs/heads/main.zip
+    filename: lvis.zip
+    license: MIT
+    annotation: yolo-bounding-box
+    source_url: https://www.kaggle.com/datasets/henningheyen/lvis-fruits-and-vegetables-dataset
+  - id: bangladesh-smartphone-parquet
+    title: Multiple Smartphone Bangladesh Vegetable Detection
+    url: https://huggingface.co/datasets/LFTTim/multiple_smartphone_bangladesh_vegetable_detection/resolve/main/data/train-00000-of-00001.parquet
+    filename: bangladesh.parquet
+    license: CC-BY-4.0
+    annotation: object-detection-parquet
+    source_url: https://huggingface.co/datasets/LFTTim/multiple_smartphone_bangladesh_vegetable_detection
+  - id: fruit-worldwide-00000
+    title: Fruit Detection Worldwide part 1
+    url: https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide/resolve/main/data/train-00000-of-00002.parquet
+    filename: fruit-worldwide-00000.parquet
+    license: CC-BY-4.0
+    annotation: object-detection-parquet
+    source_url: https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide
+  - id: fruit-worldwide-00001
+    title: Fruit Detection Worldwide part 2
+    url: https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide/resolve/main/data/train-00001-of-00002.parquet
+    filename: fruit-worldwide-00001.parquet
+    license: CC-BY-4.0
+    annotation: object-detection-parquet
+    source_url: https://huggingface.co/datasets/Project-AgML/fruit_detection_worldwide
+  - id: kitchen-annotations
+    title: Kitchen Fruit Vegetable Detection annotations
+    url: https://huggingface.co/datasets/omorros/kitchen-fruit-vegetable-detection/resolve/main/coco/annotations.json
+    filename: annotations.json
+    license: CC-BY-4.0
+    annotation: coco-bounding-box
+    source_url: https://huggingface.co/datasets/omorros/kitchen-fruit-vegetable-detection

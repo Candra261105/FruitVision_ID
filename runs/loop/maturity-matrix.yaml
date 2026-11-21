@@ -1,0 +1,9 @@
+tasks:
+  - id: maturity
+    task: maturity
+    model: C:/Users/dragon/Downloads/FruitVision_ID/runs/classify/runs/advanced-condition/maturity/weights/best.pt
+    epochs: 8
+    patience: 4
+    batch: 64
+    imgsz: 160
+    workers: 0

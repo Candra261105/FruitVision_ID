@@ -1,0 +1,44 @@
+{
+  "world_1024": {
+    "tag": "world_1024",
+    "weights": "yolov8s-world.pt",
+    "imgsz": 1024,
+    "map50": 0.0338,
+    "map50_95": 0.013,
+    "precision": 0.0658,
+    "recall": 0.0654,
+    "per_class": {
+      "cucumber": 0.0781,
+      "tomato": 0.023,
+      "green beans": 0.0002
+    }
+  },
+  "detector_640": {
+    "tag": "detector_640",
+    "weights": "best.pt",
+    "imgsz": 640,
+    "map50": 0.3986,
+    "map50_95": 0.1905,
+    "precision": 0.3949,
+    "recall": 0.494,
+    "per_class": {
+      "cucumber": 0.4227,
+      "tomato": 0.4305,
+      "green beans": 0.3426
+    }
+  },
+  "detector_1024": {
+    "tag": "detector_1024",
+    "weights": "best.pt",
+    "imgsz": 1024,
+    "map50": 0.1654,
+    "map50_95": 0.0637,
+    "precision": 0.212,
+    "recall": 0.3434,
+    "per_class": {
+      "cucumber": 0.1904,
+      "tomato": 0.1773,
+      "green beans": 0.1285
+    }
+  }
+}

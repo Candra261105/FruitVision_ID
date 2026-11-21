@@ -1,0 +1,12 @@
+{
+  "root": "data\\processed\\kitchen-top3",
+  "split_counts": {
+    "unknown": 120
+  },
+  "image_count": 120,
+  "duplicate_groups": {},
+  "cross_split_duplicate_groups": {},
+  "invalid_label_count": 0,
+  "invalid_labels": [],
+  "status": "clean"
+}

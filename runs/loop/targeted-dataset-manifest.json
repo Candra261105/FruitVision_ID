@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\data\\processed\\combined-top3-cc0-experiment",
+  "output": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\data\\processed\\combined-top3-cc0-targeted",
+  "base_train_images": 3268,
+  "green_beans_train_images": 1381,
+  "duplicated_green_beans_images": 690,
+  "target_extra_fraction": 0.5,
+  "unchanged_splits": {
+    "val": true,
+    "test": true,
+    "external_holdout": true
+  },
+  "policy": "train-only green beans oversampling by deterministic exact-image copies; val/test/external_holdout unchanged"
+}

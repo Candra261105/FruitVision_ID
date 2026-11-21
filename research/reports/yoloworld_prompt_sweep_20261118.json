@@ -1,0 +1,50 @@
+{
+  "plain": {
+    "prompts": [
+      "cucumber",
+      "tomato",
+      "green beans"
+    ],
+    "map50": 0.0195,
+    "map50_95": 0.0077,
+    "precision": 0.0734,
+    "recall": 0.0944,
+    "per_class": {
+      "cucumber": 0.0301,
+      "tomato": 0.0285,
+      "green beans": 0.0
+    }
+  },
+  "photo_of": {
+    "prompts": [
+      "a photo of a cucumber",
+      "a photo of a tomato",
+      "a photo of green beans"
+    ],
+    "map50": 0.0195,
+    "map50_95": 0.0077,
+    "precision": 0.0734,
+    "recall": 0.0944,
+    "per_class": {
+      "a photo of a cucumber": 0.0301,
+      "a photo of a tomato": 0.0285,
+      "a photo of green beans": 0.0
+    }
+  },
+  "fruit_words": {
+    "prompts": [
+      "cucumber fruit",
+      "tomato fruit",
+      "green bean pod"
+    ],
+    "map50": 0.0195,
+    "map50_95": 0.0077,
+    "precision": 0.0734,
+    "recall": 0.0944,
+    "per_class": {
+      "cucumber fruit": 0.0301,
+      "tomato fruit": 0.0285,
+      "green bean pod": 0.0
+    }
+  }
+}

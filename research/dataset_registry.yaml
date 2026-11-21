@@ -1,0 +1,93 @@
+﻿schema_version: 1
+project: FruitVision ID
+accessed: 2026-11-18
+usage: personal-classroom
+entries:
+  - id: project-agml-tomato-detection-kaggle
+    title: Tomato Detection Kaggle / greenhouse fruit detection
+    source_url: https://huggingface.co/datasets/Project-AgML/tomato_detection_kaggle
+    original_source: Kaggle / MDPI Agronomy greenhouse study
+    license: CC0 1.0
+    classes: [tomato]
+    labels: [object-detection]
+    annotation: parquet-bounding-box
+    download_status: downloaded-and-split
+    audit_status: approved-for-training-experiment
+    provenance_note: 895 gambar unik, 4.930 bbox, 0 bbox invalid, 0 duplikasi internal, 0 duplikasi dengan combined-top3-final. Sebanyak 716 gambar dipakai sebagai train tambahan dan 179 ditahan sebagai external holdout.
+  - id: lfttim-multiple-smartphone-bangladesh-vegetable-detection
+    title: Multiple Smartphone Bangladesh Vegetable Detection
+    source_url: https://huggingface.co/datasets/LFTTim/multiple_smartphone_bangladesh_vegetable_detection
+    original_source: Hugging Face
+    license: CC BY 4.0
+    classes: [cucumber, tomato, green beans]
+    labels: [object-detection]
+    annotation: parquet-bounding-box
+    download_status: downloaded-and-converted
+    audit_status: rejected_duplicate
+    provenance_note: 3.534 gambar dan split bawaan berhasil diaudit. Semua 3.174 gambar target adalah hash SHA-256 yang sudah ada di combined-top3-final, dengan 0 perbedaan label. Tidak boleh digabungkan sebagai data baru.
+  - id: killa92-fruit-ripeness-object-detection
+    title: Fruit Ripeness Object Detection Dataset
+    source_url: https://www.kaggle.com/datasets/killa92/fruit-ripeness-object-detection-dataset
+    original_source: Kaggle
+    license: Apache-2.0
+    classes: [banana, mango, orange]
+    labels: [ripe, unripe, overripe, rotten]
+    annotation: yolo-bounding-box
+    download_status: candidate-not-downloaded
+    audit_status: metadata-only
+    provenance_note: Dataset metadata menyebut Lakatan banana, Carabao mango, dan orange. Asal Indonesia belum dibuktikan.
+  - id: molten-fruits-360
+    title: Fruits-360
+    source_url: https://www.kaggle.com/datasets/moltean/fruits
+    original_source: Kaggle
+    license: CC-BY-SA-4.0
+    classes: [banana, mango, orange, papaya, avocado]
+    labels: [fruit-class]
+    annotation: image-folder
+    download_status: candidate-not-downloaded
+    audit_status: metadata-only
+    provenance_note: Cocok sebagai data klasifikasi pendukung, bukan bukti deteksi buah berdempetan.
+  - id: leftin-fruit-ripeness
+    title: "Fruit Ripeness: Unripe, Ripe, and Rotten"
+    source_url: https://www.kaggle.com/datasets/leftin/fruit-ripeness-unripe-ripe-and-rotten
+    original_source: Kaggle
+    license: CC-BY-SA-4.0
+    classes: [banana, orange]
+    labels: [unripe, ripe, rotten]
+    annotation: image-folder
+    download_status: candidate-not-downloaded
+    audit_status: metadata-only
+    provenance_note: Tidak mencakup seluruh lima kelas prioritas.
+  - id: darthraider-fruit-ripeness
+    title: Fruit Ripeness Detection Dataset
+    source_url: https://huggingface.co/datasets/darthraider/fruit-ripeness-detection-dataset
+    original_source: Hugging Face
+    license: Apache-2.0
+    classes: [banana, mango]
+    labels: [ripe, unripe]
+    annotation: image-folder
+    download_status: candidate-not-downloaded
+    audit_status: metadata-only
+    provenance_note: Kartu dataset menyebut data berasal dari kondisi luar ruang. Tautan Mendeley asal perlu diverifikasi terpisah.
+  - id: five-tropical-fruit-ripeness
+    title: Five Fruit Ripeness Image Dataset with Monocular Depth Maps
+    source_url: https://github.com/xuetong932-hub/Five-Fruit-Ripeness-Image-Dataset-with-Monocular-Depth-Maps
+    original_source: GitHub
+    license: unknown
+    classes: [banana, mango, papaya]
+    labels: [ripe, unripe]
+    annotation: repository-dependent
+    download_status: candidate-not-downloaded
+    audit_status: license-review-required
+    provenance_note: Jangan masukkan ke bobot yang dibagikan sebelum lisensi dan file label diverifikasi.
+  - id: henningheyen-lvis-fruits-vegetables
+    title: LVIS Fruits And Vegetables Dataset
+    source_url: https://www.kaggle.com/datasets/henningheyen/lvis-fruits-and-vegetables-dataset
+    original_source: Kaggle
+    license: MIT
+    classes: [unknown-until-audit]
+    labels: [object-detection]
+    annotation: yolo-bounding-box
+    download_status: candidate-not-downloaded
+    audit_status: metadata-only
+    provenance_note: Metadata menyebut dataset YOLO dari LVIS. Wajib audit daftar kelas sebelum memilihnya untuk lima buah prioritas.
