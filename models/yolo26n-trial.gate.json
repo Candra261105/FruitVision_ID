@@ -1,0 +1,9 @@
+﻿{
+    "status":  "trial",
+    "model":  "YOLO26n",
+    "weights":  "models/yolo26n-trial.pt",
+    "weights_sha256":  "25686cda8629858fd25af63f5c5c21f537985f8bed339952addf90759c25e656",
+    "source":  "epoch-30 best.pt",
+    "evaluation_status":  "baseline_gate_rejected",
+    "note":  "Diaktifkan eksplisit untuk uji pengguna. Belum menggantikan fallback secara tervalidasi."
+}

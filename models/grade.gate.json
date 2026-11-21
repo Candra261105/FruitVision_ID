@@ -1,0 +1,77 @@
+{
+  "status": "eligible",
+  "created_at": "2026-11-18T16:48:13.318370+00:00",
+  "model": "grade.pt",
+  "evaluation": {
+    "task": "grade",
+    "labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "macro_f1": 0.8351254480286738,
+    "balanced_accuracy": 0.8303571428571429,
+    "ordinal_mean_error": 0.18421052631578946,
+    "support": 76,
+    "per_class": {
+      "A": {
+        "precision": 0.7647058823529411,
+        "recall": 0.9285714285714286,
+        "f1": 0.8387096774193549,
+        "support": 28
+      },
+      "B": {
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1": 0.7999999999999999,
+        "support": 32
+      },
+      "C": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8125,
+        "f1": 0.8666666666666666,
+        "support": 16
+      }
+    },
+    "confusion_matrix": {
+      "A": {
+        "A": 26,
+        "B": 2,
+        "C": 0
+      },
+      "B": {
+        "A": 7,
+        "B": 24,
+        "C": 1
+      },
+      "C": {
+        "A": 1,
+        "B": 2,
+        "C": 13
+      }
+    },
+    "mean_confidence": 0.8714947441690847,
+    "evaluated_at": "2026-11-18T16:48:13.281764+00:00",
+    "model": "grade.pt",
+    "weights_source": "runs\\advanced-condition\\grade\\weights\\best.pt",
+    "test_dir": "runs\\advanced-condition\\grade\\dataset\\test"
+  },
+  "provenance": {
+    "task": "grade",
+    "taxonomy_version": 1,
+    "taxonomy_sha256": "d8b615dc45ff28d0fde8eaaea176210ab83ff28feed82aa9860708efeea90071",
+    "manifest_sha256": "a32cf178e755abe03c6e9b61ecca90c36371f2ff80670c897342241667e70c8a",
+    "model_sha256": "a24ef917b47303b9a5d92f210e04db6bc16c5bc4341ad3d42ad68e13c28e8c00",
+    "split_strategy": "holdout dataset sumber; session_id dikelompokkan; 0 overlap lintas split (audit)",
+    "dataset": "Project-AgML/AFruitDB_fruit_grade_classification",
+    "dataset_license": "CC BY 4.0",
+    "fruits": [
+      "tomato"
+    ],
+    "imgsz": 160,
+    "evaluation_split": "test holdout, tanpa gambar augmentasi",
+    "augmentation": "augmentasi Ultralytics hanya pada split train",
+    "evaluated_at": "2026-11-18T16:48:13.281764+00:00"
+  },
+  "reasons": []
+}

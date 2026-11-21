@@ -1,0 +1,77 @@
+{
+  "status": "eligible",
+  "created_at": "2026-11-18T16:33:31.460496+00:00",
+  "model": "disease.pt",
+  "evaluation": {
+    "task": "disease",
+    "labels": [
+      "healthy",
+      "belly_rot",
+      "pythium_fruit_rot"
+    ],
+    "macro_f1": 1.0,
+    "balanced_accuracy": 1.0,
+    "ordinal_mean_error": 0.0,
+    "support": 434,
+    "per_class": {
+      "healthy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 143
+      },
+      "belly_rot": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 143
+      },
+      "pythium_fruit_rot": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 148
+      }
+    },
+    "confusion_matrix": {
+      "healthy": {
+        "healthy": 143,
+        "belly_rot": 0,
+        "pythium_fruit_rot": 0
+      },
+      "belly_rot": {
+        "healthy": 0,
+        "belly_rot": 143,
+        "pythium_fruit_rot": 0
+      },
+      "pythium_fruit_rot": {
+        "healthy": 0,
+        "belly_rot": 0,
+        "pythium_fruit_rot": 148
+      }
+    },
+    "mean_confidence": 0.9998521593309218,
+    "evaluated_at": "2026-11-18T16:33:31.305947+00:00",
+    "model": "disease.pt",
+    "weights_source": "runs\\advanced-condition\\disease\\weights\\best.pt",
+    "test_dir": "runs\\advanced-condition\\disease\\dataset\\test"
+  },
+  "provenance": {
+    "task": "disease",
+    "taxonomy_version": 1,
+    "taxonomy_sha256": "d8b615dc45ff28d0fde8eaaea176210ab83ff28feed82aa9860708efeea90071",
+    "manifest_sha256": "7ebd34b7a3b50657000885cabeb396ab0c9dcac2c243a2542c2cbac6681b3659",
+    "model_sha256": "836696424ec01e1e9e804311d5c79956d1ea4580f08c0a82c1018f288272e0a0",
+    "split_strategy": "holdout dataset sumber; session_id dikelompokkan; 0 overlap lintas split (audit)",
+    "dataset": "Project-AgML/cucumber_disease_classification",
+    "dataset_license": "lihat manifest license_or_permission",
+    "fruits": [
+      "cucumber"
+    ],
+    "imgsz": 160,
+    "evaluation_split": "test holdout, tanpa gambar augmentasi",
+    "augmentation": "augmentasi Ultralytics hanya pada split train",
+    "evaluated_at": "2026-11-18T16:33:31.305947+00:00"
+  },
+  "reasons": []
+}

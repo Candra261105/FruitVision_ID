@@ -1,0 +1,77 @@
+{
+  "status": "eligible",
+  "created_at": "2026-11-18T15:13:08.008610+00:00",
+  "model": "maturity.pt",
+  "evaluation": {
+    "task": "maturity",
+    "labels": [
+      "unripe",
+      "half_ripe",
+      "ripe"
+    ],
+    "macro_f1": 0.7815198666139086,
+    "balanced_accuracy": 0.8000371239941404,
+    "ordinal_mean_error": 0.2302357836338419,
+    "support": 721,
+    "per_class": {
+      "unripe": {
+        "precision": 0.856353591160221,
+        "recall": 0.8333333333333334,
+        "f1": 0.8446866485013623,
+        "support": 186
+      },
+      "half_ripe": {
+        "precision": 0.8241758241758241,
+        "recall": 0.6637168141592921,
+        "f1": 0.7352941176470588,
+        "support": 339
+      },
+      "ripe": {
+        "precision": 0.6629213483146067,
+        "recall": 0.9030612244897959,
+        "f1": 0.7645788336933046,
+        "support": 196
+      }
+    },
+    "confusion_matrix": {
+      "unripe": {
+        "unripe": 155,
+        "half_ripe": 30,
+        "ripe": 1
+      },
+      "half_ripe": {
+        "unripe": 25,
+        "half_ripe": 225,
+        "ripe": 89
+      },
+      "ripe": {
+        "unripe": 1,
+        "half_ripe": 18,
+        "ripe": 177
+      }
+    },
+    "mean_confidence": 0.8164046336063565,
+    "evaluated_at": "2026-11-18T15:13:07.570897+00:00",
+    "model": "maturity.pt",
+    "weights_source": "runs\\advanced-condition\\maturity\\weights\\best.pt",
+    "test_dir": "runs\\advanced-condition\\maturity\\dataset\\test"
+  },
+  "provenance": {
+    "task": "maturity",
+    "taxonomy_version": 1,
+    "taxonomy_sha256": "d8b615dc45ff28d0fde8eaaea176210ab83ff28feed82aa9860708efeea90071",
+    "manifest_sha256": "e896f15d6cde9e0fd9ff711227a3883a5d5e73715f963e78c9f559149c333dcd",
+    "model_sha256": "74f41fe24a33e564d67f5bc4942dc0208eea59d88f9fa67462c20ec0609ef9cf",
+    "split_strategy": "holdout dataset sumber; session_id dikelompokkan; 0 overlap lintas split (audit)",
+    "dataset": "ParsaVictor/tomato-ripeness-detection",
+    "dataset_license": "CC BY 4.0",
+    "fruits": [
+      "tomato"
+    ],
+    "imgsz": 160,
+    "evaluation_split": "test holdout, tanpa gambar augmentasi",
+    "augmentation": "augmentasi Ultralytics hanya pada split train",
+    "evaluated_at": "2026-11-18T15:13:07.570897+00:00"
+  },
+  "reasons": []
+}

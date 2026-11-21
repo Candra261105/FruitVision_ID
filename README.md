@@ -66,7 +66,7 @@ Jendela backend dan frontend akan terbuka sebagai dua jendela Command Prompt. Ja
 
 ## Menyiapkan model
 
-File bobot model tidak disimpan di GitHub karena ukurannya besar. Simpan file `.pt` di folder `models`.
+Sebagian bobot model yang dipakai project ini sudah disimpan di GitHub karena ukurannya masih di bawah batas file GitHub. Dataset gambar dan checkpoint eksperimen lain tetap disimpan di luar repository karena ukurannya jauh lebih besar.
 
 Struktur minimalnya:
 
@@ -75,6 +75,14 @@ FruitVision_ID/
 └── models/
     ├── yolov8s-world.pt
     └── yolo26n-trial.pt
+```
+
+Setelah clone, model berikut tersedia langsung:
+
+```text
+models/yolo26n-trial.pt
+models/yolov8s-world.pt
+runs/detect/runs/loop-detector-yolo26n/experiment-512-yolo26n/weights/best.pt
 ```
 
 ### Model YOLO26n untuk uji coba
@@ -153,7 +161,7 @@ Checkpoint dasar YOLO26n epoch 30 yang dipakai project ini berada di:
 runs/detect/runs/loop-detector-yolo26n/experiment-512-yolo26n/weights/best.pt
 ```
 
-Salin file tersebut ke komputer lain melalui flashdisk, Google Drive, OneDrive, atau jaringan lokal. Dataset juga perlu disalin karena folder `data/processed/` tidak masuk GitHub.
+Checkpoint tersebut sudah ikut di repository. Dataset tetap perlu disalin dari penyimpanan terpisah karena folder `data/processed/` tidak masuk GitHub.
 
 ### Cara 1: memakai VS Code
 
@@ -164,12 +172,12 @@ Buka VS Code, tekan `Ctrl+Shift+P`, pilih **Git: Clone**, masukkan URL repositor
 Atau jalankan dari terminal:
 
 ```powershell
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd REPOSITORY
+git clone https://github.com/Candra261105/FruitVision_ID.git
+cd FruitVision_ID
 code .
 ```
 
-Ganti URL contoh tersebut dengan URL repository yang sebenarnya.
+Repository ini bersifat public. Siapa pun yang memiliki link dapat melakukan clone.
 
 #### B. Siapkan Python di terminal VS Code
 
@@ -209,9 +217,9 @@ names:
   - green beans
 ```
 
-#### D. Masukkan checkpoint
+#### D. Periksa checkpoint
 
-Cara paling sederhana adalah menaruh checkpoint di lokasi yang dicari script:
+Checkpoint dasar sudah tersedia di lokasi yang dicari script:
 
 ```text
 runs\detect\runs\loop-detector-yolo26n\experiment-512-yolo26n\weights\best.pt
@@ -223,7 +231,7 @@ Jika ingin menyimpan checkpoint di lokasi lain, gunakan environment variable. So
 $env:FRUITVISION_BASE_WEIGHTS = 'D:\FruitVisionTransfer\best.pt'
 ```
 
-Ganti path contoh tersebut dengan lokasi `best.pt` di komputer teman.
+Jika file itu dipindahkan ke lokasi lain, ubah environment variable tersebut sesuai lokasi baru.
 
 #### E. Jalankan training lanjutan
 
@@ -341,7 +349,7 @@ models/                          Bobot model lokal
 data/README.md                   Dokumentasi dataset
 data/processed/                  Dataset lokal, tidak masuk Git
 research/                        Script audit dataset dan training
-runs/                            Log, checkpoint, dan hasil evaluasi
+runs/                            Script dan metadata run yang dipilih
 run_all.cmd                      Menjalankan backend dan frontend
 run_backend.cmd                  Menjalankan backend saja
 run_frontend.cmd                 Menjalankan frontend saja
@@ -366,3 +374,9 @@ data\README.md
 ```
 
 Kode project dan setiap dataset memiliki ketentuan lisensi yang berbeda. Baca lisensi sumber sebelum membagikan ulang gambar atau bobot model.
+
+## Batasan penyimpanan GitHub
+
+Repository ini sudah berisi kode, dokumentasi, konfigurasi, manifest, laporan audit, dan beberapa bobot model. Dataset gambar, file Parquet, cache, serta hasil eksperimen besar sengaja tidak di-push. Ukuran data lokal yang dikecualikan sekitar 18,6 GB dan tidak sesuai dengan batas GitHub biasa.
+
+Untuk training di komputer lain, siapkan dataset sesuai `data/README.md`, lalu jalankan script training dari folder project. Untuk menjalankan web, model trial sudah tersedia di `models/yolo26n-trial.pt`.
