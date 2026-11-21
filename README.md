@@ -130,6 +130,41 @@ Dokumentasi dataset ada di:
 data\README.md
 ```
 
+### Download seluruh folder data
+
+Seluruh folder `data` project disediakan melalui Google Drive:
+
+[Download folder data FruitVision ID dari Google Drive](https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA)
+
+Cara memasangnya setelah project di-clone:
+
+1. Buka link Drive di atas.
+2. Unduh folder `data` atau salin seluruh isinya ke komputer sendiri.
+3. Letakkan folder tersebut langsung di root project, sejajar dengan `backend`, `frontend`, `models`, dan `runs`.
+
+Struktur yang benar:
+
+```text
+FruitVision_ID/
+├── backend/
+├── frontend/
+├── models/
+├── runs/
+└── data/
+    ├── raw/
+    ├── processed/
+    ├── advanced/
+    └── README.md
+```
+
+Jangan sampai folder menjadi `data/data/`. Jika dataset hanya ingin dipakai untuk training detector, folder paling penting adalah:
+
+```text
+data\processed\combined-top3-cc0-targeted
+```
+
+Folder `data` berukuran besar. Pastikan ruang kosong di komputer cukup sebelum mengunduh seluruhnya. Untuk training detector, tidak perlu memindahkan dataset ke folder lain setelah diletakkan di root project.
+
 Dataset utama YOLO26n berada di:
 
 ```text
@@ -142,7 +177,7 @@ Dataset targeted untuk training lanjutan berada di:
 data\processed\combined-top3-cc0-targeted
 ```
 
-Folder dataset dikecualikan dari GitHub karena ukurannya sekitar 2,7 sampai 3,2 GB. Simpan dataset di komputer pengguna, lalu pastikan `data.yaml` menunjuk ke folder yang benar.
+Folder dataset dikecualikan dari GitHub karena ukurannya besar. File dataset disediakan melalui Google Drive, sedangkan GitHub menyimpan kode, konfigurasi, script, checkpoint, dan dokumentasi.
 
 ## Melanjutkan training di komputer lain
 
@@ -194,12 +229,18 @@ Di VS Code, tekan `Ctrl+Shift+P`, pilih **Python: Select Interpreter**, lalu pil
 .venv\Scripts\python.exe
 ```
 
-#### C. Masukkan dataset
+#### C. Download dan masukkan dataset
 
-Salin dataset targeted ke lokasi berikut:
+Unduh seluruh folder `data` dari [Google Drive FruitVision ID](https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA), lalu letakkan langsung di root project. Untuk training detector, dataset targeted harus berada di:
 
 ```text
 FruitVision_ID\data\processed\combined-top3-cc0-targeted
+```
+
+Jika hanya ingin menghemat ruang, cukup ambil folder berikut dari Drive:
+
+```text
+data\processed\combined-top3-cc0-targeted
 ```
 
 Folder tersebut harus memiliki `data.yaml`, folder `images`, dan folder `labels` dengan split `train`, `val`, `test`, serta `external_holdout`.
@@ -242,6 +283,20 @@ Jalankan dari folder root project di terminal VS Code:
 ```
 
 Script akan memeriksa dataset dan nama kelas, membaca `best.pt`, lalu melakukan fine-tuning selama 20 epoch tambahan. Ukuran gambar yang dipakai adalah `512`. GPU CUDA akan dipakai jika tersedia, sedangkan komputer tanpa CUDA akan memakai CPU.
+
+Untuk menambah jumlah epoch, buka file:
+
+```text
+runs\loop\train_yolo26n_targeted.py
+```
+
+Ubah nilai berikut, misalnya dari 20 menjadi 100:
+
+```python
+epochs=100
+```
+
+Kemudian jalankan script yang sama. Hasil training baru akan dibuat di folder `runs\detect` dan tidak menimpa checkpoint lama selama nama run tidak dibuat sama.
 
 Hasil training berada di:
 

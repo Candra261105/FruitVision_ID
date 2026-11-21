@@ -2,6 +2,24 @@
 
 Folder ini menjelaskan dataset yang dipakai detector YOLO26n. Gambar dan label dataset tidak disimpan di GitHub karena ukurannya besar.
 
+## Link download dataset
+
+Seluruh folder `data` project dapat diunduh dari Google Drive:
+
+https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA
+
+Setelah diunduh, letakkan folder `data` langsung di root repository `FruitVision_ID`, sehingga path-nya menjadi:
+
+```text
+FruitVision_ID/data/
+```
+
+Jangan membuat susunan `FruitVision_ID/data/data/`. Untuk training detector, dataset yang digunakan adalah:
+
+```text
+FruitVision_ID/data/processed/combined-top3-cc0-targeted
+```
+
 ## Dataset yang dipakai model epoch 30
 
 Lokasi lokal:
@@ -131,7 +149,7 @@ Pembagian sumber ini:
 
 ## Cara memakai dataset di komputer lain
 
-Salin folder dataset ke lokasi berikut di dalam project:
+Setelah folder `data` dari Google Drive berada di root project, dataset utama dapat ditemukan di:
 
 ```text
 FruitVision_ID/data/processed/combined-top3-cc0-experiment
@@ -168,4 +186,4 @@ data/processed/
 data/raw/
 ```
 
-Karena itu, README ini ikut GitHub, sedangkan gambar dan label tetap berada di penyimpanan lokal atau layanan penyimpanan dataset. Untuk membagikan dataset, gunakan Git LFS, Hugging Face Dataset, Google Drive, atau arsip terpisah sesuai lisensi masing-masing sumber.
+Karena itu, README ini ikut GitHub, sedangkan gambar dan label dibagikan melalui Google Drive. GitHub tetap menjadi tempat kode, script training, checkpoint, konfigurasi, manifest, dan dokumentasi.
