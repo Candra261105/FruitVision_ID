@@ -313,6 +313,42 @@ weights\last.pt
 
 Jangan menutup terminal selama proses berjalan. Jika training dihentikan, simpan folder hasil tersebut, terutama file `weights\last.pt`.
 
+### Preset training 50 sampai 100 epoch
+
+Repository ini menyediakan preset berikut di folder `training_presets`:
+
+| File | Jumlah epoch dalam satu sesi fine-tuning |
+|---|---:|
+| `train_50_epochs.cmd` | 50 |
+| `train_60_epochs.cmd` | 60 |
+| `train_70_epochs.cmd` | 70 |
+| `train_80_epochs.cmd` | 80 |
+| `train_90_epochs.cmd` | 90 |
+| `train_100_epochs.cmd` | 100 |
+
+Pastikan dataset dan `.venv` sudah siap. Dari VS Code, jalankan salah satu perintah berikut di terminal project:
+
+```powershell
+cmd /c training_presets\train_50_epochs.cmd
+cmd /c training_presets\train_60_epochs.cmd
+cmd /c training_presets\train_70_epochs.cmd
+cmd /c training_presets\train_80_epochs.cmd
+cmd /c training_presets\train_90_epochs.cmd
+cmd /c training_presets\train_100_epochs.cmd
+```
+
+Atau klik dua kali file `.cmd` yang diinginkan dari File Explorer. Setiap preset memulai fine-tuning dari checkpoint epoch 30 yang ada di repository, lalu membuat folder hasil sendiri. Preset tidak menjalankan keenam training sekaligus.
+
+Untuk jumlah lain, misalnya 110 epoch, gunakan runner yang sama:
+
+```powershell
+& .\.venv\Scripts\python.exe runs\loop\train_targeted_epochs.py --epochs 110
+```
+
+Nilai `--epochs` adalah jumlah epoch pada sesi fine-tuning dari checkpoint awal, bukan jaminan bahwa model langsung lebih akurat. Evaluasi `best.pt` pada test dan `external_holdout` sebelum mengganti model web.
+
+Jika training terhenti, jangan menjalankan ulang preset yang sama dengan `--resume` secara otomatis. Simpan dahulu folder hasil dan gunakan `weights\last.pt` hanya untuk melanjutkan run yang sama setelah memastikan checkpoint tersebut utuh.
+
 ### Cara 2: memakai PowerShell tanpa VS Code
 
 VS Code hanya membantu membuka project dan memantau proses. Training tetap dijalankan oleh Python, jadi bisa dilakukan langsung dari PowerShell:
@@ -405,6 +441,7 @@ data/README.md                   Dokumentasi dataset
 data/processed/                  Dataset lokal, tidak masuk Git
 research/                        Script audit dataset dan training
 runs/                            Script dan metadata run yang dipilih
+training_presets/                Preset training 50, 60, 70, 80, 90, dan 100 epoch
 run_all.cmd                      Menjalankan backend dan frontend
 run_backend.cmd                  Menjalankan backend saja
 run_frontend.cmd                 Menjalankan frontend saja
