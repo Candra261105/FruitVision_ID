@@ -27,6 +27,8 @@ def create_app() -> FastAPI:
         model_loaded=runtime.model_loaded,
         mode=runtime.mode,
         threshold=settings.confidence_threshold,
+        class_names=runtime.class_names,
+        stable_detection_ids=runtime.class_names == ("tomato", "pumpkin", "lemon"),
         advanced_models=advanced_models,
     )
     application = FastAPI(title="FruitVision ID", version="0.1.0")

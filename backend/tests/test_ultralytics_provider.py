@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from PIL import Image
 
 from app.inference.ultralytics_provider import UltralyticsProvider
-from app.services.model_registry import load_runtime
+from app.services.model_registry import load_runtime, model_info
 
 
 def test_open_vocabulary_provider_sets_target_classes(monkeypatch) -> None:
@@ -158,6 +158,33 @@ def test_registry_loads_approved_custom_model_without_world_prompts(monkeypatch,
     assert runtime.model_loaded is True
     assert runtime.mode == "custom"
     assert calls["kwargs"] == {"imgsz": 640}
+
+
+def test_registry_preserves_new_model_taxonomy_from_gate(monkeypatch, tmp_path) -> None:
+    class FakeNewProvider:
+        is_open_vocabulary = False
+        class_names = ("tomato", "pumpkin", "lemon")
+
+        def __init__(self, _model_path, _confidence_threshold, **_kwargs) -> None:
+            pass
+
+    monkeypatch.setattr(
+        "app.inference.ultralytics_provider.UltralyticsProvider",
+        FakeNewProvider,
+        raising=False,
+    )
+    model_path = tmp_path / "tomato-pumpkin-lemon.pt"
+    model_path.write_bytes(b"weights")
+    model_path.with_suffix(".gate.json").write_text(
+        '{"status":"eligible","classes":["tomato","pumpkin","lemon"]}',
+        encoding="utf-8",
+    )
+
+    runtime = load_runtime(model_path, confidence_threshold=0.45)
+
+    assert runtime.model_loaded is True
+    assert runtime.class_names == ("tomato", "pumpkin", "lemon")
+    assert model_info(runtime)["classes"] == ["tomato", "pumpkin", "lemon"]
 
 
 def test_open_vocabulary_provider_retries_small_crop_with_context(monkeypatch) -> None:

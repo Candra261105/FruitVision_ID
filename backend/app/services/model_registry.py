@@ -9,7 +9,8 @@ from app.inference.base import InferenceProvider
 from app.services.prediction_service import FRUIT_NAMES, split_label
 
 TARGET_CLASS_PROMPTS = ("cucumber", "tomato", "green beans")
-TARGET_DATASET_NAMES = ("cucumber", "tomato", "green beans")
+TARGET_DATASET_NAMES = ("cucumber", "tomato", "green_beans")
+NEW_DATASET_NAMES = ("tomato", "pumpkin", "lemon")
 
 
 @dataclass(frozen=True)
@@ -20,6 +21,7 @@ class ModelRuntime:
     name: str
     stage_classes: tuple[str, ...]
     limitation: str
+    class_names: tuple[str, ...] = TARGET_DATASET_NAMES
 
 
 def load_runtime(
@@ -45,6 +47,9 @@ def load_runtime(
             gate = json.loads(gate_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             gate = {}
+    gate_classes = tuple(gate.get("classes", ()))
+    normalized_gate_classes = tuple(name.replace(" ", "_") for name in gate_classes)
+    class_names = normalized_gate_classes if normalized_gate_classes in {TARGET_DATASET_NAMES, NEW_DATASET_NAMES} else TARGET_DATASET_NAMES
     is_trial_model = not is_world_model and allow_unapproved_custom and gate.get("status") != "eligible"
     if not is_world_model and gate.get("status") != "eligible" and not allow_unapproved_custom:
         return ModelRuntime(
@@ -68,7 +73,8 @@ def load_runtime(
             provider_kwargs["imgsz"] = gate_imgsz
         provider = UltralyticsProvider(model_path, confidence_threshold, **provider_kwargs)
         available_classes = {split_label(name, None)[0] for name in provider.class_names}
-        missing_classes = sorted(set(FRUIT_NAMES) - available_classes)
+        required_classes = {split_label(name, None)[0] for name in class_names}
+        missing_classes = sorted(required_classes - available_classes)
         if missing_classes and not provider.is_open_vocabulary:
             return ModelRuntime(
                 provider=None,
@@ -90,6 +96,7 @@ def load_runtime(
             name="Bobot ada, runtime model belum siap",
             stage_classes=(),
             limitation=f"Model belum dapat dimuat ({type(exc).__name__}). Periksa dependensi dan bobot.",
+            class_names=class_names,
         )
 
     return ModelRuntime(
@@ -107,6 +114,7 @@ def load_runtime(
                 else "Model custom lolos gate. Kematangan, penyakit, busuk, dan grade tetap belum tersedia."
             )
         ),
+        class_names=class_names,
     )
 
 
@@ -115,7 +123,7 @@ def model_info(runtime: ModelRuntime) -> dict[str, Any]:
         "name": runtime.name,
         "mode": runtime.mode,
         "model_available": runtime.model_loaded,
-        "classes": list(FRUIT_NAMES),
+        "classes": list(runtime.class_names),
         "stage_classes": list(runtime.stage_classes),
         "limitation": runtime.limitation,
     }

@@ -53,6 +53,23 @@ h2 { font-size: 23px; letter-spacing: -.04em; margin-bottom: 0; }
 .result-empty { color: #789888; font-size: 14px; padding: 55px 20px; text-align: center; }
 .prediction-message { color: #d8e8d0; font-size: 14px; margin: 18px 0 0; }
 .detection-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.object-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); gap: 8px; margin-top: 16px; }
+.object-card { position: relative; display: grid; gap: 7px; border: 1px solid #315448; background: #122a24; color: #e9f0df; cursor: pointer; padding: 7px; text-align: left; }
+.object-card.is-selected { border-color: #f2c14e; box-shadow: inset 0 0 0 1px #f2c14e; }
+.object-card img, .object-card-empty { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: #0d1c19; color: #789888; font-size: 10px; padding: 20px 4px; text-align: center; }
+.object-card strong, .object-card small { display: block; }
+.object-card small { color: #92af9a; font-size: 10px; margin-top: 3px; }
+.object-card-warning { color: #f2c14e; font-size: 10px; text-transform: uppercase; }
+.selected-object { border-top: 1px solid #315448; margin-top: 18px; padding-top: 16px; }
+.selected-object h3 { margin: 0 0 5px; }
+.selected-status { border-left: 2px solid #f2c14e; display: grid; gap: 5px; margin-top: 12px; padding-left: 12px; }
+.selected-status span { color: #92af9a; font-size: 12px; line-height: 1.5; }
+.color-indicator { margin-top: 14px; }
+.color-bars { display: flex; height: 10px; overflow: hidden; }
+.color-bars span { display: block; }
+.color-merah { background: #d66b55; }.color-kuning { background: #f2c14e; }.color-hijau { background: #72a873; }.color-lainnya { background: #789888; }
+.color-indicator ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 8px 0; padding: 0; }
+.color-indicator li { color: #b8d4b9; font-size: 11px; }.color-indicator li strong { color: #e9f0df; margin-left: 4px; }.color-indicator small { color: #789888; font-size: 10px; }
 .detection-row { align-items: center; border-top: 1px solid #315448; display: grid; grid-template-columns: 38px 1fr auto; gap: 9px; padding: 14px 0; }
 .object-number { color: #f2c14e; font-family: ui-monospace, monospace; font-size: 12px; }
 .detection-row strong { display: block; font-size: 14px; }

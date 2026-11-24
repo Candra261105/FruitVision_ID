@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0.."
-call .venv\Scripts\python.exe runs\loop\train_targeted_epochs.py --epochs 60
+call .venv\Scripts\python.exe runs\loop\train_tomato_pumpkin_lemon.py --epochs 60
 pause

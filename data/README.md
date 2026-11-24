@@ -4,6 +4,9 @@ Folder ini menjelaskan dataset yang dipakai detector YOLO26n. Gambar dan label d
 
 ## Link download dataset
 
+Pipeline eksperimen terpisah dengan taxonomy `0 tomato`, `1 pumpkin`, `2 lemon`
+berada di `data/processed/tomato-pumpkin-lemon`. Dataset lama tidak ditimpa.
+
 Seluruh folder `data` project dapat diunduh dari Google Drive:
 
 https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA

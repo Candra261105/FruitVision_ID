@@ -27,6 +27,14 @@ class ConditionAssessment(BaseModel):
     detail: str = ""
 
 
+class ColorIndicator(BaseModel):
+    hue_segments: dict[str, float]
+    saturation: float = Field(ge=0.0, le=1.0)
+    value: float = Field(ge=0.0, le=1.0)
+    status: Literal["available", "review"]
+    detail: str = "Indikator warna HSV, bukan diagnosis kondisi buah."
+
+
 class Detection(BaseModel):
     id: int = Field(ge=1)
     class_name: str
@@ -38,6 +46,8 @@ class Detection(BaseModel):
     review_status: Literal["accepted", "review"] = "accepted"
     warnings: list[str] = Field(default_factory=list)
     conditions: dict[str, ConditionAssessment] = Field(default_factory=dict)
+    crop_image: str | None = None
+    color_indicator: ColorIndicator | None = None
 
 
 class QualityReport(BaseModel):

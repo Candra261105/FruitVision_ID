@@ -2,6 +2,10 @@ import type { AIExplanation, Detection, ModelInfo, PredictionResponse } from "..
 import { DetectionCanvas } from "./DetectionCanvas";
 import { capabilityLabel, capabilityStatusLabel } from "../lib/capabilities";
 import { detectionWarnings, emptyResultExplanation } from "../lib/resultMessages";
+import { useState } from "react";
+import { selectedDetection } from "../lib/objectSelection";
+import { ObjectCropSelector } from "./ObjectCropSelector";
+import { ColorIndicatorChart } from "./ColorIndicatorChart";
 
 type ResultPanelProps = { imageUrl: string | null; model: ModelInfo | null; prediction: PredictionResponse | null; ai: AIExplanation | null; busy: boolean };
 
@@ -14,7 +18,9 @@ function DetectionRow({ detection }: { detection: Detection }) {
 }
 
 export function ResultPanel({ imageUrl, model, prediction, ai, busy }: ResultPanelProps) {
+  const [selectedId, setSelectedId] = useState<number | null>(null);
   const enhancedUrl = prediction?.enhanced_image ?? imageUrl;
+  const selected = selectedDetection(prediction?.detections ?? [], selectedId);
   const conditionActive = ["disease", "maturity", "rot", "grade"].some((task) => prediction?.capabilities[task]?.status === "available");
   return <section className="result-panel" aria-labelledby="result-title">
     <div className="panel-heading"><div><p className="section-kicker">Pembacaan</p><h2 id="result-title">Hasil pengamatan</h2></div>{busy && <span className="loading-label">memproses...</span>}</div>
@@ -22,7 +28,9 @@ export function ResultPanel({ imageUrl, model, prediction, ai, busy }: ResultPan
      {prediction && <p className="prediction-message">{prediction.detections.length === 0 ? emptyResultExplanation(prediction) : prediction.message}</p>}
     {prediction?.enhancement_status && <div className="result-note"><strong>{prediction.enhancement_status === "enhanced" ? "Gambar diperjelas sebelum deteksi." : "Gambar sudah cukup jelas."}</strong><span>{prediction.enhancement_steps.length ? `Tahap: ${prediction.enhancement_steps.join(", ")}.` : "Tidak ada filter yang dipaksakan."}</span></div>}
     {prediction?.quality && <div className="quality-grid"><div><span>Kecerahan</span><strong>{prediction.quality.brightness}</strong></div><div><span>Kontras</span><strong>{prediction.quality.contrast}</strong></div><div><span>Noise</span><strong>{prediction.quality.noise}</strong></div><div><span>Ketajaman</span><strong>{prediction.quality.blur_score}</strong></div><div><span>Silau</span><strong>{Math.round(prediction.quality.glare_ratio * 100)}%</strong></div><div><span>Resolusi</span><strong>{prediction.quality.width} x {prediction.quality.height}</strong></div></div>}
-    {prediction && prediction.detections.length > 0 && <ul className="detection-list">{prediction.detections.map((detection) => <DetectionRow key={detection.id} detection={detection} />)}</ul>}
+     {prediction && prediction.detections.length > 0 && <ul className="detection-list">{prediction.detections.map((detection) => <DetectionRow key={detection.id} detection={detection} />)}</ul>}
+     {prediction && <ObjectCropSelector detections={prediction.detections} selectedId={selected?.id ?? null} onSelect={setSelectedId} />}
+     {selected && <section className="selected-object" aria-labelledby="selected-object-title"><p className="section-kicker">Objek terpilih</p><h3 id="selected-object-title">Objek {selected.id}: {selected.fruit}</h3><p className="row-meta">{Math.round(selected.confidence * 100)}% yakin · hasil deteksi tersimpan untuk objek ini</p>{selected.color_indicator && <ColorIndicatorChart segments={selected.color_indicator.hue_segments} />}<div className="selected-status"><strong>Perlu verifikasi lanjutan oleh pengguna.</strong><span>Crop, bounding box, dan indikator warna membantu pemeriksaan awal. Sistem tidak mendiagnosis kematangan atau kebusukan dari HSV.</span></div>{selected.warnings.length > 0 && <ul>{selected.warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul>}</section>}
     {prediction && <div className="capability-list"><strong>Status fitur inspeksi lanjutan</strong><span className="capability-intro">{conditionActive ? "Model kondisi aktif membuat penilaian per objek untuk komoditas yang tercantum di detail." : "Fitur di bawah ini belum membuat penilaian otomatis dari foto saat ini."}</span>{["disease", "maturity", "rot", "grade"].map((name) => { const capability = prediction.capabilities[name] ?? { status: "unavailable" as const, detail: "Belum tersedia." }; return <div className="capability-row" key={name}><div><span>{capabilityLabel(name)}</span><small>{capability.detail}</small></div><span className={`capability-status capability-${capability.status}`}>{capabilityStatusLabel(capability)}</span></div>; })}</div>}
     {prediction?.recommendations.length ? <div className="recommendation-list"><strong>Rekomendasi</strong><ul>{prediction.recommendations.map((recommendation) => <li key={recommendation}>{recommendation}</li>)}</ul></div> : null}
     {ai && <div className="ai-result"><strong>Status AI: {ai.status === "available" ? "tersedia" : ai.status === "error" ? "gagal, hasil CV tetap tersedia" : "belum aktif"}</strong><span>{ai.detail}</span>{ai.summary && <p>{ai.summary}</p>}{ai.uncertainties.length > 0 && <ul>{ai.uncertainties.map((item) => <li key={item}>{item}</li>)}</ul>}<small>{ai.disclaimer}</small></div>}

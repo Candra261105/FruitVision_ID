@@ -1,10 +1,16 @@
 # FruitVision ID
 
-Aplikasi web lokal untuk mendeteksi tiga jenis sayuran dari foto atau kamera:
+Aplikasi web lokal untuk mendeteksi objek hasil panen dari foto atau kamera.
 
-- `cucumber` atau mentimun
-- `tomato` atau tomat
-- `green beans` atau buncis
+Pipeline eksperimen terbaru memakai tiga kelas terpisah:
+
+- `0 tomato` atau tomat
+- `1 pumpkin` atau labu
+- `2 lemon` atau lemon
+
+Model lama dengan taxonomy `cucumber/tomato/green beans` tetap tidak ditimpa.
+Model tomato/pumpkin/lemon hanya dapat dipakai setelah gate evaluasi menyatakan
+`eligible` dan aktivasi manual dilakukan.
 
 Project ini dibuat untuk tugas PCT106. Backend menggunakan FastAPI dan Ultralytics. Frontend menggunakan React dan Vite. Aplikasi berjalan di komputer lokal, bukan di server publik.
 
@@ -123,6 +129,9 @@ models\yolov8s-world.pt
 YOLO-World adalah fallback demo. Ia bukan model custom yang dilatih khusus untuk kondisi kamera pengguna.
 
 ## Dataset detector
+
+Dataset eksperimen baru, script audit, komposit train-only, evaluator, dan preset
+training dijelaskan di [`docs/tomato-pumpkin-lemon-training.md`](docs/tomato-pumpkin-lemon-training.md).
 
 Dokumentasi dataset ada di:
 

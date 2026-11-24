@@ -9,6 +9,14 @@ export type ConditionAssessment = {
   detail: string;
 };
 
+export type ColorIndicator = {
+  hue_segments: Record<string, number>;
+  saturation: number;
+  value: number;
+  status: "available" | "review";
+  detail: string;
+};
+
 export type Detection = {
   id: number;
   class_name: string;
@@ -20,6 +28,8 @@ export type Detection = {
   review_status: "accepted" | "review";
   warnings: string[];
   conditions: Record<string, ConditionAssessment>;
+  crop_image: string | null;
+  color_indicator: ColorIndicator | null;
 };
 
 export type QualityReport = {

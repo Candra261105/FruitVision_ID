@@ -159,3 +159,43 @@ def test_prediction_message_names_detected_condition_fruit() -> None:
     result = service.predict(Image.new("RGB", (100, 100), "white"))
 
     assert "kondisi mentimun" in result.message.lower()
+
+
+def test_new_taxonomy_returns_crop_and_color_indicator() -> None:
+    service = PredictionService(
+        provider=lambda _image: [
+            RawDetection(label="tomato", confidence=0.92, box=(0.1, 0.1, 0.7, 0.8)),
+            RawDetection(label="lemon", confidence=0.88, box=(0.72, 0.12, 0.98, 0.42)),
+        ],
+        model_loaded=True,
+        mode="custom",
+        class_names=("tomato", "pumpkin", "lemon"),
+        stable_detection_ids=True,
+    )
+
+    result = service.predict(Image.new("RGB", (200, 160), (220, 80, 40)))
+
+    assert [item.class_name for item in result.detections] == ["tomato", "lemon"]
+    assert all(item.crop_image and item.crop_image.startswith("data:image/jpeg;base64,") for item in result.detections)
+    assert all(item.color_indicator is not None for item in result.detections)
+    assert all(abs(sum(item.color_indicator.hue_segments.values()) - 100.0) < 0.01 for item in result.detections if item.color_indicator)
+    assert result.detections[0].id != result.detections[1].id
+
+
+def test_new_taxonomy_marks_close_and_overlapping_objects_for_review() -> None:
+    service = PredictionService(
+        provider=lambda _image: [
+            RawDetection(label="pumpkin", confidence=0.92, box=(0.1, 0.1, 0.7, 0.7)),
+            RawDetection(label="pumpkin", confidence=0.91, box=(0.3, 0.3, 0.8, 0.8)),
+        ],
+        model_loaded=True,
+        mode="custom",
+        class_names=("tomato", "pumpkin", "lemon"),
+        stable_detection_ids=True,
+    )
+
+    result = service.predict(Image.new("RGB", (200, 200), "white"))
+
+    assert all(item.review_status == "review" for item in result.detections)
+    assert any("berdekatan" in warning for item in result.detections for warning in item.warnings)
+    assert any("overlap" in warning for item in result.detections for warning in item.warnings)
