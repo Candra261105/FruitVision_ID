@@ -61,6 +61,16 @@ training_presets/train_90_epochs.cmd
 training_presets/train_100_epochs.cmd
 ```
 
+Setiap preset sudah mengarah langsung ke:
+
+```text
+data\processed\tomato-pumpkin-lemon\data.yaml
+```
+
+Jika menjalankan dari komputer lain, letakkan folder dataset pada struktur
+repository yang sama, lalu pastikan `.venv` sudah tersedia. Jangan mengubah
+`data.yaml` ke dataset lama karena urutan kelasnya berbeda.
+
 `best.pt` dari training belum otomatis menggantikan model aplikasi. Epoch lebih
 banyak juga tidak menjamin akurasi.
 
