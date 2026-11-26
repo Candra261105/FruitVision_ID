@@ -13,6 +13,7 @@ dist/
 models/*.pt
 models/*.onnx
 data/raw/
+data/crops/
 data/processed/
 data/advanced/
 research/*.audit.json
