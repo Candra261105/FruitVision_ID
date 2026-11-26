@@ -36,7 +36,7 @@
 - Consumes: `data/advanced/source/tomato_ripeness_crops.zip`, `data/raw/lvis-fruits-vegetables-github/lvis.zip`, `data/processed/bangladesh/`
 - Produces: `refine_and_feather_crop(img, mask) -> PIL.Image`, `extract_tomato_ripeness_crops(zip_path, out_dir, limit)`
 
-- [ ] **Step 1: Write test for crop refinement and feathering**
+- [x] **Step 1: Write test for crop refinement and feathering**
 
 ```python
 def test_refine_and_feather_crop():
@@ -51,21 +51,21 @@ def test_refine_and_feather_crop():
     assert alpha.getpixel((0, 0)) == 0
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `uv run pytest tests/test_ai_refine_crops.py -v`
 Expected: FAIL with ModuleNotFoundError or ImportError
 
-- [ ] **Step 3: Implement `research/ai_refine_crops.py` and enhance `research/harvest_fruit_crops.py`**
+- [x] **Step 3: Implement `research/ai_refine_crops.py` and enhance `research/harvest_fruit_crops.py`**
 
 Implementasikan ekstraksi tomat dari `tomato_ripeness_crops.zip`, lemon dari dataset tersedia, serta fungsi penghalusan sudut (*feathered circular/oval alpha mask*) untuk mencegah artefak sudut hitam kotak.
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `uv run pytest tests/test_ai_refine_crops.py -v`
 Expected: PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add research/ai_refine_crops.py research/harvest_fruit_crops.py tests/test_ai_refine_crops.py
@@ -85,7 +85,7 @@ git commit -m "feat: add ai crop harvester and feathering refinement engine"
 - Consumes: Target URLs / CC public datasets / synthetic scene templates
 - Produces: `filter_and_deduplicate_boxes(boxes, iou_thresh=0.5) -> list[tuple]`, `generate_yolo_label_lines(detections, img_w, img_h) -> str`
 
-- [ ] **Step 1: Write test for auto-label deduplication and box filtering**
+- [x] **Step 1: Write test for auto-label deduplication and box filtering**
 
 ```python
 def test_filter_and_deduplicate_boxes():
@@ -103,21 +103,21 @@ def test_filter_and_deduplicate_boxes():
     assert filtered[1][0] == 1
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `uv run pytest tests/test_ai_auto_label.py -v`
 Expected: FAIL
 
-- [ ] **Step 3: Implement `research/ai_auto_label.py` and `research/harvest_web_context.py`**
+- [x] **Step 3: Implement `research/ai_auto_label.py` and `research/harvest_web_context.py`**
 
 Implementasikan IoU matching, deduplikasi kotak bertumpuk (*redundant overlapping boxes*), validasi rentang koordinat 0.0–1.0, serta pengunduh/penyusun citra konteks dapur/rak nyata.
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `uv run pytest tests/test_ai_auto_label.py -v`
 Expected: PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add research/harvest_web_context.py research/ai_auto_label.py tests/test_ai_auto_label.py
@@ -137,24 +137,24 @@ git commit -m "feat: implement web context harvesting and ai auto-labeling engin
 - Consumes: Bank crop halus (Tahap 1), Real & Auto-labeled scenes (Tahap 2), Benchmark splits
 - Produces: Dataset `train`, `val` (300 frozen), `test` (300 frozen) di `data/processed/tomato-pumpkin-lemon-expanded/dataset`
 
-- [ ] **Step 1: Write integration test for dataset expansion scaling**
+- [x] **Step 1: Write integration test for dataset expansion scaling**
 
 Pastikan test memverifikasi integritas koordinat, zero synthetic leakage ke `val`/`test`, dan peningkatan kuantitas instance lemon/tomato.
 
-- [ ] **Step 2: Run test to verify current state**
+- [x] **Step 2: Run test to verify current state**
 
 Run: `uv run pytest tests/test_dataset_expansion.py -v`
 Expected: PASS (pada state sebelumnya)
 
-- [ ] **Step 3: Update `generate_fruit_composites.py` & `build_expanded_dataset.py`**
+- [x] **Step 3: Update `generate_fruit_composites.py` & `build_expanded_dataset.py`**
 
 Tingkatkan variasi komposit (target 2.000–3.000 citra komposit beresolusi 800x800), integrasikan citra scene konteks baru, dan bobotkan proporsi objek lemon & tomat.
 
-- [ ] **Step 4: Generate expanded dataset & verify leakage**
+- [x] **Step 4: Generate expanded dataset & verify leakage**
 
 Jalankan generator komposit dan assembler dataset, lalu pastikan verifikasi kebocoran (*leakage guard*) menyatakan lolos 100%.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add research/generate_fruit_composites.py research/build_expanded_dataset.py tests/test_dataset_expansion.py
@@ -174,7 +174,7 @@ git commit -m "feat: scale composite generation and integrate multi-source datas
 - Consumes: `dataset/data.yaml`
 - Produces: Pelatihan YOLO11m @ 800px dengan auto-download bebas error dan opsi bundle zip artifact.
 
-- [ ] **Step 1: Write test for Colab runner download fallback**
+- [x] **Step 1: Write test for Colab runner download fallback**
 
 ```python
 def test_colab_download_fallback_logic():
@@ -189,24 +189,24 @@ def test_colab_download_fallback_logic():
         assert status["zip_created"] is True
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `uv run pytest tests/test_colab_runner.py -v`
 Expected: FAIL
 
-- [ ] **Step 3: Implement `research/colab_download_helper.py` and patch `colab_train_expanded.py`**
+- [x] **Step 3: Implement `research/colab_download_helper.py` and patch `colab_train_expanded.py`**
 
 - Tangani `AttributeError` secara eksplisit saat `_IPython.get_ipython().kernel` bernilai `None`.
 - Buat bundle zip ringkas `fruitvision_yolo11m_best_artifacts.zip` berisi `best.pt`, `results.png`, `confusion_matrix.png`, dan metrik.
 - Perbarui konfigurasi default model ke `yolo11m.pt` (Medium), imgsz 800, batch 16, epochs 1000, patience 50.
 - Perbarui panduan `docs/COLAB_EXPANDED_GUIDE.md`.
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `uv run pytest tests/test_colab_runner.py -v`
 Expected: PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add research/colab_download_helper.py data/tomato-pumpkin-lemon-expanded/training/colab_train_expanded.py docs/COLAB_EXPANDED_GUIDE.md tests/test_colab_runner.py
@@ -221,22 +221,22 @@ git commit -m "fix: harden colab auto-download handler and upgrade training to y
 - Modify: `research/package_expanded_colab.py`
 - Output: `data/tomato-pumpkin-lemon-expanded.zip`
 
-- [ ] **Step 1: Execute package builder**
+- [x] **Step 1: Execute package builder**
 
 Run: `uv run python research/package_expanded_colab.py`
 Expected: Sukses membuat `data/tomato-pumpkin-lemon-expanded.zip`.
 
-- [ ] **Step 2: Run all unit and regression tests**
+- [x] **Step 2: Run all unit and regression tests**
 
 Run: `uv run pytest tests/ -v`
 Expected: All tests PASS.
 
-- [ ] **Step 3: Run full backend regression tests**
+- [x] **Step 3: Run full backend regression tests**
 
 Run: `uv run pytest backend/tests/ -v`
 Expected: All 147 backend tests PASS.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add research/package_expanded_colab.py docs/

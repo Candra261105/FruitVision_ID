@@ -11,6 +11,7 @@ def package_dataset_for_colab(
     dataset_root: Path,
     training_script: Path,
     output_zip: Path,
+    helper_script: Path | None = None,
 ) -> Path:
     """Create a self-contained zip package for Google Colab training."""
     output_zip.parent.mkdir(parents=True, exist_ok=True)
@@ -25,6 +26,10 @@ def package_dataset_for_colab(
         # Add training script
         if training_script.is_file():
             zf.write(training_script, arcname=f"training/{training_script.name}")
+
+        # Add helper script
+        if helper_script and helper_script.is_file():
+            zf.write(helper_script, arcname=f"research/{helper_script.name}")
 
     return output_zip
 
@@ -42,6 +47,11 @@ def main() -> int:
         default=Path("data/tomato-pumpkin-lemon-expanded/training/colab_train_expanded.py"),
     )
     parser.add_argument(
+        "--helper",
+        type=Path,
+        default=Path("research/colab_download_helper.py"),
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=Path("data/tomato-pumpkin-lemon-expanded.zip"),
@@ -49,7 +59,7 @@ def main() -> int:
     args = parser.parse_args()
 
     print(f"[*] Packaging expanded dataset from {args.dataset}...")
-    zip_path = package_dataset_for_colab(args.dataset, args.script, args.output)
+    zip_path = package_dataset_for_colab(args.dataset, args.script, args.output, helper_script=args.helper)
     size_mb = zip_path.stat().st_size / (1024 * 1024)
     print(f"[OK] Package ready: {zip_path} ({size_mb:.2f} MB)")
     return 0

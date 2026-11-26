@@ -5,10 +5,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
 from PIL import Image
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 CLASS_NAMES = ("tomato", "pumpkin", "lemon")
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}

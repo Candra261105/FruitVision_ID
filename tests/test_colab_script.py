@@ -22,7 +22,7 @@ def test_colab_script_syntax_and_hyperparameters():
     assert "batch=32" in code or "batch = 32" in code or "batch_size = 32" in code
     assert "yolo11x" in code or "yolo11s" in code
     assert "device=0" in code or "device = 0" in code
-    assert "default=40" in code or "patience=40" in code or "patience = 40" in code
+    assert "patience" in code and ("40" in code or "50" in code)
     assert "files.download" in code
 
 

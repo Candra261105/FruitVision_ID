@@ -88,6 +88,9 @@ def extract_tomato_ripeness_crops(
                     records.append(
                         {
                             "class": "tomato",
+                            "class_name": "tomato",
+                            "class_id": 0,
+                            "crop_path": str(out_path),
                             "source": "tomato_ripeness_crops",
                             "filename": out_name,
                             "width": w,
