@@ -30,34 +30,101 @@ export default function App() {
   }, []);
 
   async function handleImage(file: Blob) {
-    setBusy(true); setError(null); setPrediction(null); setAiMessage(null); setAiResult(null);
+    setBusy(true);
+    setError(null);
+    setPrediction(null);
+    setAiMessage(null);
+    setAiResult(null);
+
     const nextUrl = URL.createObjectURL(file);
-    setImageUrl((previous) => { if (previous) URL.revokeObjectURL(previous); return nextUrl; });
+    setImageUrl((previous) => {
+      if (previous) URL.revokeObjectURL(previous);
+      return nextUrl;
+    });
+
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 8000);
-    try { setPrediction(await predictImage(file, controller.signal)); }
-    catch (reason) { setError(reason instanceof DOMException && reason.name === "AbortError" ? "Proses melewati batas 8 detik. Coba gambar yang lebih kecil." : reason instanceof Error ? reason.message : "Gambar tidak dapat diproses."); }
-    finally { window.clearTimeout(timeout); setBusy(false); }
+
+    try {
+      setPrediction(await predictImage(file, controller.signal));
+    } catch (reason) {
+      setError(
+        reason instanceof DOMException && reason.name === "AbortError"
+          ? "Proses melewati batas 8 detik. Coba gambar yang lebih kecil."
+          : reason instanceof Error
+            ? reason.message
+            : "Gambar tidak dapat diproses.",
+      );
+    } finally {
+      window.clearTimeout(timeout);
+      setBusy(false);
+    }
   }
 
   async function handleExplain() {
     if (!prediction || aiBusy) return;
-    setAiBusy(true); setAiMessage(null);
+    setAiBusy(true);
+    setAiMessage(null);
     try {
       const explanation = await explainPrediction(prediction);
       setAiResult(explanation);
       setAiMessage(`${explanation.summary || explanation.detail} ${explanation.recommendations.join(" ")}`.trim());
     } catch (reason) {
       setAiMessage(reason instanceof Error ? reason.message : "Penjelasan AI tidak tersedia.");
-    } finally { setAiBusy(false); }
+    } finally {
+      setAiBusy(false);
+    }
   }
 
-  return <main className="app-shell">
-    <header className="topbar"><a className="brand" href="/" aria-label="FruitVision ID beranda"><span className="brand-seed" />FruitVision <em>ID</em></a><span className="offline-tag">lokal · offline</span></header>
-    <section className="intro"><div><p className="eyebrow">Inspeksi tanaman dan hasil panen</p><h1>Lihat hasil panen lebih jelas.</h1><p className="intro-copy">Ambil snapshot atau unggah foto. Sistem memperbaiki gambar secara konservatif sebelum mendeteksi tomat, labu, dan lemon.</p></div><div className="class-strip"><span>tomat</span><span>labu</span><span>lemon</span></div></section>
-    {error && <StatusBanner kind="error">{error}</StatusBanner>}
-     <div className="workspace"><CameraPanel busy={busy} onImage={(file) => void handleImage(file)} /><ResultPanel imageUrl={imageUrl} model={model} prediction={prediction} ai={aiResult} busy={busy} /></div>
-     {prediction && <section className="ai-panel"><div><p className="section-kicker">Penjelasan opsional</p><h2>AI assistant</h2><p>Kirim ringkasan hasil CV ke provider yang dikonfigurasi di backend. AI tidak menentukan diagnosis.</p></div><button className="button button-primary" onClick={() => void handleExplain()} disabled={aiBusy}>{aiBusy ? "Meminta penjelasan..." : "Minta penjelasan AI"}</button>{aiMessage && <p className="prediction-message">{aiMessage}</p>}</section>}
-      <footer className="footer"><span>FruitVision ID · PCT106</span><span>Deteksi + quality check awal</span><span>Kondisi aktif mengikuti komoditas dan status model yang ditampilkan</span></footer>
-  </main>;
+  return (
+    <main className="app-shell">
+      <header className="topbar">
+        <a className="brand" href="/" aria-label="FruitVision ID beranda">
+          <span className="brand-seed" />
+          FruitVision <em>ID</em>
+        </a>
+        <div className="topbar-meta">
+          <span className="offline-tag">lokal · offline</span>
+        </div>
+      </header>
+
+      <section className="intro">
+        <div className="intro-content">
+          <p className="eyebrow">Inspeksi tanaman dan hasil panen</p>
+          <h1>Lihat hasil panen lebih jelas.</h1>
+          <p className="intro-copy">
+            Ambil snapshot atau unggah foto. Sistem memperbaiki gambar secara konservatif sebelum mendeteksi tomat, labu, dan lemon.
+          </p>
+        </div>
+        <div className="class-strip" aria-label="Daftar komoditas target">
+          <span className="class-strip-label">Target:</span>
+          <span className="class-tag">tomat</span>
+          <span className="class-tag">labu</span>
+          <span className="class-tag">lemon</span>
+        </div>
+      </section>
+
+      {error && <StatusBanner kind="error">{error}</StatusBanner>}
+
+      <div className="workspace">
+        <CameraPanel busy={busy} onImage={(file) => void handleImage(file)} />
+        <ResultPanel
+          imageUrl={imageUrl}
+          model={model}
+          prediction={prediction}
+          ai={aiResult}
+          busy={busy}
+          onExplain={() => void handleExplain()}
+          aiBusy={aiBusy}
+          aiMessage={aiMessage}
+        />
+      </div>
+
+      <footer className="footer">
+        <span>FruitVision ID · Laboratorium PCT106</span>
+        <span>Deteksi 3 Komoditas + Evaluasi Kualitas Citra</span>
+        <span>Kondisi aktif mengikuti komoditas dan status model yang ditampilkan</span>
+      </footer>
+    </main>
+  );
 }

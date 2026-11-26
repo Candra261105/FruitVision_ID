@@ -45,6 +45,9 @@ def load_runtime(
     if gate_path.is_file():
         try:
             gate = json.loads(gate_path.read_text(encoding="utf-8"))
+            if isinstance(gate.get("gate"), dict):
+                nested = gate.get("gate", {})
+                gate = {**nested, **{k: v for k, v in gate.items() if k != "gate"}}
         except (OSError, json.JSONDecodeError):
             gate = {}
     gate_classes = tuple(gate.get("classes", ()))

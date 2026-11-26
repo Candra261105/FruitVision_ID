@@ -18,7 +18,7 @@ export function CameraPanel({ busy, onImage }: CameraPanelProps) {
     if (starting) return;
     setCameraError(null);
     if (!navigator.mediaDevices?.getUserMedia) {
-      setCameraError("Browser ini tidak menyediakan akses kamera. Gunakan unggah gambar.");
+      setCameraError("Browser ini tidak menyediakan akses kamera. Gunakan tombol unggah gambar.");
       return;
     }
     setStarting(true);
@@ -62,23 +62,79 @@ export function CameraPanel({ busy, onImage }: CameraPanelProps) {
     <section className="camera-panel" aria-labelledby="camera-title">
       <div className="panel-heading">
         <div>
-          <p className="section-kicker">Ruang pengamatan</p>
+          <p className="section-kicker">Ruang Pengamatan</p>
           <h2 id="camera-title">Arahkan ke buah</h2>
         </div>
-        <span className={`live-dot ${active ? "is-live" : ""}`}>{active ? "aktif" : "siap"}</span>
+        <span className={`live-dot ${active ? "is-live" : ""}`}>
+          {active ? "aktif" : "siap"}
+        </span>
       </div>
+
       <div className="camera-frame">
         <video ref={videoRef} className={active ? "visible" : ""} muted playsInline aria-label="Pratinjau kamera" />
-        {!active && <div className="camera-empty"><span className="camera-mark">◌</span><p>Kamera belum dinyalakan</p><small>Atau pilih gambar dari perangkat untuk mulai.</small></div>}
+        {!active && (
+          <div className="camera-empty">
+            <span className="camera-mark" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+            </span>
+            <p>Kamera belum dinyalakan</p>
+            <small>Nyalakan kamera perangkat atau pilih file foto dari komputer.</small>
+          </div>
+        )}
       </div>
+
       <div className="camera-actions">
-        {!active ? <button className="button button-primary" onClick={() => void startCamera()} disabled={busy || starting}>{starting ? "Menyalakan..." : "Nyalakan kamera"}</button> : <button className="button button-primary" onClick={capture} disabled={busy}>Ambil snapshot</button>}
-        {active && <button className="button button-quiet" onClick={stopCamera}>Matikan</button>}
+        {!active ? (
+          <button className="button button-primary" onClick={() => void startCamera()} disabled={busy || starting}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
+            {starting ? "Menyalakan..." : "Nyalakan kamera"}
+          </button>
+        ) : (
+          <button className="button button-primary" onClick={capture} disabled={busy}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            Ambil snapshot
+          </button>
+        )}
+
+        {active && (
+          <button className="button button-quiet" onClick={stopCamera}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            </svg>
+            Matikan
+          </button>
+        )}
+
         <label className="button button-quiet file-button" htmlFor="fruit-upload">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17 8 12 3 7 8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+          </svg>
           Unggah gambar
-          <input id="fruit-upload" type="file" accept="image/*" onChange={(event) => { const file = event.target.files?.[0]; if (file) onImage(file); event.target.value = ""; }} disabled={busy} />
+          <input
+            id="fruit-upload"
+            type="file"
+            accept="image/*"
+            onChange={(event) => {
+              const file = event.target.files?.[0];
+              if (file) onImage(file);
+              event.target.value = "";
+            }}
+            disabled={busy}
+          />
         </label>
       </div>
+
       {cameraError && <p className="inline-error" role="alert">{cameraError}</p>}
     </section>
   );
