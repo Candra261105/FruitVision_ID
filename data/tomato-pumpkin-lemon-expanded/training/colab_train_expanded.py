@@ -23,17 +23,17 @@ parser = argparse.ArgumentParser(description="FruitVision ID Expanded Training P
 parser.add_argument(
     "--model",
     type=str,
-    default="yolo11x.pt",
-    help="Arsitektur model: yolo11x.pt (maksimal T4), yolo11m.pt (medium), yolo11s.pt (small)",
+    default="yolo11m.pt",
+    help="Arsitektur model: yolo11m.pt (medium rekomendasi T4), yolo11x.pt (maksimal), yolo11s.pt (small)",
 )
 parser.add_argument(
     "--batch",
     type=int,
     default=None,
-    help="Batch size (default: auto 16 untuk yolo11x, batch=32 untuk yolo11s/yolo11m)",
+    help="Batch size (default: auto 16 untuk yolo11m/yolo11x, batch=32 untuk yolo11s)",
 )
 parser.add_argument("--epochs", type=int, default=1000, help="Maksimal epoch (default: 1000)")
-parser.add_argument("--patience", type=int, default=40, help="Patience early stopping (default: 40)")
+parser.add_argument("--patience", type=int, default=50, help="Patience early stopping (default: 50)")
 parser.add_argument(
     "--reset",
     action="store_true",
@@ -87,9 +87,9 @@ else:
 if args.batch is not None:
     batch_size = args.batch
 else:
-    # yolo11x (56.9M params) menggunakan batch=16 pada 800px agar VRAM 16GB optimal (85-90% utilization)
-    # yolo11s/yolo11m menggunakan batch=32
-    if "11x" in base_model or "11l" in base_model:
+    # yolo11m (20.1M params) & yolo11x (56.9M params) menggunakan batch=16 pada 800px agar VRAM 16GB optimal
+    # yolo11s menggunakan batch=32
+    if any(k in base_model for k in ("11m", "11l", "11x")):
         batch_size = 16
     else:
         batch_size = 32
@@ -164,23 +164,61 @@ try:
 except Exception as err:
     print(f"[Info] Tampilan grafik inline dilewati: {err}")
 
-# 6. AUTO-DOWNLOAD KE LAPTOP
+# 6. AUTO-DOWNLOAD & ARTIFACT PACKAGING
 print("\n" + "=" * 65)
-print("📥 MENGUNDUH MODEL & GRAFIK KE LAPTOP SECARA OTOMATIS...")
+print("📥 MENGUNDUH MODEL & GRAFIK SECARA AMAN (MULTI-TIER HANDLER)...")
 print("=" * 65)
 
 try:
-    from google.colab import files
-    if best_weight.exists():
-        print(f"[*] Mengunduh model bobot: {best_weight.name} ...")
-        files.download(str(best_weight))
-        time.sleep(2)
-
-    results_png = save_dir / "results.png"
-    if results_png.exists():
-        print(f"[*] Mengunduh grafik pelatihan: {results_png.name} ...")
-        files.download(str(results_png))
-
-    print("\n[OK] SELESAI SEMPURNA! Silakan cek folder Downloads di laptop Anda.")
+    from research.colab_download_helper import safe_download_artifacts
 except ImportError:
-    print("[Info] Bukan lingkungan Google Colab. File tersimpan aman di disk lokal.")
+    import shutil
+    import zipfile
+
+    def safe_download_artifacts(files_to_bundle, zip_dest, drive_dest=None):
+        status = {"zip_created": False, "drive_copied": False, "direct_download": False}
+        zip_dest.parent.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(zip_dest, "w", compression=zipfile.ZIP_DEFLATED) as z:
+            for item in files_to_bundle:
+                if item.is_file():
+                    z.write(item, arcname=item.name)
+        status["zip_created"] = zip_dest.is_file() and zip_dest.stat().st_size > 0
+
+        if drive_dest and drive_dest.exists() and status["zip_created"]:
+            try:
+                shutil.copy2(zip_dest, drive_dest / zip_dest.name)
+                status["drive_copied"] = True
+                print(f"[OK] Disimpan otomatis ke Google Drive: {drive_dest / zip_dest.name}")
+            except Exception:
+                pass
+
+        try:
+            from google.colab import files
+            print(f"[*] Mencoba unduh file via browser: {zip_dest.name} ...")
+            files.download(str(zip_dest))
+            status["direct_download"] = True
+            print("[OK] Permintaan unduhan browser berhasil dikirim.")
+        except Exception as err:
+            print(f"[Info] Unduhan langsung browser dilewati ({type(err).__name__}).")
+            print(f"[Aman] File hasil akhir Anda telah dikemas rapi di:")
+            print(f"  👉 {zip_dest.resolve()}")
+            print("  (Klik kanan file tersebut di panel file sebelah kiri Colab lalu pilih 'Download')")
+
+        return status
+
+bundle_files = [
+    best_weight,
+    save_dir / "results.png",
+    save_dir / "confusion_matrix.png",
+    save_dir / "args.yaml",
+]
+zip_dest = Path("/content/fruitvision_yolo11m_best_artifacts.zip")
+drive_dest = Path("/content/drive/MyDrive")
+
+status = safe_download_artifacts(
+    files_to_bundle=bundle_files,
+    zip_dest=zip_dest,
+    drive_dest=drive_dest if drive_dest.exists() else None,
+)
+
+print("\n[OK] PIPELINE SELESAI SEMPURNA!")

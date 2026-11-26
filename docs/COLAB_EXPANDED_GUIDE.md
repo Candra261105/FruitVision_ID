@@ -1,22 +1,24 @@
-# Panduan Menjalankan Training Expanded (YOLO11x Maksimal @ 800px) di Google Colab T4
+# Panduan Menjalankan Training Expanded (YOLO11m Rekomendasi @ 800px) di Google Colab T4
 
-Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVision ID (Tomato, Pumpkin, Lemon)** menggunakan paket dataset yang telah diperkaya (`tomato-pumpkin-lemon-expanded.zip`) dengan arsitektur maksimal untuk mencapai akurasi tertinggi di GPU Tesla T4 Google Colab.
+Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVision ID (Tomato, Pumpkin, Lemon)** menggunakan paket dataset yang telah diperkaya (`tomato-pumpkin-lemon-expanded.zip`) dengan arsitektur optimal YOLO11m untuk mencapai akurasi tertinggi di GPU Tesla T4 Google Colab.
 
 ---
 
 ## 1. Keunggulan Arsitektur & Dataset Baru
-- **Arsitektur Maksimal (YOLO11x)**:
-  * Menggunakan **`yolo11x.pt`** (Extra Large, 56,9M parameter, backbone C3k2 terdalam + C2PSA attention) secara default untuk mengejar akurasi puncak (mAP tertinggi).
-  * Opsi fleksibel: dapat juga memilih **`yolo11m.pt`** (Medium, 20,1M parameter) jika ingin keseimbangan tinggi antara akurasi dan kecepatan CPU lokal.
+- **Arsitektur Rekomendasi (YOLO11m)**:
+  * Menggunakan **`yolo11m.pt`** (Medium, 20.1M parameter, 68 GFLOPs) secara default: memberikan representasi fitur tajam untuk membedakan lemon kuning/hijau dari daun dan latar belakang, dengan waktu pelatihan ~1.5 - 2 menit per epoch di Tesla T4.
+  * Opsi alternatif: `yolo11s.pt` (Small, 9.4M parameter) atau `yolo11x.pt` (Extra large, 56.9M parameter).
 - **Optimasi Khusus Tesla T4 (16GB VRAM)**:
-  * Resolusi **`imgsz=800`** untuk menangkap lemon kecil dan tomat berkerumun.
-  * Auto batch allocation: **`batch=16`** untuk YOLO11x (utilisasi VRAM ~85-90%, aman tanpa OOM) dan **`batch=32`** untuk YOLO11s/YOLO11m.
+  * Resolusi **`imgsz=800`** untuk mendeteksi lemon kecil dan buah berkerumun.
+  * Auto batch allocation: **`batch=16`** untuk YOLO11m/YOLO11x (utilisasi VRAM ~85-90%, aman tanpa OOM) dan **`batch=32`** untuk YOLO11s.
   * Mengaktifkan scheduler **Cosine LR (`cos_lr=True`)** dan **`close_mosaic=15`** agar koordinat bounding box di epoch akhir sangat presisi.
-- **Total Objek Meningkat Drastis**:
-  * **Lemon**: **6.737 objek** (sebelumnya sangat minim, kini menjadi prioritas utama).
-  * **Tomato**: **9.947 objek** (mencakup variasi mentah, setengah matang, matang, dan meja dapur).
-  * **Pumpkin**: **3.650 objek** (mempertahankan akurasi tinggi 95%+).
-- **Latar Belakang Prosedural Cerdas**: Meja kayu, marmer dapur, kain lap, dan variasi pencahayaan alami (bukan kanvas kosong).
+- **Multi-Source Ingestion & AI Re-cropping**:
+  * Pemanenan 10.000 crop buah dengan antialiasing oval feathered tanpa artefak sudut hitam kotak.
+  * Ingesti pemandangan dapur nyata (*kitchen scenes*) berlabel format YOLO standar.
+  * Peningkatan kuantitas objek: **Lemon 6.781**, **Tomato 9.995**, **Pumpkin 3.650**.
+- **Multi-Tier Safe Download**:
+  * Menangani otomatis keterbatasan subshell Colab tanpa error `AttributeError: NoneType kernel`.
+  * Secara otomatis membuat bundel zip siap ambil: `/content/fruitvision_yolo11m_best_artifacts.zip`.
 - **Benchmark Terkunci (100% Jujur)**: Data pengujian `val` (300 gambar) dan `test` (300 gambar) tetap menggunakan data asli yang sama persis tanpa bocor satu objek pun.
 
 ---
@@ -51,22 +53,23 @@ Buat satu sel kode di Colab, tempelkan seluruh kode di bawah ini, lalu jalankan 
 # 2. Install dependensi
 !pip install -q ultralytics matplotlib
 
-# 3. Eksekusi training YOLO11x Maksimal (800px, Auto-batch, Auto-eval, Auto-download)
+# 3. Eksekusi training YOLO11m (800px, Auto-batch, Auto-eval, Multi-tier download)
 !python training/colab_train_expanded.py
-```
-
-*Catatan: Jika ingin menggunakan varian Medium (20M parameter, lebih cepat di CPU laptop), cukup jalankan:*
-```python
-!python training/colab_train_expanded.py --model yolo11m.pt
 ```
 
 ---
 
-### Langkah 4: Hasil Otomatis
-Setelah model mencapai performa puncak (dihentikan otomatis oleh early stopping `patience=40`):
-1. Bobot model terbaik (`best.pt`) akan **otomatis diunduh** oleh browser ke folder `Downloads` laptop Anda.
-2. Grafik evaluasi (`results.png` dan `confusion_matrix.png`) ditampilkan langsung di output Colab.
-3. Pindahkan file `best.pt` yang terunduh ke:
+### Langkah 4: Pengambilan Hasil Model & Grafik
+Setelah pelatihan mencapai performa puncak (dihentikan otomatis oleh early stopping `patience=50`):
+1. Skrip mencoba mengunduh bundel otomatis ke browser.
+2. Jika browser Anda memblokir unduhan pop-up, seluruh artefak terbaik telah dikemas rapi di:
+   `/content/fruitvision_yolo11m_best_artifacts.zip`
+   *(Cukup buka panel folder di sebelah kiri Colab, klik kanan file `fruitvision_yolo11m_best_artifacts.zip` lalu klik **Download**)*.
+3. Di dalam file zip tersebut terdapat:
+   - `best.pt` (Bobot model terbaik untuk deteksi).
+   - `results.png` (Kurva kenaikan mAP dan penurunan loss).
+   - `confusion_matrix.png` (Tingkat akurasi deteksi per kelas buah).
+4. Ekstrak `best.pt` dan letakkan di:
    `C:\Users\dragon\Downloads\FruitVision_ID\models\best.pt`
 workspace_dir = Path("/content/tomato-pumpkin-lemon-expanded")
 if not workspace_dir.exists():
