@@ -220,6 +220,20 @@ def main() -> int:
         print(f"  -> Ingested {len(t_records)} tomato crops.")
         all_records.extend(t_records)
 
+    # 3. Massive Tomato Ripeness Crops Archive
+    ripeness_zip = Path(r"C:\Users\dragon\Downloads\FruitVision_ID\data\advanced\source\tomato_ripeness_crops.zip")
+    if ripeness_zip.is_file():
+        from research.ai_refine_crops import extract_tomato_ripeness_crops
+        print(f"[*] Ingesting tomato crops from archive: {ripeness_zip}")
+        r_records = extract_tomato_ripeness_crops(
+            zip_path=ripeness_zip,
+            output_dir=args.output,
+            limit=args.max_per_class,
+            feather=True,
+        )
+        print(f"  -> Extracted {len(r_records)} tomato crops from archive.")
+        all_records.extend(r_records)
+
     # Save manifest
     manifest_path = args.output / "harvest_manifest.json"
     manifest_data = {
