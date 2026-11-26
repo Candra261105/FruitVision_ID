@@ -40,6 +40,13 @@ def test_apply_feathering_adds_alpha_transparency():
     assert corner_alpha < 255
 
 
+def test_rotation_in_rgba_has_transparent_corners():
+    # Test that rotating an RGBA image leaves expanded corner pixels with alpha 0 (not black opaque)
+    crop = Image.new("RGBA", (40, 40), (255, 0, 0, 255))
+    rotated = crop.rotate(45, expand=True, resample=Image.Resampling.BILINEAR)
+    assert rotated.getpixel((0, 0))[3] == 0
+
+
 def test_generate_composites_creates_valid_yolo_labels(tmp_path: Path):
     # Setup mock crops and manifest
     crops_dir = tmp_path / "crops"

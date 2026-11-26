@@ -1,0 +1,35 @@
+{
+  "status": "pending_evaluation",
+  "classes": [
+    "tomato",
+    "pumpkin",
+    "lemon"
+  ],
+  "weights": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\.worktrees\\tomato-pumpkin-lemon\\data\\tomato-pumpkin-lemon-training\\runs\\adaptive\\smoke-cpu-1ep-fixed\\weights\\best.pt",
+  "weights_sha256": "81cf88ab87c42a46d12fa967d8e39a0091e50dc9d860a2ea841a817bb178e353",
+  "epochs": 1,
+  "dataset": {
+    "epochs": 1,
+    "data_yaml": "C:\\Users\\dragon\\Downloads\\FruitVision_ID\\.worktrees\\tomato-pumpkin-lemon\\data\\tomato-pumpkin-lemon-training\\dataset\\data.yaml",
+    "names": [
+      "tomato",
+      "pumpkin",
+      "lemon"
+    ],
+    "validation": {
+      "invalid_label_count": 0,
+      "invalid_labels": [],
+      "class_counts": {
+        "tomato": 13447,
+        "pumpkin": 4079,
+        "lemon": 7178
+      },
+      "duplicate_groups": {},
+      "cross_split_duplicate_groups": {},
+      "synthetic_images": 1000,
+      "synthetic_errors": [],
+      "status": "clean"
+    }
+  },
+  "detail": "Checkpoint selesai, tetapi belum eligible untuk deployment sebelum evaluasi test/external."
+}

@@ -30,6 +30,7 @@ def harvest_from_yolo(
     padding: int = 4,
     min_size: int = 12,
     max_per_class: int = 2000,
+    exclude_stems: set[str] | None = None,
 ) -> list[dict[str, Any]]:
     """Harvest fruit objects from YOLO labeled image dataset."""
     records: list[dict[str, Any]] = []
@@ -41,6 +42,8 @@ def harvest_from_yolo(
     class_counts: dict[int, int] = {0: 0, 1: 0, 2: 0}
     image_files = sorted([p for p in image_dir.iterdir() if p.suffix.lower() in IMAGE_SUFFIXES])
     for img_path in image_files:
+        if exclude_stems and img_path.stem in exclude_stems:
+            continue
         if all(c >= max_per_class for c in class_counts.values()):
             break
         lbl_path = label_dir / f"{img_path.stem}.txt"
@@ -170,6 +173,20 @@ def main() -> int:
     args.output.mkdir(parents=True, exist_ok=True)
     all_records: list[dict[str, Any]] = []
 
+    # Collect benchmark val & test stems to guarantee ZERO leakage
+    exclude_stems: set[str] = set()
+    benchmark_dir = Path("data/tomato-pumpkin-lemon-training/dataset/images")
+    if benchmark_dir.exists():
+        for split in ("val", "test"):
+            split_dir = benchmark_dir / split
+            if split_dir.exists():
+                for p in split_dir.glob("*"):
+                    stem = p.stem
+                    if stem.startswith("bangladesh__"):
+                        stem = stem[len("bangladesh__"):]
+                    exclude_stems.add(stem)
+    print(f"[*] Leakage guard: excluding {len(exclude_stems)} benchmark val/test image stems from harvest.")
+
     # 1. Bangladesh YOLO Dataset
     # Mapping in bangladesh: 14: lemon -> 2, 16: pumpkin -> 1, 20: tomato -> 0
     bg_dir = Path(r"C:\Users\dragon\Downloads\FruitVision_ID\data\processed\bangladesh")
@@ -183,8 +200,9 @@ def main() -> int:
             padding=args.padding,
             min_size=args.min_size,
             max_per_class=args.max_per_class,
+            exclude_stems=exclude_stems,
         )
-        print(f"  -> Harvested {len(bg_records)} crops from Bangladesh.")
+        print(f"  -> Harvested {len(bg_records)} crops from Bangladesh (strictly train-only).")
         all_records.extend(bg_records)
 
     # 2. Existing Tomato Crops (ParsaVictor / CC-BY 4.0)

@@ -8,7 +8,7 @@ import random
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 from research.procedural_backgrounds import generate_texture, STYLES
 
@@ -32,7 +32,10 @@ def apply_feathering(crop: Image.Image, radius: float = 1.0) -> Image.Image:
         draw.rectangle([i, i, w - 1 - i, h - 1 - i], outline=alpha_val)
 
     mask = mask.filter(ImageFilter.BoxBlur(radius=max(1, int(radius))))
-    rgba.putalpha(mask)
+    # Preserve existing alpha channel from rotation expansion
+    r, g, b, orig_a = rgba.split()
+    final_a = ImageChops.multiply(orig_a, mask)
+    rgba.putalpha(final_a)
     return rgba
 
 
@@ -137,9 +140,10 @@ def generate_composites(
 
             crop_resized = crop_img.resize((fw, fh), Image.Resampling.BILINEAR)
 
-            # Subtle rotation (-25 to 25 deg)
+            # Convert to RGBA before rotation so outer corners are transparent (alpha 0)
+            crop_rgba = crop_resized.convert("RGBA")
             rot_angle = rng.uniform(-25, 25)
-            crop_rot = crop_resized.rotate(rot_angle, expand=True, resample=Image.Resampling.BILINEAR)
+            crop_rot = crop_rgba.rotate(rot_angle, expand=True, resample=Image.Resampling.BILINEAR)
 
             # Lighting adjustment
             bright_factor = rng.uniform(0.85, 1.18)
@@ -171,17 +175,15 @@ def generate_composites(
             # Paste with alpha
             canvas.paste(feathered, (px, py), feathered)
 
-            # YOLO bounding box
-            center_x = (px + cw / 2.0) / canv_w
-            center_y = (py + ch / 2.0) / canv_h
-            norm_w = cw / canv_w
-            norm_h = ch / canv_h
-
-            # Safety clamp within [0.001, 0.999]
-            center_x = max(0.001, min(0.999, center_x))
-            center_y = max(0.001, min(0.999, center_y))
-            norm_w = max(0.001, min(0.999, norm_w))
-            norm_h = max(0.001, min(0.999, norm_h))
+            # YOLO bounding box clamped via edge coordinates
+            x1 = max(0.0, float(px) / canv_w)
+            y1 = max(0.0, float(py) / canv_h)
+            x2 = min(1.0, float(px + cw) / canv_w)
+            y2 = min(1.0, float(py + ch) / canv_h)
+            norm_w = max(0.001, x2 - x1)
+            norm_h = max(0.001, y2 - y1)
+            center_x = max(0.001, min(0.999, (x1 + x2) / 2.0))
+            center_y = max(0.001, min(0.999, (y1 + y2) / 2.0))
 
             placed_boxes.append((cid, center_x, center_y, norm_w, norm_h))
             item_metadata.append(

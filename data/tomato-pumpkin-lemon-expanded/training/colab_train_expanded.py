@@ -47,7 +47,7 @@ candidate_weights += glob.glob("/content/**/weights/best.pt", recursive=True)
 candidate_weights = list(set(candidate_weights))
 
 if candidate_weights:
-    base_model = sorted(candidate_weights)[-1]
+    base_model = max(candidate_weights, key=os.path.getmtime)
     print(f"[*] Melanjutkan pembelajaran dari checkpoint terbaik: {base_model}")
 else:
     # Default to YOLO11s (Small, 9.4M params) for superior detail resolution

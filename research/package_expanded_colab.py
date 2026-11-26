@@ -19,8 +19,8 @@ def package_dataset_for_colab(
         # Add dataset files
         for file_path in dataset_root.rglob("*"):
             if file_path.is_file():
-                rel_path = file_path.relative_to(dataset_root.parent)
-                zf.write(file_path, arcname=str(rel_path).replace("\\", "/"))
+                rel_path = file_path.relative_to(dataset_root)
+                zf.write(file_path, arcname=f"dataset/{rel_path}".replace("\\", "/"))
 
         # Add training script
         if training_script.is_file():

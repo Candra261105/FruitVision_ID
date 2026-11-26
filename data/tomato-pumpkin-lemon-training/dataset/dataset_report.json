@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "class_names": [
+    "tomato",
+    "pumpkin",
+    "lemon"
+  ],
+  "seed": 20261124,
+  "source_audit": "research\\tomato-pumpkin-lemon.audit.json",
+  "split_counts": {
+    "train": 3097,
+    "val": 300,
+    "test": 300,
+    "external_holdout": 299
+  },
+  "object_counts": {
+    "tomato": 11737,
+    "pumpkin": 3720,
+    "lemon": 6247
+  },
+  "synthetic_images": 1000,
+  "partial": false
+}

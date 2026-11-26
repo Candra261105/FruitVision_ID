@@ -74,3 +74,30 @@ def test_ingest_existing_crops(tmp_path: Path):
     assert records[0]["class_id"] == 0
     assert records[0]["class_name"] == "tomato"
     assert Path(records[0]["crop_path"]).exists()
+
+
+def test_harvest_respects_exclude_stems(tmp_path: Path):
+    img_dir = tmp_path / "images"
+    lbl_dir = tmp_path / "labels"
+    out_dir = tmp_path / "crops"
+    img_dir.mkdir(parents=True)
+    lbl_dir.mkdir(parents=True)
+
+    # Image 1 is in test/val split (excluded)
+    img1 = Image.new("RGB", (100, 100), color=(255, 0, 0))
+    img1.save(img_dir / "val_img_01.jpg")
+    (lbl_dir / "val_img_01.txt").write_text("14 0.5 0.5 0.4 0.4\n", encoding="utf-8")
+
+    # Image 2 is in train split (allowed)
+    img2 = Image.new("RGB", (100, 100), color=(0, 255, 0))
+    img2.save(img_dir / "train_img_01.jpg")
+    (lbl_dir / "train_img_01.txt").write_text("14 0.5 0.5 0.4 0.4\n", encoding="utf-8")
+
+    class_map = {14: 2}
+    exclude = {"val_img_01"}
+    records = harvest_from_yolo(img_dir, lbl_dir, class_map, out_dir, padding=2, min_size=10, exclude_stems=exclude)
+
+    assert len(records) == 1
+    assert "train_img_01" in records[0]["source_image"]
+    assert "val_img_01" not in records[0]["source_image"]
+
