@@ -34,6 +34,11 @@ parser.add_argument(
 )
 parser.add_argument("--epochs", type=int, default=1000, help="Maksimal epoch (default: 1000)")
 parser.add_argument("--patience", type=int, default=40, help="Patience early stopping (default: 40)")
+parser.add_argument(
+    "--reset",
+    action="store_true",
+    help="Mulai dari awal tanpa melanjutkan checkpoint lama",
+)
 args = parser.parse_args()
 
 # 1. SETUP WORKSPACE & DATASET
@@ -63,16 +68,20 @@ print(f"Target Model    : {args.model}")
 print("=" * 65)
 
 # 2. SELECT MODEL (YOLO11x / YOLO11s or RESUME CHECKPOINT)
-candidate_weights = glob.glob(str(workspace_dir / "runs/**/weights/best.pt"), recursive=True)
-candidate_weights += glob.glob("/content/**/weights/best.pt", recursive=True)
-candidate_weights = list(set(candidate_weights))
+if args.reset:
+    candidate_weights = []
+    print("[*] Mode --reset aktif: Mengabaikan checkpoint lama.")
+else:
+    candidate_weights = glob.glob(str(workspace_dir / "runs/**/weights/best.pt"), recursive=True)
+    candidate_weights += glob.glob("/content/**/weights/best.pt", recursive=True)
+    candidate_weights = list(set(candidate_weights))
 
-if candidate_weights:
+if candidate_weights and not args.reset:
     base_model = max(candidate_weights, key=os.path.getmtime)
     print(f"[*] Melanjutkan pembelajaran dari checkpoint terbaik: {base_model}")
 else:
     base_model = args.model
-    print(f"[*] Memulai pelatihan baru dari arsitektur maksimal: {base_model}")
+    print(f"[*] Memulai pelatihan baru dari arsitektur: {base_model}")
 
 # 3. AUTO-CONFIG BATCH & VRAM OPTIMIZATION FOR TESLA T4
 if args.batch is not None:
