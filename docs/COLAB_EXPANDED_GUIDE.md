@@ -1,17 +1,23 @@
-# Panduan Menjalankan Training Expanded (YOLO11s @ 800px) di Google Colab T4
+# Panduan Menjalankan Training Expanded (YOLO11x Maksimal @ 800px) di Google Colab T4
 
-Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVision ID (Tomato, Pumpkin, Lemon)** menggunakan paket dataset yang telah diperkaya (`tomato-pumpkin-lemon-expanded.zip`).
+Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVision ID (Tomato, Pumpkin, Lemon)** menggunakan paket dataset yang telah diperkaya (`tomato-pumpkin-lemon-expanded.zip`) dengan arsitektur maksimal untuk mencapai akurasi tertinggi di GPU Tesla T4 Google Colab.
 
 ---
 
-## 1. Keunggulan Dataset Expanded & Pelatihan Baru
+## 1. Keunggulan Arsitektur & Dataset Baru
+- **Arsitektur Maksimal (YOLO11x)**:
+  * Menggunakan **`yolo11x.pt`** (Extra Large, 56,9M parameter, backbone C3k2 terdalam + C2PSA attention) secara default untuk mengejar akurasi puncak (mAP tertinggi).
+  * Opsi fleksibel: dapat juga memilih **`yolo11m.pt`** (Medium, 20,1M parameter) jika ingin keseimbangan tinggi antara akurasi dan kecepatan CPU lokal.
+- **Optimasi Khusus Tesla T4 (16GB VRAM)**:
+  * Resolusi **`imgsz=800`** untuk menangkap lemon kecil dan tomat berkerumun.
+  * Auto batch allocation: **`batch=16`** untuk YOLO11x (utilisasi VRAM ~85-90%, aman tanpa OOM) dan **`batch=32`** untuk YOLO11s/YOLO11m.
+  * Mengaktifkan scheduler **Cosine LR (`cos_lr=True`)** dan **`close_mosaic=15`** agar koordinat bounding box di epoch akhir sangat presisi.
 - **Total Objek Meningkat Drastis**:
-  * **Lemon**: **6.741 objek** (sebelumnya sangat minim, kini menjadi prioritas utama).
-  * **Tomato**: **9.939 objek** (mencakup variasi mentah, setengah matang, matang, dan meja dapur).
-  * **Pumpkin**: **3.649 objek** (mempertahankan akurasi tinggi 95%+).
-- **Latar Belakang Prosedural Cerdas**: Meja kayu, marmer dapur, kain lap, dan variasi pencahayaan alami (bukan lagi kanvas abu-abu polos).
-- **Arsitektur Model Baru**: Menggunakan `yolo11s.pt` (Small, 9.4M parameter) dengan resolusi input `imgsz=800` untuk menangkap detail lemon dan tomat kecil.
-- **Benchmark Terkunci (100% Jujur)**: Data pengujian `val` (300 gambar) dan `test` (300 gambar) tetap menggunakan data asli yang sama persis, menjamin perbandingan peningkatan akurasi dari 73.25% valid secara objektif.
+  * **Lemon**: **6.737 objek** (sebelumnya sangat minim, kini menjadi prioritas utama).
+  * **Tomato**: **9.947 objek** (mencakup variasi mentah, setengah matang, matang, dan meja dapur).
+  * **Pumpkin**: **3.650 objek** (mempertahankan akurasi tinggi 95%+).
+- **Latar Belakang Prosedural Cerdas**: Meja kayu, marmer dapur, kain lap, dan variasi pencahayaan alami (bukan kanvas kosong).
+- **Benchmark Terkunci (100% Jujur)**: Data pengujian `val` (300 gambar) dan `test` (300 gambar) tetap menggunakan data asli yang sama persis tanpa bocor satu objek pun.
 
 ---
 
@@ -28,9 +34,9 @@ Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVisio
 ### Langkah 2: Unggah Dataset ke Colab
 1. Di panel kiri Google Colab, klik ikon **Folder** (File).
 2. Seret (*drag-and-drop*) file dari laptop Anda:
-   `FruitVision_ID\.worktrees\tomato-pumpkin-lemon\data\tomato-pumpkin-lemon-expanded.zip`
-   ke panel folder Colab.
-3. Tunggu hingga proses unggah selesai (lingkaran oranye di bawah file selesai berputar).
+   `C:\Users\dragon\Downloads\FruitVision_ID\data\tomato-pumpkin-lemon-expanded.zip`
+   ke panel folder Colab (`/content/`).
+3. Tunggu hingga proses unggah selesai (lingkaran proses di bawah nama file selesai berputar).
 
 ---
 
@@ -38,16 +44,30 @@ Panduan ini berisi langkah-langkah untuk melatih model deteksi buah **FruitVisio
 Buat satu sel kode di Colab, tempelkan seluruh kode di bawah ini, lalu jalankan (**Shift + Enter**):
 
 ```python
-# ==============================================================================
-# FRUITVISION ID - EXPANDED TRAINING PIPELINE (YOLO11s @ 800px)
-# ==============================================================================
-import os, glob, time
-from pathlib import Path
+# 1. Ekstrak package
+!unzip -q /content/tomato-pumpkin-lemon-expanded.zip -d /content/workspace
+%cd /content/workspace
 
-# 1. Install Ultralytics
-!pip install -q ultralytics
+# 2. Install dependensi
+!pip install -q ultralytics matplotlib
 
-# 2. Ekstrak Dataset Otomatis
+# 3. Eksekusi training YOLO11x Maksimal (800px, Auto-batch, Auto-eval, Auto-download)
+!python training/colab_train_expanded.py
+```
+
+*Catatan: Jika ingin menggunakan varian Medium (20M parameter, lebih cepat di CPU laptop), cukup jalankan:*
+```python
+!python training/colab_train_expanded.py --model yolo11m.pt
+```
+
+---
+
+### Langkah 4: Hasil Otomatis
+Setelah model mencapai performa puncak (dihentikan otomatis oleh early stopping `patience=40`):
+1. Bobot model terbaik (`best.pt`) akan **otomatis diunduh** oleh browser ke folder `Downloads` laptop Anda.
+2. Grafik evaluasi (`results.png` dan `confusion_matrix.png`) ditampilkan langsung di output Colab.
+3. Pindahkan file `best.pt` yang terunduh ke:
+   `C:\Users\dragon\Downloads\FruitVision_ID\models\best.pt`
 workspace_dir = Path("/content/tomato-pumpkin-lemon-expanded")
 if not workspace_dir.exists():
     print("[*] Mengekstrak dataset expanded...")

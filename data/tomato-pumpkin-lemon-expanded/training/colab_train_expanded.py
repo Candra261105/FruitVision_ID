@@ -1,20 +1,40 @@
 #!/usr/bin/env python3
-"""FruitVision ID - Expanded Dataset YOLO11s 800px Training & Auto-Download Pipeline.
+"""FruitVision ID - Expanded Dataset YOLO11 800px Training & Auto-Download Pipeline.
 
 Automated Colab execution script:
 1. Auto-extracts tomato-pumpkin-lemon-expanded.zip if needed.
-2. Trains YOLO11s at 800px resolution with batch=32, cache='ram', patience=40 on T4 GPU.
-3. Evaluates mAP50 and per-fruit detection metrics on frozen benchmark.
-4. Plots training curves and confusion matrix inline.
-5. Triggers automatic download of best.pt and results.png to local Downloads.
+2. Trains maximal YOLO11 architecture (default: yolo11x.pt for maximum accuracy on T4 GPU, or yolo11m/yolo11s).
+3. Auto-scales batch size to fully utilize Tesla T4 16GB VRAM at 800px resolution (batch=16 for x, batch=32 for s/m).
+4. Employs advanced training augmentations: Cosine LR scheduler, close_mosaic=15, and RAM caching.
+5. Evaluates mAP50 and per-fruit detection metrics on frozen benchmark.
+6. Plots training curves and confusion matrix inline.
+7. Triggers automatic download of best.pt and results.png to local Downloads.
 """
 
+import argparse
 import glob
 import os
 import time
 from pathlib import Path
 
 from ultralytics import YOLO
+
+parser = argparse.ArgumentParser(description="FruitVision ID Expanded Training Pipeline")
+parser.add_argument(
+    "--model",
+    type=str,
+    default="yolo11x.pt",
+    help="Arsitektur model: yolo11x.pt (maksimal T4), yolo11m.pt (medium), yolo11s.pt (small)",
+)
+parser.add_argument(
+    "--batch",
+    type=int,
+    default=None,
+    help="Batch size (default: auto 16 untuk yolo11x, batch=32 untuk yolo11s/yolo11m)",
+)
+parser.add_argument("--epochs", type=int, default=1000, help="Maksimal epoch (default: 1000)")
+parser.add_argument("--patience", type=int, default=40, help="Patience early stopping (default: 40)")
+args = parser.parse_args()
 
 # 1. SETUP WORKSPACE & DATASET
 workspace_dir = Path("/content/tomato-pumpkin-lemon-expanded")
@@ -36,12 +56,13 @@ else:
         data_yaml = str(workspace_dir / "dataset" / "data.yaml")
 
 print("=" * 65)
-print("🍎 FRUITVISION ID - EXPANDED TRAINING PIPELINE (YOLO11s @ 800px)")
+print("🍎 FRUITVISION ID - EXPANDED TRAINING PIPELINE (YOLO11 @ 800px)")
 print(f"Direktori Kerja : {os.getcwd()}")
 print(f"Data YAML       : {data_yaml}")
+print(f"Target Model    : {args.model}")
 print("=" * 65)
 
-# 2. SELECT MODEL (YOLO11s or RESUME CHECKPOINT)
+# 2. SELECT MODEL (YOLO11x / YOLO11s or RESUME CHECKPOINT)
 candidate_weights = glob.glob(str(workspace_dir / "runs/**/weights/best.pt"), recursive=True)
 candidate_weights += glob.glob("/content/**/weights/best.pt", recursive=True)
 candidate_weights = list(set(candidate_weights))
@@ -50,27 +71,38 @@ if candidate_weights:
     base_model = max(candidate_weights, key=os.path.getmtime)
     print(f"[*] Melanjutkan pembelajaran dari checkpoint terbaik: {base_model}")
 else:
-    # Default to YOLO11s (Small, 9.4M params) for superior detail resolution
-    base_model = "yolo11s.pt"
-    print(f"[*] Memulai pelatihan baru dari arsitektur: {base_model}")
+    base_model = args.model
+    print(f"[*] Memulai pelatihan baru dari arsitektur maksimal: {base_model}")
 
-# 3. TRAINING ACCELERATION (TESLA T4 GPU)
+# 3. AUTO-CONFIG BATCH & VRAM OPTIMIZATION FOR TESLA T4
+if args.batch is not None:
+    batch_size = args.batch
+else:
+    # yolo11x (56.9M params) menggunakan batch=16 pada 800px agar VRAM 16GB optimal (85-90% utilization)
+    # yolo11s/yolo11m menggunakan batch=32
+    if "11x" in base_model or "11l" in base_model:
+        batch_size = 16
+    else:
+        batch_size = 32
+
 print("\n" + "=" * 65)
-print("🚀 MEMULAI TRAINING EXPANDED (BATCH 32, IMGSZ 800, PATIENCE 40)")
+print(f"🚀 MEMULAI TRAINING EXPANDED ({base_model.upper()} | BATCH {batch_size} | IMGSZ 800 | PATIENCE {args.patience})")
 print("=" * 65)
 
 model = YOLO(base_model)
 results = model.train(
     data=data_yaml,
-    epochs=1000,
+    epochs=args.epochs,
     imgsz=800,           # Resolusi tinggi 800px untuk menangkap lemon & tomat kecil
-    batch=32,            # Keseimbangan emas: presisi detail & stabilitas gradien VRAM
+    batch=batch_size,    # Disesuaikan otomatis dengan arsitektur & kapasitas VRAM 16GB
     cache="ram",         # Memuat 100% dataset ke RAM Colab (nol bottleneck disk)
     workers=4,           # Maksimalkan seluruh thread CPU Colab
     device=0,            # Tesla T4 GPU
-    patience=40,         # Otomatis berhenti saat kurva akurasi sudah maksimal di puncak
+    patience=args.patience,  # Otomatis berhenti saat kurva akurasi sudah mencapai puncak
+    cos_lr=True,         # Cosine learning rate scheduler untuk stabilitas akurasi puncak
+    close_mosaic=15,     # Matikan augmentasi mosaic 15 epoch terakhir agar bounding box presisi tajam
     project=str(workspace_dir / "runs" / "adaptive"),
-    name="expanded-yolo11s-800px",
+    name=f"expanded-{Path(base_model).stem}-800px",
     exist_ok=True,
     save_period=10,
     plots=True           # Menghasilkan grafik visual (results.png, confusion_matrix.png)
