@@ -6,10 +6,13 @@ import argparse
 import hashlib
 import json
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 CLASS_NAMES = ("tomato", "pumpkin", "lemon")
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
@@ -58,8 +61,9 @@ def integrate_train_data(
     source_dataset: Path,
     composite_dir: Path,
     target_dataset: Path,
+    extra_real_dirs: list[Path] | None = None,
 ) -> dict[str, int]:
-    """Integrate real train images and newly generated synthetic composites into train split."""
+    """Integrate real train images, extra real context scenes, and synthetic composites into train split."""
     tgt_img_dir = target_dataset / "images" / "train"
     tgt_lbl_dir = target_dataset / "labels" / "train"
     tgt_img_dir.mkdir(parents=True, exist_ok=True)
@@ -87,7 +91,29 @@ def integrate_train_data(
                     shutil.copy2(lbl_path, dst_lbl)
             counts["real_train"] += 1
 
-    # 2. Synthetic composites
+    # 2. Extra real datasets (e.g. kitchen scenes, web contexts)
+    if extra_real_dirs:
+        for extra_dir in extra_real_dirs:
+            extra_img_dir = extra_dir / "images" / "train"
+            extra_lbl_dir = extra_dir / "labels" / "train"
+            if not extra_img_dir.exists():
+                # Check root of extra_dir
+                extra_img_dir = extra_dir
+                extra_lbl_dir = extra_dir
+            for img_path in extra_img_dir.glob("*"):
+                if img_path.suffix.lower() not in IMAGE_SUFFIXES:
+                    continue
+                lbl_path = extra_lbl_dir / f"{img_path.stem}.txt"
+                dst_img = tgt_img_dir / img_path.name
+                if not dst_img.exists():
+                    shutil.copy2(img_path, dst_img)
+                if lbl_path.is_file():
+                    dst_lbl = tgt_lbl_dir / lbl_path.name
+                    if not dst_lbl.exists():
+                        shutil.copy2(lbl_path, dst_lbl)
+                counts["real_train"] += 1
+
+    # 3. Synthetic composites
     comp_img_dir = composite_dir / "images" / "train"
     comp_lbl_dir = composite_dir / "labels" / "train"
     if comp_img_dir.exists():
@@ -172,6 +198,13 @@ def main() -> int:
         type=Path,
         default=Path("data/processed/tomato-pumpkin-lemon-expanded/dataset"),
     )
+    parser.add_argument(
+        "--extra-real-dirs",
+        type=Path,
+        nargs="*",
+        default=[],
+        help="Additional directories containing real scene images and labels",
+    )
     args = parser.parse_args()
 
     args.output.mkdir(parents=True, exist_ok=True)
@@ -180,8 +213,13 @@ def main() -> int:
     freeze_stats = freeze_benchmark_splits(args.source_benchmark, args.output)
     print(f"  -> Frozen val: {freeze_stats['val_count']}, test: {freeze_stats['test_count']}")
 
-    print("[*] Integrating real train images and synthetic composites...")
-    train_stats = integrate_train_data(args.source_benchmark, args.composite_dir, args.output)
+    print("[*] Integrating real train images, extra scenes, and synthetic composites...")
+    train_stats = integrate_train_data(
+        args.source_benchmark,
+        args.composite_dir,
+        args.output,
+        extra_real_dirs=args.extra_real_dirs,
+    )
     print(f"  -> Real train images: {train_stats['real_train']}")
     print(f"  -> Synthetic composites: {train_stats['synthetic_train']}")
 

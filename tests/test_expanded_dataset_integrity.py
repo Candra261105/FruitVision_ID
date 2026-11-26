@@ -80,3 +80,39 @@ def test_write_dataset_yaml_structure(tmp_path: Path):
     assert content["val"] == "images/val"
     assert content["test"] == "images/test"
     assert content["names"] == ["tomato", "pumpkin", "lemon"]
+
+
+def test_integrate_train_data_with_extra_real_sources(tmp_path: Path):
+    src_dir = tmp_path / "base"
+    comp_dir = tmp_path / "composites"
+    extra_dir = tmp_path / "extra_real"
+    target_dir = tmp_path / "output"
+
+    # Base train
+    (src_dir / "images" / "train").mkdir(parents=True)
+    (src_dir / "labels" / "train").mkdir(parents=True)
+    Image.new("RGB", (20, 20)).save(src_dir / "images" / "train" / "base_01.jpg")
+    (src_dir / "labels" / "train" / "base_01.txt").write_text("0 0.5 0.5 0.2 0.2\n")
+
+    # Composites
+    (comp_dir / "images" / "train").mkdir(parents=True)
+    (comp_dir / "labels" / "train").mkdir(parents=True)
+    Image.new("RGB", (20, 20)).save(comp_dir / "images" / "train" / "synthetic_01.jpg")
+    (comp_dir / "labels" / "train" / "synthetic_01.txt").write_text("1 0.5 0.5 0.2 0.2\n")
+
+    # Extra real
+    (extra_dir / "images" / "train").mkdir(parents=True)
+    (extra_dir / "labels" / "train").mkdir(parents=True)
+    Image.new("RGB", (20, 20)).save(extra_dir / "images" / "train" / "kitchen_01.jpg")
+    (extra_dir / "labels" / "train" / "kitchen_01.txt").write_text("2 0.5 0.5 0.2 0.2\n")
+
+    stats = integrate_train_data(
+        source_dataset=src_dir,
+        composite_dir=comp_dir,
+        target_dataset=target_dir,
+        extra_real_dirs=[extra_dir],
+    )
+    assert stats["real_train"] == 2
+    assert stats["synthetic_train"] == 1
+    assert (target_dir / "images" / "train" / "kitchen_01.jpg").is_file()
+    assert (target_dir / "labels" / "train" / "kitchen_01.txt").is_file()

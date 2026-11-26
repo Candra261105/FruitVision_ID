@@ -5,10 +5,13 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import sys
 from pathlib import Path
 from typing import Any
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from research.procedural_backgrounds import generate_texture, STYLES
 
