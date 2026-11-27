@@ -29,6 +29,47 @@ FRUIT_NAMES = {
 }
 NEW_FRUIT_NAMES = {"tomato": "Tomat", "pumpkin": "Labu", "lemon": "Lemon"}
 
+PRODUCTION_FRUIT_NAMES = {
+    "apple": "Apel",
+    "banana": "Pisang",
+    "beetroot": "Bit Merah",
+    "bitter_gourd": "Pare",
+    "bottle_gourd": "Labu Air",
+    "cabbage": "Kubis",
+    "capsicum": "Paprika",
+    "carrot": "Wortel",
+    "cauliflower": "Kembang Kol",
+    "cherry": "Ceri",
+    "chilli": "Cabai",
+    "coconut": "Kelapa",
+    "cucumber": "Mentimun",
+    "eggplant": "Terong",
+    "ginger": "Jahe",
+    "grape": "Anggur",
+    "green_orange": "Jeruk Hijau",
+    "kiwi": "Kiwi",
+    "maize": "Jagung",
+    "mango": "Mangga",
+    "melon": "Melon",
+    "okra": "Okra",
+    "onion": "Bawang",
+    "orange": "Jeruk",
+    "peach": "Persik",
+    "pear": "Pir",
+    "peas": "Kacang Polong",
+    "pineapple": "Nanas",
+    "pomegranate": "Delima",
+    "potato": "Kentang",
+    "pumpkin": "Labu",
+    "radish": "Lobak",
+    "strawberry": "Stroberi",
+    "tomato": "Tomat",
+    "turnip": "Turnip",
+    "watermelon": "Semangka",
+    "lemon": "Lemon",
+    "green_beans": "Buncis",
+}
+
 STAGE_NAMES = {
     "unripe": "mentah",
     "raw": "mentah",
@@ -59,7 +100,7 @@ DEMO_REVIEW_THRESHOLD = 0.20
 def split_label(raw_label: str, raw_stage: str | None) -> tuple[str, str | None]:
     label = raw_label.lower().strip().replace("-", "_").replace(" ", "_")
     stage = raw_stage.lower().strip() or None if raw_stage else None
-    for fruit in FRUIT_NAMES:
+    for fruit in PRODUCTION_FRUIT_NAMES:
         for separator in ("_", "/", ":"):
             prefix = f"{fruit}{separator}"
             suffix = f"{separator}{fruit}"
@@ -229,7 +270,15 @@ class PredictionService:
         self.advanced_statuses = advanced_statuses or {}
         self.advanced_models = advanced_models or {}
         self.class_names = class_names or tuple(FRUIT_NAMES)
-        self.fruit_names = {name: (NEW_FRUIT_NAMES if name in NEW_FRUIT_NAMES else FRUIT_NAMES).get(name, name) for name in self.class_names}
+        self.fruit_names = {
+            name: PRODUCTION_FRUIT_NAMES.get(
+                name.lower(),
+                (NEW_FRUIT_NAMES if name in NEW_FRUIT_NAMES else FRUIT_NAMES).get(
+                    name, name.replace("_", " ").title()
+                ),
+            )
+            for name in self.class_names
+        }
         self.stable_detection_ids = stable_detection_ids
 
     def _assess_conditions(self, image: Image.Image, box: tuple[float, float, float, float], fruit: str) -> dict[str, ConditionAssessment]:

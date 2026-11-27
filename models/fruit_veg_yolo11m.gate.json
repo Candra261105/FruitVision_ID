@@ -1,0 +1,26 @@
+{
+  "status": "eligible",
+  "model": "YOLO11m",
+  "weights": "models/fruit_veg_yolo11m.pt",
+  "source": "Hugging Face Piyu12/fruit-veg-yolo11m-detector",
+  "classes": [
+    "Apple", "Banana", "Beetroot", "Bitter_Gourd", "Bottle_Gourd",
+    "Cabbage", "Capsicum", "Carrot", "Cauliflower", "Cherry",
+    "Chilli", "Coconut", "Cucumber", "EggPlant", "Ginger",
+    "Grape", "Green_Orange", "Kiwi", "Maize", "Mango",
+    "Melon", "Okra", "Onion", "Orange", "Peach",
+    "Pear", "Peas", "Pineapple", "Pomegranate", "Potato",
+    "Radish", "Strawberry", "Tomato", "Turnip", "Watermelon"
+  ],
+  "metrics": {
+    "map50": 0.925,
+    "map50_95": 0.691,
+    "imgsz": 640
+  },
+  "provenance": {
+    "repo": "Piyu12/fruit-veg-yolo11m-detector",
+    "license": "agpl-3.0",
+    "dataset": "bohni-tech/fruits-and-vegi"
+  },
+  "detail": "Model YOLO11m pre-trained dari Hugging Face untuk deteksi 35 jenis buah dan sayur."
+}

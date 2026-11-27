@@ -23,7 +23,12 @@ class Settings:
 def load_settings() -> Settings:
     root = Path(__file__).resolve().parents[2]
     configured_model = os.getenv("FRUITVISION_MODEL_PATH", "")
-    model_path = Path(configured_model) if configured_model else root / "models" / "yolov8s-world.pt"
+    if configured_model:
+        model_path = Path(configured_model)
+    elif (root / "models" / "fruit_veg_yolo11m.pt").is_file():
+        model_path = root / "models" / "fruit_veg_yolo11m.pt"
+    else:
+        model_path = root / "models" / "yolov8s-world.pt"
     if not model_path.is_absolute():
         model_path = root / model_path
     origins = os.getenv("FRUITVISION_CORS_ORIGINS", "http://127.0.0.1:5173,http://localhost:5173")

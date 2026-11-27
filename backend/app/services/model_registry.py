@@ -51,8 +51,11 @@ def load_runtime(
         except (OSError, json.JSONDecodeError):
             gate = {}
     gate_classes = tuple(gate.get("classes", ()))
-    normalized_gate_classes = tuple(name.replace(" ", "_") for name in gate_classes)
-    class_names = normalized_gate_classes if normalized_gate_classes in {TARGET_DATASET_NAMES, NEW_DATASET_NAMES} else TARGET_DATASET_NAMES
+    normalized_gate_classes = tuple(name.lower().replace(" ", "_") for name in gate_classes)
+    if normalized_gate_classes:
+        class_names = normalized_gate_classes
+    else:
+        class_names = TARGET_DATASET_NAMES
     is_trial_model = not is_world_model and allow_unapproved_custom and gate.get("status") != "eligible"
     if not is_world_model and gate.get("status") != "eligible" and not allow_unapproved_custom:
         return ModelRuntime(
