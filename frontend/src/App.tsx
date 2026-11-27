@@ -93,14 +93,36 @@ export default function App() {
           <p className="eyebrow">Inspeksi tanaman dan hasil panen</p>
           <h1>Lihat hasil panen lebih jelas.</h1>
           <p className="intro-copy">
-            Ambil snapshot atau unggah foto. Sistem memperbaiki gambar secara konservatif sebelum mendeteksi tomat, labu, dan lemon.
+            Ambil snapshot atau unggah foto. Sistem memperbaiki gambar secara konservatif sebelum mendeteksi buah dan sayur dengan akurat.
           </p>
         </div>
         <div className="class-strip" aria-label="Daftar komoditas target">
-          <span className="class-strip-label">Target:</span>
-          <span className="class-tag">tomat</span>
-          <span className="class-tag">labu</span>
-          <span className="class-tag">lemon</span>
+          <span className="class-strip-label">
+            Target ({model?.classes?.length ?? 35} Komoditas):
+          </span>
+          {model?.classes && model.classes.length > 0 ? (
+            <>
+              {model.classes.slice(0, 10).map((cls) => (
+                <span key={cls} className="class-tag">
+                  {cls.replace(/_/g, " ").toLowerCase()}
+                </span>
+              ))}
+              {model.classes.length > 10 && (
+                <span className="class-tag" style={{ opacity: 0.85, fontStyle: "italic" }}>
+                  +{model.classes.length - 10} lainnya
+                </span>
+              )}
+            </>
+          ) : (
+            <>
+              <span className="class-tag">apel</span>
+              <span className="class-tag">pisang</span>
+              <span className="class-tag">jeruk</span>
+              <span className="class-tag">tomat</span>
+              <span className="class-tag">stroberi</span>
+              <span className="class-tag" style={{ opacity: 0.85, fontStyle: "italic" }}>+30 lainnya</span>
+            </>
+          )}
         </div>
       </section>
 
@@ -121,8 +143,12 @@ export default function App() {
       </div>
 
       <footer className="footer">
-        <span>FruitVision ID · Laboratorium PCT106</span>
-        <span>Deteksi 3 Komoditas + Evaluasi Kualitas Citra</span>
+        <span>FruitVision ID · Produksi & Laboratorium PCT106</span>
+        <span>
+          {model?.classes && model.classes.length > 3
+            ? `Deteksi ${model.classes.length} Komoditas Buah & Sayur + Evaluasi Kualitas Citra`
+            : "Deteksi Multi-Komoditas + Evaluasi Kualitas Citra"}
+        </span>
         <span>Kondisi aktif mengikuti komoditas dan status model yang ditampilkan</span>
       </footer>
     </main>

@@ -168,7 +168,11 @@ export function ResultPanel({
           </div>
           <div className="result-note">
             <strong>Siap menganalisis komoditas.</strong>
-            <span>Sistem akan mendeteksi tomat, labu, dan lemon serta mengevaluasi metrik kecerahan dan kontras.</span>
+            <span>
+              {model?.classes && model.classes.length > 3
+                ? `Sistem mendeteksi hingga ${model.classes.length} jenis buah & sayur serta mengevaluasi metrik kecerahan dan kontras.`
+                : "Sistem akan mendeteksi komoditas buah & sayur serta mengevaluasi metrik kecerahan dan kontras."}
+            </span>
           </div>
         </div>
       )}
