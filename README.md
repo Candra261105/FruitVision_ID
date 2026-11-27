@@ -1,18 +1,13 @@
 # FruitVision ID
 
-Aplikasi web lokal untuk mendeteksi objek hasil panen dari foto atau kamera.
+Aplikasi web lokal untuk inspeksi dan deteksi hasil panen buah serta sayuran dari foto atau kamera secara real-time.
 
-Pipeline eksperimen terbaru memakai tiga kelas terpisah:
+Versi produksi saat ini menggunakan model **YOLO11m** (`models/fruit_veg_yolo11m.pt`, 38,7 MB, mAP50 92,5%) yang mendukung deteksi **35 komoditas buah dan sayur** dengan pelabelan bahasa Indonesia:
 
-- `0 tomato` atau tomat
-- `1 pumpkin` atau labu
-- `2 lemon` atau lemon
+- **Buah**: Apel, Pisang, Ceri, Anggur, Jeruk Hijau, Kiwi, Mangga, Melon, Jeruk, Persik, Pir, Nanas, Delima, Stroberi, Semangka, Lemon.
+- **Sayur & Rempah**: Bit Merah, Pare, Labu Air, Kubis, Paprika, Wortel, Kembang Kol, Cabai, Kelapa, Mentimun, Terong, Jahe, Jagung, Okra, Bawang, Kacang Polong, Kentang, Lobak, Tomat, Turnip, Labu.
 
-Model lama dengan taxonomy `cucumber/tomato/green beans` tetap tidak ditimpa.
-Model tomato/pumpkin/lemon hanya dapat dipakai setelah gate evaluasi menyatakan
-`eligible` dan aktivasi manual dilakukan.
-
-Project ini dibuat untuk tugas PCT106. Backend menggunakan FastAPI dan Ultralytics. Frontend menggunakan React dan Vite. Aplikasi berjalan di komputer lokal, bukan di server publik.
+Project ini dibuat untuk tugas Pengolahan Citra (PCT106). Backend menggunakan FastAPI dan Ultralytics. Frontend menggunakan React dan Vite. Aplikasi berjalan di komputer lokal secara efisien (CPU-friendly).
 
 ## Yang perlu disiapkan
 
@@ -72,42 +67,34 @@ Jendela backend dan frontend akan terbuka sebagai dua jendela Command Prompt. Ja
 
 ## Menyiapkan model
 
-Sebagian bobot model yang dipakai project ini sudah disimpan di GitHub karena ukurannya masih di bawah batas file GitHub. Dataset gambar dan checkpoint eksperimen lain tetap disimpan di luar repository karena ukurannya jauh lebih besar.
+## Menyiapkan model produksi
 
-Struktur minimalnya:
+FruitVision ID menggunakan model deteksi produksi **YOLO11m** (35 kelas buah & sayur) yang telah lolos verifikasi gate (`models/fruit_veg_yolo11m.gate.json`).
+
+### 1. Unduh otomatis bobot model produksi
+Jika berkas `models/fruit_veg_yolo11m.pt` belum ada di lokal setelah clone, jalankan skrip pengunduh otomatis:
+
+```powershell
+py research\download_production_model.py
+```
+
+Skrip ini akan mengunduh model berbobot 38,7 MB langsung dari Hugging Face (`Piyu12/fruit-veg-yolo11m-detector`) ke folder `models/`.
+
+### 2. Struktur folder model
 
 ```text
 FruitVision_ID/
 └── models/
-    ├── yolov8s-world.pt
-    └── yolo26n-trial.pt
+    ├── fruit_veg_yolo11m.pt         # Model produksi 35 kelas (default)
+    ├── fruit_veg_yolo11m.gate.json    # Descriptor gate terverifikasi (status: eligible)
+    ├── yolov8s-world.pt              # Fallback open-vocabulary demo
+    └── yolo26n-trial.pt              # Checkpoint trial legacy (opsional)
 ```
 
-Setelah clone, model berikut tersedia langsung:
+Backend secara otomatis memilih `models/fruit_veg_yolo11m.pt` sebagai model utama tanpa perlu konfigurasi tambahan.
 
-```text
-models/yolo26n-trial.pt
-models/yolov8s-world.pt
-runs/detect/runs/loop-detector-yolo26n/experiment-512-yolo26n/weights/best.pt
-```
-
-### Model YOLO26n untuk uji coba
-
-Bobot lokal yang sudah digunakan pada project ini berada di:
-
-```text
-runs\detect\runs\loop-detector-yolo26n\experiment-512-yolo26n\weights\best.pt
-```
-
-Salin ke folder model dengan nama berikut:
-
-```powershell
-Copy-Item `
-  runs\detect\runs\loop-detector-yolo26n\experiment-512-yolo26n\weights\best.pt `
-  models\yolo26n-trial.pt
-```
-
-Jalankan backend dengan YOLO26n sebagai model uji:
+### 3. Model alternatif / uji coba
+Jika ingin menjalankan model kustom atau checkpoint lama secara eksplisit:
 
 ```powershell
 $env:FRUITVISION_MODEL_PATH = 'models\yolo26n-trial.pt'
@@ -115,18 +102,6 @@ $env:FRUITVISION_ALLOW_UNAPPROVED_CUSTOM = 'true'
 $env:FRUITVISION_CONFIDENCE = '0.25'
 run_backend.cmd
 ```
-
-Mode `trial` sengaja menandai bahwa model sedang dicoba. Hasil evaluasi test epoch 30 adalah mAP50 `0,5142`, sehingga model ini belum berstatus tervalidasi untuk menggantikan model fallback.
-
-### Model fallback YOLO-World
-
-Jika `FRUITVISION_MODEL_PATH` tidak diatur, backend mencari:
-
-```text
-models\yolov8s-world.pt
-```
-
-YOLO-World adalah fallback demo. Ia bukan model custom yang dilatih khusus untuk kondisi kamera pengguna.
 
 ## Dataset detector
 
@@ -139,54 +114,16 @@ Dokumentasi dataset ada di:
 data\README.md
 ```
 
-### Download seluruh folder data
+### Model & Dataset Siap Pakai (Versi Selesai)
 
-Seluruh folder `data` project disediakan melalui Google Drive:
+Aplikasi FruitVision ID versi rilis ini sudah selesai dan siap digunakan langsung:
+- Model produksi **35 kelas buah & sayur** (`models/fruit_veg_yolo11m.pt`) langsung aktif dan dapat diunduh otomatis via `py research/download_production_model.py`.
+- Tidak perlu mengunduh file dataset besar bergiga-giga untuk menjalankan aplikasi web.
 
-[Download folder data FruitVision ID dari Google Drive](https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA)
-
-Cara memasangnya setelah project di-clone:
-
-1. Buka link Drive di atas.
-2. Unduh folder `data` atau salin seluruh isinya ke komputer sendiri.
-3. Letakkan folder tersebut langsung di root project, sejajar dengan `backend`, `frontend`, `models`, dan `runs`.
-
-Struktur yang benar:
-
-```text
-FruitVision_ID/
-├── backend/
-├── frontend/
-├── models/
-├── runs/
-└── data/
-    ├── raw/
-    ├── processed/
-    ├── advanced/
-    └── README.md
-```
-
-Jangan sampai folder menjadi `data/data/`. Jika dataset hanya ingin dipakai untuk training detector, folder paling penting adalah:
-
-```text
-data\processed\combined-top3-cc0-targeted
-```
-
-Folder `data` berukuran besar. Pastikan ruang kosong di komputer cukup sebelum mengunduh seluruhnya. Untuk training detector, tidak perlu memindahkan dataset ke folder lain setelah diletakkan di root project.
-
-Dataset utama YOLO26n berada di:
-
-```text
-data\processed\combined-top3-cc0-experiment
-```
-
-Dataset targeted untuk training lanjutan berada di:
-
-```text
-data\processed\combined-top3-cc0-targeted
-```
-
-Folder dataset dikecualikan dari GitHub karena ukurannya besar. File dataset disediakan melalui Google Drive, sedangkan GitHub menyimpan kode, konfigurasi, script, checkpoint, dan dokumentasi.
+Bagi yang ingin melakukan eksperimen training kustom:
+- Paket dataset expansion mandiri tersedia di `data/tomato-pumpkin-lemon-expanded.zip`.
+- Panduan training cloud cepat menggunakan GPU T4 gratis di Google Colab tersedia di [`docs/COLAB_EXPANDED_GUIDE.md`](docs/COLAB_EXPANDED_GUIDE.md).
+- Dokumentasi struktur dataset lokal dapat dibaca di [`data/README.md`](data/README.md).
 
 ## Melanjutkan training di komputer lain
 
@@ -238,19 +175,19 @@ Di VS Code, tekan `Ctrl+Shift+P`, pilih **Python: Select Interpreter**, lalu pil
 .venv\Scripts\python.exe
 ```
 
-#### C. Download dan masukkan dataset
+#### C. Menyiapkan model produksi & dataset
 
-Unduh seluruh folder `data` dari [Google Drive FruitVision ID](https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA), lalu letakkan langsung di root project. Untuk training detector, dataset targeted harus berada di:
+Untuk menjalankan aplikasi secara langsung, unduh bobot model produksi:
 
-```text
-FruitVision_ID\data\processed\combined-top3-cc0-targeted
+```powershell
+py research\download_production_model.py
 ```
 
-Jika hanya ingin menghemat ruang, cukup ambil folder berikut dari Drive:
+Jika ingin melatih ulang detector, paket dataset mandiri sudah disediakan di `data/tomato-pumpkin-lemon-expanded.zip`. Ikuti panduan Google Colab T4 GPU di [`docs/COLAB_EXPANDED_GUIDE.md`](docs/COLAB_EXPANDED_GUIDE.md) agar proses training selesai cepat dan tidak membebani CPU komputer.
 
-```text
-data\processed\combined-top3-cc0-targeted
-```
+Jika menggunakan dataset lokal lama untuk eksperimen:
+- Folder dataset: `data\processed\combined-top3-cc0-targeted`
+- Manifest perubahan: `runs\loop\targeted-dataset-manifest.json`
 
 Folder tersebut harus memiliki `data.yaml`, folder `images`, dan folder `labels` dengan split `train`, `val`, `test`, serta `external_holdout`.
 

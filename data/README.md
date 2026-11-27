@@ -2,26 +2,20 @@
 
 Folder ini menjelaskan dataset yang dipakai detector YOLO26n. Gambar dan label dataset tidak disimpan di GitHub karena ukurannya besar.
 
-## Link download dataset
+## Status Rilis & Dataset Siap Pakai
 
-Pipeline eksperimen terpisah dengan taxonomy `0 tomato`, `1 pumpkin`, `2 lemon`
-berada di `data/processed/tomato-pumpkin-lemon`. Dataset lama tidak ditimpa.
+Aplikasi FruitVision ID versi rilis ini telah selesai dan menggunakan model produksi pre-trained **YOLO11m** (35 kelas buah dan sayur, bobot 38,7 MB). Bobot model dapat diunduh otomatis via:
 
-Seluruh folder `data` project dapat diunduh dari Google Drive:
-
-https://drive.google.com/drive/folders/1DHmeFsZXayfNMzsmUWiG1zlSIsAym7aA
-
-Setelah diunduh, letakkan folder `data` langsung di root repository `FruitVision_ID`, sehingga path-nya menjadi:
-
-```text
-FruitVision_ID/data/
+```powershell
+py research\download_production_model.py
 ```
 
-Jangan membuat susunan `FruitVision_ID/data/data/`. Untuk training detector, dataset yang digunakan adalah:
+Pengguna tidak perlu mengunduh seluruh file dataset mentah bergiga-giga untuk menjalankan aplikasi web.
 
-```text
-FruitVision_ID/data/processed/combined-top3-cc0-targeted
-```
+Untuk eksperimen training mandiri:
+- Paket dataset expansion lengkap siap latih tersedia dalam bentuk arsip: `data/tomato-pumpkin-lemon-expanded.zip`.
+- Panduan training di cloud Google Colab dengan GPU T4 gratis dapat dilihat di [`docs/COLAB_EXPANDED_GUIDE.md`](../docs/COLAB_EXPANDED_GUIDE.md).
+- Pipeline eksperimen lokal terpisah dengan taxonomy `0 tomato`, `1 pumpkin`, `2 lemon` berada di `data/processed/tomato-pumpkin-lemon`.
 
 ## Dataset yang dipakai model epoch 30
 
@@ -152,11 +146,12 @@ Pembagian sumber ini:
 
 ## Cara memakai dataset di komputer lain
 
-Setelah folder `data` dari Google Drive berada di root project, dataset utama dapat ditemukan di:
+Untuk menjalankan aplikasi web, tidak perlu menyalin folder data karena model produksi sudah mandiri.
 
-```text
-FruitVision_ID/data/processed/combined-top3-cc0-experiment
-```
+Jika Anda ingin melanjutkan eksperimen detector berbasis folder lokal:
+- Dataset experiment: `FruitVision_ID/data/processed/combined-top3-cc0-experiment`
+- Dataset targeted: `FruitVision_ID/data/processed/combined-top3-cc0-targeted`
+- Dataset tomato-pumpkin-lemon: `FruitVision_ID/data/processed/tomato-pumpkin-lemon`
 
 `data.yaml` sudah memakai path relatif:
 
@@ -189,4 +184,4 @@ data/processed/
 data/raw/
 ```
 
-Karena itu, README ini ikut GitHub, sedangkan gambar dan label dibagikan melalui Google Drive. GitHub tetap menjadi tempat kode, script training, checkpoint, konfigurasi, manifest, dan dokumentasi.
+GitHub menyimpan seluruh kode, script training & downloader, gate descriptor, checkpoint, konfigurasi, manifest, dan dokumentasi lengkap. Dataset komposit besar disarankan dilatih di cloud (Colab GPU) menggunakan paket zip yang telah dioptimasi.

@@ -16,9 +16,9 @@ baru, script training, evaluator, dan launcher Windows.
 Untuk teman yang biasa bekerja di VS Code, gunakan **mode hybrid notebook** di
 bawah. Launcher `.cmd` tetap tersedia sebagai cara cadangan yang lebih singkat.
 
-## Cara memakai dari Google Drive
+## Cara Memakai Paket Training Mandiri
 
-1. Unduh seluruh folder `tomato-pumpkin-lemon-training` ke komputer. Jangan
+1. Ekstrak atau buka folder `tomato-pumpkin-lemon-training` di komputer. Jangan
    hanya mengunduh folder `launchers`.
 2. Pastikan Python 3.10 atau lebih baru tersedia dan perintah `py` dapat
    dijalankan dari Command Prompt.
